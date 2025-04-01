@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "Your_Name - Data Science Portfolio"
+  title: "Nathaniel Clark - Data Science Portfolio"
   favicon: Images/favicon.png
   back-to-top-navigation: true
   repo-url: https://github.com/username/username.github.io
@@ -10,11 +10,10 @@ website:
 
   page-footer: 
     border: true
-    left: "Your_Name 2024©"
+    left: "Nathaniel Clark 2025©"
     right: 
       - icon: linkedin
-        href: Your_LinkedIn_URL
-
+        href: https://www.linkedin.com/in/nathaniel-e-clark/
   navbar:
     background: primary
     search: true   
@@ -175,11 +174,7 @@ website:
   
 format:  
   html:
-    theme: #see this link to customize the theme with css (https://quarto.org/docs/output-formats/html-themes.html#dark-mode)
-      light: flatly # more themes can be found [here](https://quarto.org/docs/output-formats/html-themes.html)
-      dark: darkly
-      #light: cosmo
-      #dark: [cosmo, theme-dark.scss]
+    theme: lux
     css: styles.css
     toc: true
 
