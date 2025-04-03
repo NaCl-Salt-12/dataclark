@@ -30,6 +30,91 @@ I'm a Data Science student at Brigham Young University-Idaho with expertise in P
 :::
 :::
 
+## Recent Blog Posts
+
+::: {.grid}
+::: {.g-col-12}
+```{python}
+#| echo: false
+#| output: asis
+
+import os
+import yaml
+import re
+from datetime import datetime
+from pathlib import Path
+
+# Function to extract post metadata
+def get_post_info(file_path):
+    try:
+        with open(file_path, 'r') as f:
+            content = f.read()
+            # Extract YAML front matter
+            yaml_match = re.search(r'^---\s(.*?)\s---', content, re.DOTALL)
+            if yaml_match:
+                yaml_content = yaml_match.group(1)
+                metadata = yaml.safe_load(yaml_content)
+                
+                # Get default values if specific fields aren't present
+                title = metadata.get('title', 'Untitled Post')
+                date = metadata.get('date', 'No date')
+                description = metadata.get('description', '')
+                categories = metadata.get('categories', [])
+                
+                return {
+                    'title': title,
+                    'date': date,
+                    'description': description,
+                    'categories': categories,
+                    'path': str(file_path)
+                }
+    except Exception as e:
+        print(f"Error processing {file_path}: {e}")
+    
+    return None
+
+# Get blog posts
+blog_dir = Path('blog/posts')
+posts = []
+
+if blog_dir.exists():
+    for post_dir in blog_dir.iterdir():
+        if post_dir.is_dir():
+            index_file = post_dir / 'index.qmd'
+            if index_file.exists():
+                post_info = get_post_info(index_file)
+                if post_info:
+                    posts.append(post_info)
+
+# Sort posts by date (newest first)
+posts = sorted(posts, key=lambda x: x.get('date', ''), reverse=True)
+
+# Display the 3 most recent posts
+for i, post in enumerate(posts[:3]):
+    title = post.get('title', 'Untitled')
+    date = post.get('date', '')
+    description = post.get('description', '')
+    path = post.get('path', '')
+    
+    # Create a relative path from the post path
+    rel_path = os.path.relpath(path, start=os.path.dirname(os.path.abspath('index.qmd')))
+    
+    print(f"### [{title}]({rel_path})\n")
+    if date:
+        print(f"**{date}**\n")
+    if description:
+        print(f"{description}\n")
+    if i < 2:  # Add divider between posts (except after the last)
+        print("---\n")
+
+# If no posts were found
+if not posts:
+    print("### No blog posts yet\n")
+    print("Check back soon for updates and new content!\n")
+```
+:::
+:::
+
 ## Portfolio Overview
 
 This website showcases my projects and technical abilities in various aspects of data science. Browse through the sections to explore my work in data analysis, visualization, machine learning, and more.
