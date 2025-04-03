@@ -1,89 +1,110 @@
 ---
 layout: cv
-title: Isaac Newtons's CV
+title: Nathaniel Clark
 ---
-# Isaac Newton
-Physicist, Mathematician, Cambridge professor.
+# Nathaniel Clark
 
 <div id="webaddress">
-<a href="isaac@applesdofall.org">isaac@applesdofall.org</a>
-| <a href="http://en.wikipedia.org/wiki/Isaac_Newton">My wikipedia page</a>
+<a href="mailto:nathanieleclark@gmail.com">nathanieleclark@gmail.com</a>
+| +14482007651
 </div>
-
 
 ## Currently
 
-Standing on the shoulders of giants
+Studying Data Science at Brigham Young University-Idaho
 
 ### Specialized in
 
-Laws of motion, gravitation, minting coins, disliking [Robert Hooke](http://en.wikipedia.org/wiki/Robert_Hooke)
-
+Python programming, data analysis, database management, cybersecurity fundamentals
 
 ### Research interests
 
-Cooling, power series, optics, alchemy, planetary motions, apples.
-
+Machine learning, data visualization, database design, cybersecurity
 
 ## Education
 
-`1654-1660`
-__The King's School, Grantham.__
+`In Progress`
+**Brigham Young University-Idaho**
+- Bachelor of Science in Data Science
 
-`June 1661 - now`
-__Trinity College, Cambridge__
-
-- Sizar
-
-`1667 - death`
-__Trinity College, Cambridge__
-
-- Fellow
-
-
+`2018-2021`
+**Leon County Virtual School, Tallahassee, FL**
+- High School Diploma
 
 ## Awards
 
-`2012`
-President, *Royal Society*, London, UK
+`2025`
+3rd Place, Cybersecurity Category, *USU Hackathon*, Utah State University
 
-Associate, *French Academy of Science*, Paris, France
+## Technical Skills
 
+### Programming Languages
+- Python
+- R
+- C#
+- SQL
 
+### Data Science
+- Polars
+- Data cleaning
+- Visualization
+- Basic machine learning
 
-## Publications
+## Experience
 
-<!-- A list is also available [online](http://scholar.google.co.uk/citations?user=LTOTl0YAAAAJ) -->
+`Current`
+**Teaching Assistant**, Brigham Young University-Idaho
+- Database and Cybersecurity classes for Professor Kory Godfrey
+- Grade assignments and provide support to students
+- Facilitate discussions on database management and security
 
-### Journals
+`2025`
+**Hackathon Team Member**, Utah State University
+- Placed 3rd in cybersecurity category
+- Applied data analysis to security challenges
+- Developed solutions under tight deadlines
 
-`1669`
-Newton Sir I, De analysi per æquationes numero terminorum infinitas. 
+`2022-2024`
+**Full Time Missionary**, The Church of Jesus Christ of Latter-day Saints, Salt Lake City, UT
+- Developed communication and interpersonal skills
+- Led teams and coordinated community service initiatives
 
-`1669`
-Lectiones opticæ.
+`Jun-Aug 2022`
+**Handyman/Laborer**, Gyroscope Lab, LLC, Concord, MA
+- Renovated building for engineering lab
+- Applied problem-solving skills to structural challenges
 
-etc. etc. etc.
+`2021-2022`
+**Food Service**, Chipotle Mexican Grill, Tallahassee, FL
+- Managed multiple roles including cashier, food preparation
+- Ensured quality control and food safety compliance
 
-### Patents
+`Jun-Jul 2021`
+**Maintenance Worker**, U Club on Woodward, Tallahassee, FL
+- Performed repairs, appliance installation, and maintenance
+- Troubleshot facility issues efficiently
 
-`2012`
-Infinitesimal calculus for solutions to physics problems, [SMBC](http://www.techdirt.com/articles/20121011/09312820678/if-patents-had-been-around-time-newton.shtml) patent 001
+`2012-2022`
+**Lawn Maintenance**, Private homeowners, Tallahassee, FL
+- Performed mowing, edging, landscaping services
+- Managed scheduling and client relationships
 
+## Projects
 
-## Occupation
+`2025`
+**Data Cleaning and Visualization Pipeline**
+- Created automated tools for cleaning datasets
+- Generated insightful visualizations
 
-`1600`
-__Royal Mint__, London
+`2024`
+**Database Security Implementation**
+- Developed relational database systems with security features
 
-- Warden
-- Minted coins
+`2024`
+**Machine Learning Classification Models**
+- Built and evaluated basic ML models
 
-`1600`
-__Lucasian professor of Mathematics__, Cambridge University
+## Certifications
+- Driver's License
 
-
-
-<!-- ### Footer
-
-Last updated: May 2013 -->
+<!-- Last updated: April 2025 -->
