@@ -1,7 +1,38 @@
 ---
-title: "About me"
-subtitle: "My Data Science Portfolio"
-# use quarto markdown to 
+title: "My Data Science Portfolio"
 ---
 
-# Intrests
+:::{.column-page}
+![](Images/banner.jpg)
+
+## About Me
+
+I'm a Data Science student at Brigham Young University-Idaho with expertise in Python programming, data analysis, database management, and cybersecurity fundamentals. My journey in data science combines technical skills with practical problem-solving abilities.
+
+## My Focus Areas
+
+::: {.grid}
+::: {.g-col-6}
+### Technical Skills
+- Python, R, C#, SQL programming
+- Data cleaning and visualization
+- Database design and security
+- Basic machine learning
+:::
+
+::: {.g-col-6}
+### Professional Interests
+- **Machine Learning & AI** — Deep learning, LLMs, predictive modeling
+- **Data Engineering** — ETL pipelines, data systems, cloud infrastructure
+- **Data Visualization** — Interactive dashboards, storytelling with data
+- **Statistical Analysis** — Hypothesis testing, regression modeling, Bayesian methods
+- **Software Development** — Creating data-driven applications and tools
+:::
+:::
+
+## Portfolio Overview
+
+This website showcases my projects and technical abilities in various aspects of data science. Browse through the sections to explore my work in data analysis, visualization, machine learning, and more.
+
+[View My Resume](resume.qmd){.btn .btn-primary} [Contact Me](mailto:nathanieleclark@gmail.com){.btn .btn-secondary}
+:::

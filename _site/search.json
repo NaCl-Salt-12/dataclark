@@ -4,108 +4,70 @@
     "href": "competition.html",
     "title": "about me",
     "section": "",
-    "text": "MarkDown Basics",
-    "crumbs": [
-      "Competition"
-    ]
+    "text": "MarkDown Basics"
   },
   {
     "objectID": "competition.html#title-2-header",
     "href": "competition.html#title-2-header",
     "title": "about me",
     "section": "",
-    "text": "MarkDown Basics",
-    "crumbs": [
-      "Competition"
-    ]
+    "text": "MarkDown Basics"
   },
   {
     "objectID": "Cleansing_Projects/project3.html",
     "href": "Cleansing_Projects/project3.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Data Cleansing",
-      "Project 3"
-    ]
+    "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
     "objectID": "Cleansing_Projects/project1.html",
     "href": "Cleansing_Projects/project1.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Data Cleansing",
-      "Project 1"
-    ]
+    "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
     "objectID": "Cleansing_Projects/project4.html",
     "href": "Cleansing_Projects/project4.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Data Cleansing",
-      "Project 4"
-    ]
+    "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
     "objectID": "Full_Stack/project2.html",
     "href": "Full_Stack/project2.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Full Stack",
-      "Project 2"
-    ]
+    "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
     "objectID": "Full_Stack/project5.html",
     "href": "Full_Stack/project5.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Full Stack",
-      "Project 5"
-    ]
+    "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
     "objectID": "Competition/project3.html",
     "href": "Competition/project3.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Competition",
-      "Project 3"
-    ]
+    "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
     "objectID": "Competition/project1.html",
     "href": "Competition/project1.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Competition",
-      "Project 1"
-    ]
+    "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
     "objectID": "Competition/project4.html",
     "href": "Competition/project4.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Competition",
-      "Project 4"
-    ]
+    "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
     "objectID": "Cleansing_Exploration/project2.html",
@@ -144,9 +106,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "about me",
+    "title": "My Data Science Portfolio",
     "section": "",
-    "text": "MarkDown Basics"
+    "text": "I’m a Data Science student at Brigham Young University-Idaho with expertise in Python programming, data analysis, database management, and cybersecurity fundamentals. My journey in data science combines technical skills with practical problem-solving abilities.\n\n\n\n\n\n\n\nPython, R, C#, SQL programming\nData cleaning and visualization\nDatabase design and security\nBasic machine learning\n\n\n\n\n\nMachine Learning & AI — Deep learning, LLMs, predictive modeling\nData Engineering — ETL pipelines, data systems, cloud infrastructure\nData Visualization — Interactive dashboards, storytelling with data\nStatistical Analysis — Hypothesis testing, regression modeling, Bayesian methods\nSoftware Development — Creating data-driven applications and tools\n\n\n\n\n\n\nThis website showcases my projects and technical abilities in various aspects of data science. Browse through the sections to explore my work in data analysis, visualization, machine learning, and more.\nView My Resume Contact Me"
   },
   {
     "objectID": "index.html#title-2-header",
@@ -160,145 +122,105 @@
     "href": "Machine_Learning/project2.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Machine Learning",
-      "Project 2"
-    ]
+    "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
     "objectID": "Machine_Learning/project5.html",
     "href": "Machine_Learning/project5.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Machine Learning",
-      "Project 5"
-    ]
+    "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
     "objectID": "cleansing.html",
     "href": "cleansing.html",
     "title": "about me",
     "section": "",
-    "text": "MarkDown Basics",
-    "crumbs": [
-      "Data Cleansing"
-    ]
+    "text": "MarkDown Basics"
   },
   {
     "objectID": "cleansing.html#title-2-header",
     "href": "cleansing.html#title-2-header",
     "title": "about me",
     "section": "",
-    "text": "MarkDown Basics",
-    "crumbs": [
-      "Data Cleansing"
-    ]
+    "text": "MarkDown Basics"
   },
   {
     "objectID": "exploration.html",
     "href": "exploration.html",
     "title": "about me",
     "section": "",
-    "text": "MarkDown Basics",
-    "crumbs": [
-      "Data Exploration"
-    ]
+    "text": "MarkDown Basics"
   },
   {
     "objectID": "exploration.html#title-2-header",
     "href": "exploration.html#title-2-header",
     "title": "about me",
     "section": "",
-    "text": "MarkDown Basics",
-    "crumbs": [
-      "Data Exploration"
-    ]
+    "text": "MarkDown Basics"
   },
   {
     "objectID": "Story_Telling/project2.html",
     "href": "Story_Telling/project2.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Story Telling",
-      "Project 2"
-    ]
+    "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
     "objectID": "Story_Telling/project5.html",
     "href": "Story_Telling/project5.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Story Telling",
-      "Project 5"
-    ]
+    "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
     "objectID": "Story_Telling/project4.html",
     "href": "Story_Telling/project4.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Story Telling",
-      "Project 4"
-    ]
+    "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
     "objectID": "Story_Telling/project1.html",
     "href": "Story_Telling/project1.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Story Telling",
-      "Project 1"
-    ]
+    "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
     "objectID": "Story_Telling/project3.html",
     "href": "Story_Telling/project3.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Story Telling",
-      "Project 3"
-    ]
+    "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
     "objectID": "resume.html",
     "href": "resume.html",
-    "title": "Isaac Newtons’s CV",
+    "title": "Nathaniel Clark",
     "section": "",
-    "text": "Physicist, Mathematician, Cambridge professor.\n\nisaac@applesdofall.org | My wikipedia page\n\n\n\nStanding on the shoulders of giants\n\n\nLaws of motion, gravitation, minting coins, disliking Robert Hooke\n\n\n\nCooling, power series, optics, alchemy, planetary motions, apples.\n\n\n\n\n1654-1660 The King’s School, Grantham.\nJune 1661 - now Trinity College, Cambridge\n\nSizar\n\n1667 - death Trinity College, Cambridge\n\nFellow\n\n\n\n\n2012 President, Royal Society, London, UK\nAssociate, French Academy of Science, Paris, France\n\n\n\n\n\n\n1669 Newton Sir I, De analysi per æquationes numero terminorum infinitas.\n1669 Lectiones opticæ.\netc. etc. etc.\n\n\n\n2012 Infinitesimal calculus for solutions to physics problems, SMBC patent 001\n\n\n\n\n1600 Royal Mint, London\n\nWarden\nMinted coins\n\n1600 Lucasian professor of Mathematics, Cambridge University"
+    "text": "nathanieleclark@gmail.com | +14482007651\n\n\n\nStudying Data Science at Brigham Young University-Idaho\n\n\nPython programming, data analysis, database management, cybersecurity fundamentals\n\n\n\nMachine learning, data visualization, database design, cybersecurity\n\n\n\n\nIn Progress Brigham Young University-Idaho - Bachelor of Science in Data Science\n2018-2021 Leon County Virtual School, Tallahassee, FL - High School Diploma\n\n\n\n2025 3rd Place, Cybersecurity Category, USU Hackathon, Utah State University\n\n\n\n\n\n\nPython\nR\nC#\nSQL\n\n\n\n\n\nPolars\nData cleaning\nVisualization\nBasic machine learning\n\n\n\n\n\nCurrent Teaching Assistant, Brigham Young University-Idaho - Database and Cybersecurity classes for Professor Kory Godfrey - Grade assignments and provide support to students - Facilitate discussions on database management and security\n2025 Hackathon Team Member, Utah State University - Placed 3rd in cybersecurity category - Applied data analysis to security challenges - Developed solutions under tight deadlines\n2022-2024 Full Time Missionary, The Church of Jesus Christ of Latter-day Saints, Salt Lake City, UT - Developed communication and interpersonal skills - Led teams and coordinated community service initiatives\nJun-Aug 2022 Handyman/Laborer, Gyroscope Lab, LLC, Concord, MA - Renovated building for engineering lab - Applied problem-solving skills to structural challenges\n2021-2022 Food Service, Chipotle Mexican Grill, Tallahassee, FL - Managed multiple roles including cashier, food preparation - Ensured quality control and food safety compliance\nJun-Jul 2021 Maintenance Worker, U Club on Woodward, Tallahassee, FL - Performed repairs, appliance installation, and maintenance - Troubleshot facility issues efficiently\n2012-2022 Lawn Maintenance, Private homeowners, Tallahassee, FL - Performed mowing, edging, landscaping services - Managed scheduling and client relationships\n\n\n\n2025 Data Cleaning and Visualization Pipeline - Created automated tools for cleaning datasets - Generated insightful visualizations\n2024 Database Security Implementation - Developed relational database systems with security features\n2024 Machine Learning Classification Models - Built and evaluated basic ML models\n\n\n\n\nDriver’s License"
   },
   {
     "objectID": "resume.html#currently",
     "href": "resume.html#currently",
-    "title": "Isaac Newtons’s CV",
+    "title": "Nathaniel Clark",
     "section": "",
-    "text": "Standing on the shoulders of giants\n\n\nLaws of motion, gravitation, minting coins, disliking Robert Hooke\n\n\n\nCooling, power series, optics, alchemy, planetary motions, apples."
+    "text": "Studying Data Science at Brigham Young University-Idaho\n\n\nPython programming, data analysis, database management, cybersecurity fundamentals\n\n\n\nMachine learning, data visualization, database design, cybersecurity"
   },
   {
     "objectID": "resume.html#education",
     "href": "resume.html#education",
-    "title": "Isaac Newtons’s CV",
+    "title": "Nathaniel Clark",
     "section": "",
-    "text": "1654-1660 The King’s School, Grantham.\nJune 1661 - now Trinity College, Cambridge\n\nSizar\n\n1667 - death Trinity College, Cambridge\n\nFellow"
+    "text": "In Progress Brigham Young University-Idaho - Bachelor of Science in Data Science\n2018-2021 Leon County Virtual School, Tallahassee, FL - High School Diploma"
   },
   {
     "objectID": "resume.html#awards",
     "href": "resume.html#awards",
-    "title": "Isaac Newtons’s CV",
+    "title": "Nathaniel Clark",
     "section": "",
-    "text": "2012 President, Royal Society, London, UK\nAssociate, French Academy of Science, Paris, France"
+    "text": "2025 3rd Place, Cybersecurity Category, USU Hackathon, Utah State University"
   },
   {
     "objectID": "resume.html#publications",
@@ -319,53 +241,35 @@
     "href": "Machine_Learning/project4.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Machine Learning",
-      "Project 4"
-    ]
+    "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
     "objectID": "Machine_Learning/project1.html",
     "href": "Machine_Learning/project1.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Machine Learning",
-      "Project 1"
-    ]
+    "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
     "objectID": "Machine_Learning/project3.html",
     "href": "Machine_Learning/project3.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Machine Learning",
-      "Project 3"
-    ]
+    "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
     "objectID": "ml.html",
     "href": "ml.html",
     "title": "about me",
     "section": "",
-    "text": "MarkDown Basics",
-    "crumbs": [
-      "Machine Learning"
-    ]
+    "text": "MarkDown Basics"
   },
   {
     "objectID": "ml.html#title-2-header",
     "href": "ml.html#title-2-header",
     "title": "about me",
     "section": "",
-    "text": "MarkDown Basics",
-    "crumbs": [
-      "Machine Learning"
-    ]
+    "text": "MarkDown Basics"
   },
   {
     "objectID": "Cleansing_Exploration/project4.html",
@@ -393,96 +297,118 @@
     "href": "Competition/project5.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Competition",
-      "Project 5"
-    ]
+    "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
     "objectID": "Competition/project2.html",
     "href": "Competition/project2.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Competition",
-      "Project 2"
-    ]
+    "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
     "objectID": "Full_Stack/project4.html",
     "href": "Full_Stack/project4.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Full Stack",
-      "Project 4"
-    ]
+    "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
     "objectID": "Full_Stack/project1.html",
     "href": "Full_Stack/project1.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Full Stack",
-      "Project 1"
-    ]
+    "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
     "objectID": "Full_Stack/project3.html",
     "href": "Full_Stack/project3.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Full Stack",
-      "Project 3"
-    ]
+    "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
     "objectID": "Cleansing_Projects/project5.html",
     "href": "Cleansing_Projects/project5.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Data Cleansing",
-      "Project 5"
-    ]
+    "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
     "objectID": "Cleansing_Projects/project2.html",
     "href": "Cleansing_Projects/project2.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Data Cleansing",
-      "Project 2"
-    ]
+    "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
     "objectID": "full_stack.html",
     "href": "full_stack.html",
     "title": "about me",
     "section": "",
-    "text": "MarkDown Basics",
-    "crumbs": [
-      "Full Stack"
-    ]
+    "text": "MarkDown Basics"
   },
   {
     "objectID": "full_stack.html#title-2-header",
     "href": "full_stack.html#title-2-header",
     "title": "about me",
     "section": "",
-    "text": "MarkDown Basics",
-    "crumbs": [
-      "Full Stack"
-    ]
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "index.html#about-me",
+    "href": "index.html#about-me",
+    "title": "My Data Science Portfolio",
+    "section": "",
+    "text": "I’m a Data Science student at Brigham Young University-Idaho with expertise in Python programming, data analysis, database management, and cybersecurity fundamentals. My journey in data science combines technical skills with practical problem-solving abilities."
+  },
+  {
+    "objectID": "index.html#my-focus-areas",
+    "href": "index.html#my-focus-areas",
+    "title": "My Data Science Portfolio",
+    "section": "",
+    "text": "Python, R, C#, SQL programming\nData cleaning and visualization\nDatabase design and security\nBasic machine learning\n\n\n\n\n\nMachine Learning & AI — Deep learning, LLMs, predictive modeling\nData Engineering — ETL pipelines, data systems, cloud infrastructure\nData Visualization — Interactive dashboards, storytelling with data\nStatistical Analysis — Hypothesis testing, regression modeling, Bayesian methods\nSoftware Development — Creating data-driven applications and tools"
+  },
+  {
+    "objectID": "index.html#portfolio-overview",
+    "href": "index.html#portfolio-overview",
+    "title": "My Data Science Portfolio",
+    "section": "",
+    "text": "This website showcases my projects and technical abilities in various aspects of data science. Browse through the sections to explore my work in data analysis, visualization, machine learning, and more.\nView My Resume Contact Me"
+  },
+  {
+    "objectID": "resume.html#technical-skills",
+    "href": "resume.html#technical-skills",
+    "title": "Nathaniel Clark",
+    "section": "",
+    "text": "Python\nR\nC#\nSQL\n\n\n\n\n\nPolars\nData cleaning\nVisualization\nBasic machine learning"
+  },
+  {
+    "objectID": "resume.html#experience",
+    "href": "resume.html#experience",
+    "title": "Nathaniel Clark",
+    "section": "",
+    "text": "Current Teaching Assistant, Brigham Young University-Idaho - Database and Cybersecurity classes for Professor Kory Godfrey - Grade assignments and provide support to students - Facilitate discussions on database management and security\n2025 Hackathon Team Member, Utah State University - Placed 3rd in cybersecurity category - Applied data analysis to security challenges - Developed solutions under tight deadlines\n2022-2024 Full Time Missionary, The Church of Jesus Christ of Latter-day Saints, Salt Lake City, UT - Developed communication and interpersonal skills - Led teams and coordinated community service initiatives\nJun-Aug 2022 Handyman/Laborer, Gyroscope Lab, LLC, Concord, MA - Renovated building for engineering lab - Applied problem-solving skills to structural challenges\n2021-2022 Food Service, Chipotle Mexican Grill, Tallahassee, FL - Managed multiple roles including cashier, food preparation - Ensured quality control and food safety compliance\nJun-Jul 2021 Maintenance Worker, U Club on Woodward, Tallahassee, FL - Performed repairs, appliance installation, and maintenance - Troubleshot facility issues efficiently\n2012-2022 Lawn Maintenance, Private homeowners, Tallahassee, FL - Performed mowing, edging, landscaping services - Managed scheduling and client relationships"
+  },
+  {
+    "objectID": "resume.html#projects",
+    "href": "resume.html#projects",
+    "title": "Nathaniel Clark",
+    "section": "",
+    "text": "2025 Data Cleaning and Visualization Pipeline - Created automated tools for cleaning datasets - Generated insightful visualizations\n2024 Database Security Implementation - Developed relational database systems with security features\n2024 Machine Learning Classification Models - Built and evaluated basic ML models"
+  },
+  {
+    "objectID": "resume.html#certifications",
+    "href": "resume.html#certifications",
+    "title": "Nathaniel Clark",
+    "section": "",
+    "text": "Driver’s License"
+  },
+  {
+    "objectID": "index.html#welcome",
+    "href": "index.html#welcome",
+    "title": "About me",
+    "section": "",
+    "text": "I’m a Data Science student at Brigham Young University-Idaho with expertise in Python programming, data analysis, database management, and cybersecurity fundamentals. My journey in data science combines technical skills with practical problem-solving abilities.\n\n\n\n\n\n\n\n\n\n\n{{&lt; fa brands python &gt;}} Python, {{&lt; fa brands r-project &gt;}} R, C#, SQL programming\nData cleaning and visualization\nDatabase design and security\nBasic machine learning\n\n\n\n\n\nMachine Learning & AI — Deep learning, LLMs, predictive modeling\nData Engineering — ETL pipelines, data systems, cloud infrastructure\nData Visualization — Interactive dashboards, storytelling with data\nStatistical Analysis — Hypothesis testing, regression modeling, Bayesian methods\nSoftware Development — Creating data-driven applications and tools\n\n\n\n\n\n\nThis website showcases my projects and technical abilities in various aspects of data science. Browse through the sections to explore my work in data analysis, visualization, machine learning, and more.\n\n{{&lt; fa file-alt &gt;}} View My Resume {{&lt; fa envelope &gt;}} Contact Me"
   }
 ]

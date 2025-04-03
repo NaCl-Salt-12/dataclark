@@ -2,8 +2,6 @@
 layout: cv
 title: Nathaniel Clark
 ---
-# Nathaniel Clark
-
 <div id="webaddress">
 <a href="mailto:nathanieleclark@gmail.com">nathanieleclark@gmail.com</a>
 | +14482007651
