@@ -1,0 +1,23 @@
+---
+title: "Welcome to My Data Science Blog"
+author: "Nathaniel Clark"
+date: "2025-04-03"
+categories: [news, introduction]
+image: "thumbnail.jpg"  # You can add an image file here
+---
+
+## Welcome!
+
+This is my first blog post on my data science journey. I'll be sharing insights, projects, and learnings here.
+
+## What to Expect
+
+In this blog, I'll cover:
+
+- Data analysis techniques
+- Interesting projects I'm working on
+- Insights from the data science field
+- Tutorials and how-to guides
+
+Stay tuned for more content!
+```

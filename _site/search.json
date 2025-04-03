@@ -106,7 +106,7 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "My Data Science Portfolio",
+    "title": "Nathaniel Clark",
     "section": "",
     "text": "I’m a Data Science student at Brigham Young University-Idaho with expertise in Python programming, data analysis, database management, and cybersecurity fundamentals. My journey in data science combines technical skills with practical problem-solving abilities.\n\n\n\n\n\n\n\nPython, R, C#, SQL programming\nData cleaning and visualization\nDatabase design and security\nBasic machine learning\n\n\n\n\n\nMachine Learning & AI — Deep learning, LLMs, predictive modeling\nData Engineering — ETL pipelines, data systems, cloud infrastructure\nData Visualization — Interactive dashboards, storytelling with data\nStatistical Analysis — Hypothesis testing, regression modeling, Bayesian methods\nSoftware Development — Creating data-driven applications and tools\n\n\n\n\n\n\nThis website showcases my projects and technical abilities in various aspects of data science. Browse through the sections to explore my work in data analysis, visualization, machine learning, and more.\nView My Resume Contact Me"
   },
@@ -199,28 +199,28 @@
     "href": "resume.html",
     "title": "Nathaniel Clark",
     "section": "",
-    "text": "nathanieleclark@gmail.com | +14482007651\n\n\n\nStudying Data Science at Brigham Young University-Idaho\n\n\nPython programming, data analysis, database management, cybersecurity fundamentals\n\n\n\nMachine learning, data visualization, database design, cybersecurity\n\n\n\n\nIn Progress Brigham Young University-Idaho - Bachelor of Science in Data Science\n2018-2021 Leon County Virtual School, Tallahassee, FL - High School Diploma\n\n\n\n2025 3rd Place, Cybersecurity Category, USU Hackathon, Utah State University\n\n\n\n\n\n\nPython\nR\nC#\nSQL\n\n\n\n\n\nPolars\nData cleaning\nVisualization\nBasic machine learning\n\n\n\n\n\nCurrent Teaching Assistant, Brigham Young University-Idaho - Database and Cybersecurity classes for Professor Kory Godfrey - Grade assignments and provide support to students - Facilitate discussions on database management and security\n2025 Hackathon Team Member, Utah State University - Placed 3rd in cybersecurity category - Applied data analysis to security challenges - Developed solutions under tight deadlines\n2022-2024 Full Time Missionary, The Church of Jesus Christ of Latter-day Saints, Salt Lake City, UT - Developed communication and interpersonal skills - Led teams and coordinated community service initiatives\nJun-Aug 2022 Handyman/Laborer, Gyroscope Lab, LLC, Concord, MA - Renovated building for engineering lab - Applied problem-solving skills to structural challenges\n2021-2022 Food Service, Chipotle Mexican Grill, Tallahassee, FL - Managed multiple roles including cashier, food preparation - Ensured quality control and food safety compliance\nJun-Jul 2021 Maintenance Worker, U Club on Woodward, Tallahassee, FL - Performed repairs, appliance installation, and maintenance - Troubleshot facility issues efficiently\n2012-2022 Lawn Maintenance, Private homeowners, Tallahassee, FL - Performed mowing, edging, landscaping services - Managed scheduling and client relationships\n\n\n\n2025 Data Cleaning and Visualization Pipeline - Created automated tools for cleaning datasets - Generated insightful visualizations\n2024 Database Security Implementation - Developed relational database systems with security features\n2024 Machine Learning Classification Models - Built and evaluated basic ML models\n\n\n\n\nDriver’s License"
+    "text": "nathanieleclark@gmail.com | +14482007651"
   },
   {
     "objectID": "resume.html#currently",
     "href": "resume.html#currently",
     "title": "Nathaniel Clark",
-    "section": "",
-    "text": "Studying Data Science at Brigham Young University-Idaho\n\n\nPython programming, data analysis, database management, cybersecurity fundamentals\n\n\n\nMachine learning, data visualization, database design, cybersecurity"
+    "section": "Currently",
+    "text": "Currently\nStudying Data Science at Brigham Young University-Idaho\n\nSpecialized in\nPython programming, data analysis, database management, cybersecurity fundamentals\n\n\nResearch interests\nMachine learning, data visualization, database design, cybersecurity"
   },
   {
     "objectID": "resume.html#education",
     "href": "resume.html#education",
     "title": "Nathaniel Clark",
-    "section": "",
-    "text": "In Progress Brigham Young University-Idaho - Bachelor of Science in Data Science\n2018-2021 Leon County Virtual School, Tallahassee, FL - High School Diploma"
+    "section": "Education",
+    "text": "Education\nIn Progress Brigham Young University-Idaho - Bachelor of Science in Data Science\n2018-2021 Leon County Virtual School, Tallahassee, FL - High School Diploma"
   },
   {
     "objectID": "resume.html#awards",
     "href": "resume.html#awards",
     "title": "Nathaniel Clark",
-    "section": "",
-    "text": "2025 3rd Place, Cybersecurity Category, USU Hackathon, Utah State University"
+    "section": "Awards",
+    "text": "Awards\n2025 3rd Place, Cybersecurity Category, USU Hackathon, Utah State University"
   },
   {
     "objectID": "resume.html#publications",
@@ -358,21 +358,21 @@
   {
     "objectID": "index.html#about-me",
     "href": "index.html#about-me",
-    "title": "My Data Science Portfolio",
+    "title": "Nathaniel Clark",
     "section": "",
     "text": "I’m a Data Science student at Brigham Young University-Idaho with expertise in Python programming, data analysis, database management, and cybersecurity fundamentals. My journey in data science combines technical skills with practical problem-solving abilities."
   },
   {
     "objectID": "index.html#my-focus-areas",
     "href": "index.html#my-focus-areas",
-    "title": "My Data Science Portfolio",
+    "title": "Nathaniel Clark",
     "section": "",
     "text": "Python, R, C#, SQL programming\nData cleaning and visualization\nDatabase design and security\nBasic machine learning\n\n\n\n\n\nMachine Learning & AI — Deep learning, LLMs, predictive modeling\nData Engineering — ETL pipelines, data systems, cloud infrastructure\nData Visualization — Interactive dashboards, storytelling with data\nStatistical Analysis — Hypothesis testing, regression modeling, Bayesian methods\nSoftware Development — Creating data-driven applications and tools"
   },
   {
     "objectID": "index.html#portfolio-overview",
     "href": "index.html#portfolio-overview",
-    "title": "My Data Science Portfolio",
+    "title": "Nathaniel Clark",
     "section": "",
     "text": "This website showcases my projects and technical abilities in various aspects of data science. Browse through the sections to explore my work in data analysis, visualization, machine learning, and more.\nView My Resume Contact Me"
   },
@@ -380,29 +380,29 @@
     "objectID": "resume.html#technical-skills",
     "href": "resume.html#technical-skills",
     "title": "Nathaniel Clark",
-    "section": "",
-    "text": "Python\nR\nC#\nSQL\n\n\n\n\n\nPolars\nData cleaning\nVisualization\nBasic machine learning"
+    "section": "Technical Skills",
+    "text": "Technical Skills\n\nProgramming Languages\n\nPython\nR\nC#\nSQL\n\n\n\nData Science\n\nPolars\nData cleaning\nVisualization\nBasic machine learning"
   },
   {
     "objectID": "resume.html#experience",
     "href": "resume.html#experience",
     "title": "Nathaniel Clark",
-    "section": "",
-    "text": "Current Teaching Assistant, Brigham Young University-Idaho - Database and Cybersecurity classes for Professor Kory Godfrey - Grade assignments and provide support to students - Facilitate discussions on database management and security\n2025 Hackathon Team Member, Utah State University - Placed 3rd in cybersecurity category - Applied data analysis to security challenges - Developed solutions under tight deadlines\n2022-2024 Full Time Missionary, The Church of Jesus Christ of Latter-day Saints, Salt Lake City, UT - Developed communication and interpersonal skills - Led teams and coordinated community service initiatives\nJun-Aug 2022 Handyman/Laborer, Gyroscope Lab, LLC, Concord, MA - Renovated building for engineering lab - Applied problem-solving skills to structural challenges\n2021-2022 Food Service, Chipotle Mexican Grill, Tallahassee, FL - Managed multiple roles including cashier, food preparation - Ensured quality control and food safety compliance\nJun-Jul 2021 Maintenance Worker, U Club on Woodward, Tallahassee, FL - Performed repairs, appliance installation, and maintenance - Troubleshot facility issues efficiently\n2012-2022 Lawn Maintenance, Private homeowners, Tallahassee, FL - Performed mowing, edging, landscaping services - Managed scheduling and client relationships"
+    "section": "Experience",
+    "text": "Experience\nCurrent Teaching Assistant, Brigham Young University-Idaho - Database and Cybersecurity classes for Professor Kory Godfrey - Grade assignments and provide support to students - Facilitate discussions on database management and security\n2025 Hackathon Team Member, Utah State University - Placed 3rd in cybersecurity category - Applied data analysis to security challenges - Developed solutions under tight deadlines\n2022-2024 Full Time Missionary, The Church of Jesus Christ of Latter-day Saints, Salt Lake City, UT - Developed communication and interpersonal skills - Led teams and coordinated community service initiatives\nJun-Aug 2022 Handyman/Laborer, Gyroscope Lab, LLC, Concord, MA - Renovated building for engineering lab - Applied problem-solving skills to structural challenges\n2021-2022 Food Service, Chipotle Mexican Grill, Tallahassee, FL - Managed multiple roles including cashier, food preparation - Ensured quality control and food safety compliance\nJun-Jul 2021 Maintenance Worker, U Club on Woodward, Tallahassee, FL - Performed repairs, appliance installation, and maintenance - Troubleshot facility issues efficiently\n2012-2022 Lawn Maintenance, Private homeowners, Tallahassee, FL - Performed mowing, edging, landscaping services - Managed scheduling and client relationships"
   },
   {
     "objectID": "resume.html#projects",
     "href": "resume.html#projects",
     "title": "Nathaniel Clark",
-    "section": "",
-    "text": "2025 Data Cleaning and Visualization Pipeline - Created automated tools for cleaning datasets - Generated insightful visualizations\n2024 Database Security Implementation - Developed relational database systems with security features\n2024 Machine Learning Classification Models - Built and evaluated basic ML models"
+    "section": "Projects",
+    "text": "Projects\n2025 Data Cleaning and Visualization Pipeline - Created automated tools for cleaning datasets - Generated insightful visualizations\n2024 Database Security Implementation - Developed relational database systems with security features\n2024 Machine Learning Classification Models - Built and evaluated basic ML models"
   },
   {
     "objectID": "resume.html#certifications",
     "href": "resume.html#certifications",
     "title": "Nathaniel Clark",
-    "section": "",
-    "text": "Driver’s License"
+    "section": "Certifications",
+    "text": "Certifications\n\nDriver’s License"
   },
   {
     "objectID": "index.html#welcome",
@@ -410,5 +410,19 @@
     "title": "About me",
     "section": "",
     "text": "I’m a Data Science student at Brigham Young University-Idaho with expertise in Python programming, data analysis, database management, and cybersecurity fundamentals. My journey in data science combines technical skills with practical problem-solving abilities.\n\n\n\n\n\n\n\n\n\n\n{{&lt; fa brands python &gt;}} Python, {{&lt; fa brands r-project &gt;}} R, C#, SQL programming\nData cleaning and visualization\nDatabase design and security\nBasic machine learning\n\n\n\n\n\nMachine Learning & AI — Deep learning, LLMs, predictive modeling\nData Engineering — ETL pipelines, data systems, cloud infrastructure\nData Visualization — Interactive dashboards, storytelling with data\nStatistical Analysis — Hypothesis testing, regression modeling, Bayesian methods\nSoftware Development — Creating data-driven applications and tools\n\n\n\n\n\n\nThis website showcases my projects and technical abilities in various aspects of data science. Browse through the sections to explore my work in data analysis, visualization, machine learning, and more.\n\n{{&lt; fa file-alt &gt;}} View My Resume {{&lt; fa envelope &gt;}} Contact Me"
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "DataClark",
+    "section": "",
+    "text": "Back to top"
+  },
+  {
+    "objectID": "blog/posts/welcome/index.html",
+    "href": "blog/posts/welcome/index.html",
+    "title": "DataClark",
+    "section": "",
+    "text": "Back to top"
   }
 ]

@@ -1,5 +1,5 @@
 ---
-title: "My Data Science Portfolio"
+title: "Nathaniel Clark"
 ---
 
 :::{.column-page}
