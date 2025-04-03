@@ -35,6 +35,13 @@
     "text": "MarkDown Basics"
   },
   {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Data Science Blog",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nWelcome to My Data Science Blog\n\n\n\n\n\n\nnews\n\n\nintroduction\n\n\n\n\n\n\n\n\n\nApr 3, 2025\n\n\nNathaniel Clark\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+  },
+  {
     "objectID": "Story_Telling/project4.html",
     "href": "Story_Telling/project4.html",
     "title": "Client Report - [Insert Project Title]",
@@ -198,28 +205,28 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "My Data Science Portfolio",
+    "title": "Nathaniel Clark",
     "section": "",
     "text": "I’m a Data Science student at Brigham Young University-Idaho with expertise in Python programming, data analysis, database management, and cybersecurity fundamentals. My journey in data science combines technical skills with practical problem-solving abilities.\n\n\n\n\n\n\n\nPython, R, C#, SQL programming\nData cleaning and visualization\nDatabase design and security\nBasic machine learning\n\n\n\n\n\nMachine Learning & AI — Deep learning, LLMs, predictive modeling\nData Engineering — ETL pipelines, data systems, cloud infrastructure\nData Visualization — Interactive dashboards, storytelling with data\nStatistical Analysis — Hypothesis testing, regression modeling, Bayesian methods\nSoftware Development — Creating data-driven applications and tools\n\n\n\n\n\n\nThis website showcases my projects and technical abilities in various aspects of data science. Browse through the sections to explore my work in data analysis, visualization, machine learning, and more.\nView My Resume Contact Me"
   },
   {
     "objectID": "index.html#about-me",
     "href": "index.html#about-me",
-    "title": "My Data Science Portfolio",
+    "title": "Nathaniel Clark",
     "section": "",
     "text": "I’m a Data Science student at Brigham Young University-Idaho with expertise in Python programming, data analysis, database management, and cybersecurity fundamentals. My journey in data science combines technical skills with practical problem-solving abilities."
   },
   {
     "objectID": "index.html#my-focus-areas",
     "href": "index.html#my-focus-areas",
-    "title": "My Data Science Portfolio",
+    "title": "Nathaniel Clark",
     "section": "",
     "text": "Python, R, C#, SQL programming\nData cleaning and visualization\nDatabase design and security\nBasic machine learning\n\n\n\n\n\nMachine Learning & AI — Deep learning, LLMs, predictive modeling\nData Engineering — ETL pipelines, data systems, cloud infrastructure\nData Visualization — Interactive dashboards, storytelling with data\nStatistical Analysis — Hypothesis testing, regression modeling, Bayesian methods\nSoftware Development — Creating data-driven applications and tools"
   },
   {
     "objectID": "index.html#portfolio-overview",
     "href": "index.html#portfolio-overview",
-    "title": "My Data Science Portfolio",
+    "title": "Nathaniel Clark",
     "section": "",
     "text": "This website showcases my projects and technical abilities in various aspects of data science. Browse through the sections to explore my work in data analysis, visualization, machine learning, and more.\nView My Resume Contact Me"
   },
@@ -306,6 +313,27 @@
     "title": "about me",
     "section": "",
     "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "blog/posts/welcome/index.html",
+    "href": "blog/posts/welcome/index.html",
+    "title": "Welcome to My Data Science Blog",
+    "section": "",
+    "text": "This is my first blog post on my data science journey. I’ll be sharing insights, projects, and learnings here."
+  },
+  {
+    "objectID": "blog/posts/welcome/index.html#welcome",
+    "href": "blog/posts/welcome/index.html#welcome",
+    "title": "Welcome to My Data Science Blog",
+    "section": "",
+    "text": "This is my first blog post on my data science journey. I’ll be sharing insights, projects, and learnings here."
+  },
+  {
+    "objectID": "blog/posts/welcome/index.html#what-to-expect",
+    "href": "blog/posts/welcome/index.html#what-to-expect",
+    "title": "Welcome to My Data Science Blog",
+    "section": "What to Expect",
+    "text": "What to Expect\nIn this blog, I’ll cover:\n\nData analysis techniques\nInteresting projects I’m working on\nInsights from the data science field\nTutorials and how-to guides\n\nStay tuned for more content! ```"
   },
   {
     "objectID": "resume.html",
