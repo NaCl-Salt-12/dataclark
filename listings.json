@@ -2,7 +2,7 @@
   {
     "listing": "/blog/index.html",
     "items": [
-      "/blog/posts/intro_polars_1/index.html",
+      "/blog/posts/introduction_to_polars_pt1/index.html",
       "/blog/posts/welcome/index.html"
     ]
   }
