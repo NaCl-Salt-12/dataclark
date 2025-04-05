@@ -4,7 +4,7 @@ subtitle: "Dataframes and Series"
 author: "Nathaniel Clark"
 date: "2025-04-04"
 categories: [polars,python,Introduction to Polars]
-image: "Images/polars.jpg"  # You can add an image file here
+image: "polars.jpg"  # You can add an image file here
 ---
 
 
@@ -16,7 +16,7 @@ I'm writing this post to share what I've learned about Polars and provide an acc
 
 ## What is Polars?
 
-![](Images/polars.jpg)
+![](polars.jpg)
 
 Polars is a modern data manipulation library for Python and Rust designed as a high-performance alternative to pandas, especially for large datasets. It features syntax that's both human-readable and similar to R's data manipulation paradigms. Polars stands out for three main reasons:
 

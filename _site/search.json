@@ -1,452 +1,5 @@
 [
   {
-    "objectID": "competition.html",
-    "href": "competition.html",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "competition.html#title-2-header",
-    "href": "competition.html#title-2-header",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "Cleansing_Projects/project3.html",
-    "href": "Cleansing_Projects/project3.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Cleansing_Projects/project1.html",
-    "href": "Cleansing_Projects/project1.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Cleansing_Projects/project4.html",
-    "href": "Cleansing_Projects/project4.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Full_Stack/project2.html",
-    "href": "Full_Stack/project2.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Full_Stack/project5.html",
-    "href": "Full_Stack/project5.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Competition/project3.html",
-    "href": "Competition/project3.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Competition/project1.html",
-    "href": "Competition/project1.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Competition/project4.html",
-    "href": "Competition/project4.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Cleansing_Exploration/project2.html",
-    "href": "Cleansing_Exploration/project2.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Cleansing_Exploration/project5.html",
-    "href": "Cleansing_Exploration/project5.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "story_telling.html",
-    "href": "story_telling.html",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics",
-    "crumbs": [
-      "Story Telling"
-    ]
-  },
-  {
-    "objectID": "story_telling.html#title-2-header",
-    "href": "story_telling.html#title-2-header",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics",
-    "crumbs": [
-      "Story Telling"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Nathaniel Clark",
-    "section": "",
-    "text": "I’m a Data Science student at Brigham Young University-Idaho with expertise in Python programming, data analysis, database management, and cybersecurity fundamentals. My journey in data science combines technical skills with practical problem-solving abilities.\n\n\n\n\n\n\n\nPython, R, C#, SQL programming\nData cleaning and visualization\nDatabase design and security\nBasic machine learning\n\n\n\n\n\nMachine Learning & AI — Deep learning, LLMs, predictive modeling\nData Engineering — ETL pipelines, data systems, cloud infrastructure\nData Visualization — Interactive dashboards, storytelling with data\nStatistical Analysis — Hypothesis testing, regression modeling, Bayesian methods\nSoftware Development — Creating data-driven applications and tools\n\n\n\n\n\n\n\n\n\n2025-04-03\n\n\n\n\n\n\nThis website showcases my projects and technical abilities in various aspects of data science. Browse through the sections to explore my work in data analysis, visualization, machine learning, and more.\nView My Resume Contact Me"
-  },
-  {
-    "objectID": "index.html#title-2-header",
-    "href": "index.html#title-2-header",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "Machine_Learning/project2.html",
-    "href": "Machine_Learning/project2.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Machine_Learning/project5.html",
-    "href": "Machine_Learning/project5.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "cleansing.html",
-    "href": "cleansing.html",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "cleansing.html#title-2-header",
-    "href": "cleansing.html#title-2-header",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "exploration.html",
-    "href": "exploration.html",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "exploration.html#title-2-header",
-    "href": "exploration.html#title-2-header",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "Story_Telling/project2.html",
-    "href": "Story_Telling/project2.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Story_Telling/project5.html",
-    "href": "Story_Telling/project5.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Story_Telling/project4.html",
-    "href": "Story_Telling/project4.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Story_Telling/project1.html",
-    "href": "Story_Telling/project1.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Story_Telling/project3.html",
-    "href": "Story_Telling/project3.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "resume.html",
-    "href": "resume.html",
-    "title": "Nathaniel Clark",
-    "section": "",
-    "text": "nathanieleclark@gmail.com | +14482007651"
-  },
-  {
-    "objectID": "resume.html#currently",
-    "href": "resume.html#currently",
-    "title": "Nathaniel Clark",
-    "section": "Currently",
-    "text": "Currently\nStudying Data Science at Brigham Young University-Idaho\n\nSpecialized in\nPython programming, data analysis, database management, cybersecurity fundamentals\n\n\nResearch interests\nMachine learning, data visualization, database design, cybersecurity"
-  },
-  {
-    "objectID": "resume.html#education",
-    "href": "resume.html#education",
-    "title": "Nathaniel Clark",
-    "section": "Education",
-    "text": "Education\nIn Progress Brigham Young University-Idaho - Bachelor of Science in Data Science\n2018-2021 Leon County Virtual School, Tallahassee, FL - High School Diploma"
-  },
-  {
-    "objectID": "resume.html#awards",
-    "href": "resume.html#awards",
-    "title": "Nathaniel Clark",
-    "section": "Awards",
-    "text": "Awards\n2025 3rd Place, Cybersecurity Category, USU Hackathon, Utah State University"
-  },
-  {
-    "objectID": "resume.html#publications",
-    "href": "resume.html#publications",
-    "title": "Isaac Newtons’s CV",
-    "section": "",
-    "text": "1669 Newton Sir I, De analysi per æquationes numero terminorum infinitas.\n1669 Lectiones opticæ.\netc. etc. etc.\n\n\n\n2012 Infinitesimal calculus for solutions to physics problems, SMBC patent 001"
-  },
-  {
-    "objectID": "resume.html#occupation",
-    "href": "resume.html#occupation",
-    "title": "Isaac Newtons’s CV",
-    "section": "",
-    "text": "1600 Royal Mint, London\n\nWarden\nMinted coins\n\n1600 Lucasian professor of Mathematics, Cambridge University"
-  },
-  {
-    "objectID": "Machine_Learning/project4.html",
-    "href": "Machine_Learning/project4.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Machine_Learning/project1.html",
-    "href": "Machine_Learning/project1.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Machine_Learning/project3.html",
-    "href": "Machine_Learning/project3.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "ml.html",
-    "href": "ml.html",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "ml.html#title-2-header",
-    "href": "ml.html#title-2-header",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "Cleansing_Exploration/project4.html",
-    "href": "Cleansing_Exploration/project4.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Cleansing_Exploration/project1.html",
-    "href": "Cleansing_Exploration/project1.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Cleansing_Exploration/project3.html",
-    "href": "Cleansing_Exploration/project3.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Competition/project5.html",
-    "href": "Competition/project5.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Competition/project2.html",
-    "href": "Competition/project2.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Full_Stack/project4.html",
-    "href": "Full_Stack/project4.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Full_Stack/project1.html",
-    "href": "Full_Stack/project1.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Full_Stack/project3.html",
-    "href": "Full_Stack/project3.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Cleansing_Projects/project5.html",
-    "href": "Cleansing_Projects/project5.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Cleansing_Projects/project2.html",
-    "href": "Cleansing_Projects/project2.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "full_stack.html",
-    "href": "full_stack.html",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "full_stack.html#title-2-header",
-    "href": "full_stack.html#title-2-header",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "index.html#about-me",
-    "href": "index.html#about-me",
-    "title": "Nathaniel Clark",
-    "section": "",
-    "text": "I’m a Data Science student at Brigham Young University-Idaho with expertise in Python programming, data analysis, database management, and cybersecurity fundamentals. My journey in data science combines technical skills with practical problem-solving abilities."
-  },
-  {
-    "objectID": "index.html#my-focus-areas",
-    "href": "index.html#my-focus-areas",
-    "title": "Nathaniel Clark",
-    "section": "",
-    "text": "Python, R, C#, SQL programming\nData cleaning and visualization\nDatabase design and security\nBasic machine learning\n\n\n\n\n\nMachine Learning & AI — Deep learning, LLMs, predictive modeling\nData Engineering — ETL pipelines, data systems, cloud infrastructure\nData Visualization — Interactive dashboards, storytelling with data\nStatistical Analysis — Hypothesis testing, regression modeling, Bayesian methods\nSoftware Development — Creating data-driven applications and tools"
-  },
-  {
-    "objectID": "index.html#portfolio-overview",
-    "href": "index.html#portfolio-overview",
-    "title": "Nathaniel Clark",
-    "section": "",
-    "text": "This website showcases my projects and technical abilities in various aspects of data science. Browse through the sections to explore my work in data analysis, visualization, machine learning, and more.\nView My Resume Contact Me"
-  },
-  {
-    "objectID": "resume.html#technical-skills",
-    "href": "resume.html#technical-skills",
-    "title": "Nathaniel Clark",
-    "section": "Technical Skills",
-    "text": "Technical Skills\n\nProgramming Languages\n\nPython\nR\nC#\nSQL\n\n\n\nData Science\n\nPolars\nData cleaning\nVisualization\nBasic machine learning"
-  },
-  {
-    "objectID": "resume.html#experience",
-    "href": "resume.html#experience",
-    "title": "Nathaniel Clark",
-    "section": "Experience",
-    "text": "Experience\nCurrent Teaching Assistant, Brigham Young University-Idaho - Database and Cybersecurity classes for Professor Kory Godfrey - Grade assignments and provide support to students - Facilitate discussions on database management and security\n2025 Hackathon Team Member, Utah State University - Placed 3rd in cybersecurity category - Applied data analysis to security challenges - Developed solutions under tight deadlines\n2022-2024 Full Time Missionary, The Church of Jesus Christ of Latter-day Saints, Salt Lake City, UT - Developed communication and interpersonal skills - Led teams and coordinated community service initiatives\nJun-Aug 2022 Handyman/Laborer, Gyroscope Lab, LLC, Concord, MA - Renovated building for engineering lab - Applied problem-solving skills to structural challenges\n2021-2022 Food Service, Chipotle Mexican Grill, Tallahassee, FL - Managed multiple roles including cashier, food preparation - Ensured quality control and food safety compliance\nJun-Jul 2021 Maintenance Worker, U Club on Woodward, Tallahassee, FL - Performed repairs, appliance installation, and maintenance - Troubleshot facility issues efficiently\n2012-2022 Lawn Maintenance, Private homeowners, Tallahassee, FL - Performed mowing, edging, landscaping services - Managed scheduling and client relationships"
-  },
-  {
-    "objectID": "resume.html#projects",
-    "href": "resume.html#projects",
-    "title": "Nathaniel Clark",
-    "section": "Projects",
-    "text": "Projects\n2025 Data Cleaning and Visualization Pipeline - Created automated tools for cleaning datasets - Generated insightful visualizations\n2024 Database Security Implementation - Developed relational database systems with security features\n2024 Machine Learning Classification Models - Built and evaluated basic ML models"
-  },
-  {
-    "objectID": "resume.html#certifications",
-    "href": "resume.html#certifications",
-    "title": "Nathaniel Clark",
-    "section": "Certifications",
-    "text": "Certifications\n\nDriver’s License"
-  },
-  {
-    "objectID": "index.html#welcome",
-    "href": "index.html#welcome",
-    "title": "About me",
-    "section": "",
-    "text": "I’m a Data Science student at Brigham Young University-Idaho with expertise in Python programming, data analysis, database management, and cybersecurity fundamentals. My journey in data science combines technical skills with practical problem-solving abilities.\n\n\n\n\n\n\n\n\n\n\n{{&lt; fa brands python &gt;}} Python, {{&lt; fa brands r-project &gt;}} R, C#, SQL programming\nData cleaning and visualization\nDatabase design and security\nBasic machine learning\n\n\n\n\n\nMachine Learning & AI — Deep learning, LLMs, predictive modeling\nData Engineering — ETL pipelines, data systems, cloud infrastructure\nData Visualization — Interactive dashboards, storytelling with data\nStatistical Analysis — Hypothesis testing, regression modeling, Bayesian methods\nSoftware Development — Creating data-driven applications and tools\n\n\n\n\n\n\nThis website showcases my projects and technical abilities in various aspects of data science. Browse through the sections to explore my work in data analysis, visualization, machine learning, and more.\n\n{{&lt; fa file-alt &gt;}} View My Resume {{&lt; fa envelope &gt;}} Contact Me"
-  },
-  {
-    "objectID": "blog/index.html",
-    "href": "blog/index.html",
-    "title": "Data Science Blog",
-    "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to Polars Pt. 1\nDataframes and Series\n\n \n\n\npolars\n\npython\n\nIntroduction to Polars\n\n\n \n\n\n\n\n\nApr 4, 2025\nNathaniel Clark\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome to My Data Science Blog\n\n\n \n\n\nnews\n\nintroduction\n\n\n \n\n\n\n\n\nApr 3, 2025\nNathaniel Clark\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
-  },
-  {
-    "objectID": "blog/posts/welcome/index.html",
-    "href": "blog/posts/welcome/index.html",
-    "title": "Welcome to My Data Science Blog",
-    "section": "",
-    "text": "This is my first blog post on my data science journey. I’ll be sharing insights, projects, and learnings here."
-  },
-  {
-    "objectID": "blog/posts/welcome/polars-blog.html",
-    "href": "blog/posts/welcome/polars-blog.html",
-    "title": "Introduction to Polars Pt. 1",
-    "section": "",
-    "text": "Recently I took a data science course that heavily utilized pandas for data manipulation in Python. Being curious about emerging technologies, I asked my instructor if I could use Polars instead. He agreed but cautioned that he wouldn’t have supporting materials for my alternative choice.\nThroughout the course, I discovered a lack of beginner-friendly Polars resources for those new to data science. I primarily relied on official documentation, which presented some challenges along the way. Despite these obstacles, I persevered, learned a great deal, and successfully completed the class.\nI’m writing this post to share what I’ve learned about Polars and provide an accessible introduction for newcomers to data manipulation libraries, especially those with limited prior experience in the field."
-  },
-  {
-    "objectID": "blog/posts/welcome/polars-blog.html#what-is-polars",
-    "href": "blog/posts/welcome/polars-blog.html#what-is-polars",
-    "title": "Introduction to Polars Pt. 1",
-    "section": "What is Polars?",
-    "text": "What is Polars?\n\nPolars is a modern data manipulation library for Python and Rust designed as a high-performance alternative to pandas, especially for large datasets. It features syntax that’s both human-readable and similar to R’s data manipulation paradigms. Polars stands out for three main reasons:\n\nPerformance: Built in Rust, Polars delivers exceptional speed through parallel processing by default and a sophisticated query optimizer that analyzes and improves execution plans.\nMemory efficiency: Using a columnar memory format rather than row-based storage, Polars efficiently handles larger-than-memory datasets and performs operations with minimal memory overhead.\nLazy evaluation: Polars supports both eager and lazy execution modes. The lazy API builds optimized query plans before execution, similar to database query planners, resulting in more efficient data processing pipelines."
-  },
-  {
-    "objectID": "blog/posts/welcome/polars-blog.html#dataframes-and-series",
-    "href": "blog/posts/welcome/polars-blog.html#dataframes-and-series",
-    "title": "Introduction to Polars Pt. 1",
-    "section": "DataFrames and Series",
-    "text": "DataFrames and Series\n\nSeries\nThe two most common data structures in Polars are DataFrames and Series. Series are one-dimensional data structures where all elements share the same datatype. Think of a Series as a single column in a table - it’s essentially a named array of data.\nPolars supports a variety of data types that fall into these major categories:\n\nNumeric: Signed integers, unsigned integers, floating point numbers, and decimals\nNested: Lists, structs, and arrays for handling complex data\nTemporal: Dates, datetimes,and times for working with time-based data\nMiscellaneous: Strings, binary data, Booleans, categoricals, enums, and objects\n\nCreating a Series is straightforward with the following syntax:\npl.Series(name, values_list)\nWhere “name” is the label for your Series and “values_list” contains the data. Here’s a simple example:\n\nimport polars as pl\ns = pl.Series(\"example\", [1, 2, 3, 4, 5])\ns\n\n\nshape: (5,)\n\n\n\nexample\n\n\ni64\n\n\n\n\n1\n\n\n2\n\n\n3\n\n\n4\n\n\n5\n\n\n\n\n\n\n\n\nDataframes\nDataFrames are tabular data structures (rows and columns) composed of multiple Series, with each column representing a single Series. These are the workhorses of data analysis and what you’ll use most frequently.\nWith DataFrames, you can write powerful queries to filter, transform, aggregate, and reshape your data efficiently.\nDataFrames can be created in several ways:\n\nFrom a dictionary of sequences (lists, arrays)\nWith explicit schema specification\nFrom a sequence of (name, dtype) pairs\nFrom NumPy arrays\nFrom a list of lists (row-oriented data)\nBy converting pandas DataFrames\nBy importing existing tabular data from CSVs, JSON, SQL, Parquet files, etc.\n\nIn real-world environments, you’ll typically work with preexisting data, though understanding various creation methods is valuable. We’ll cover data import techniques later, but for now, here’s an example of a DataFrame created from a dictionary of lists:\n\n# Create a DataFrame from a dictionary of lists\ndf = pl.DataFrame({\n    \"name\": [\"Alice\", \"Bob\", \"Charlie\", \"David\"],\n    \"age\": [25, 30, 35, 40],\n    \"city\": [\"New York\", \"Boston\", \"Chicago\", \"Seattle\"],\n    \"salary\": [75000, 85000, 90000, 95000]\n})\n\ndf\n\n\nshape: (4, 4)\n\n\n\nname\nage\ncity\nsalary\n\n\nstr\ni64\nstr\ni64\n\n\n\n\n\"Alice\"\n25\n\"New York\"\n75000\n\n\n\"Bob\"\n30\n\"Boston\"\n85000\n\n\n\"Charlie\"\n35\n\"Chicago\"\n90000\n\n\n\"David\"\n40\n\"Seattle\"\n95000"
-  },
-  {
     "objectID": "website_env/lib/python3.13/site-packages/seaborn-0.13.2.dist-info/LICENSE.html",
     "href": "website_env/lib/python3.13/site-packages/seaborn-0.13.2.dist-info/LICENSE.html",
     "title": "DataClark",
@@ -489,11 +42,18 @@
     "text": "BSD 3-Clause License\nCopyright (c) 2009-2012, Brian Granger, Min Ragan-Kelley\nAll rights reserved.\nRedistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:\n\nRedistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.\nRedistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.\nNeither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n\n\n\n Back to top"
   },
   {
-    "objectID": "index.html#recent-blog-posts",
-    "href": "index.html#recent-blog-posts",
-    "title": "Nathaniel Clark",
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Data Science Blog",
     "section": "",
-    "text": "2025-04-03"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to Polars Pt. 1\nDataframes and Series\n\n \n\n\npolars\n\npython\n\nIntroduction to Polars\n\n\n \n\n\n\n\n\nApr 4, 2025\nNathaniel Clark\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome to My Data Science Blog\n\n\n \n\n\nnews\n\nintroduction\n\n\n \n\n\n\n\n\nApr 3, 2025\nNathaniel Clark\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+  },
+  {
+    "objectID": "blog/posts/welcome/index.html",
+    "href": "blog/posts/welcome/index.html",
+    "title": "Welcome to My Data Science Blog",
+    "section": "",
+    "text": "This is my first blog post on my data science journey. I’ll be sharing insights, projects, and learnings here."
   },
   {
     "objectID": "blog/posts/welcome/index.html#welcome",
@@ -508,6 +68,412 @@
     "title": "Welcome to My Data Science Blog",
     "section": "What to Expect",
     "text": "What to Expect\nIn this blog, I’ll cover:\n\nData analysis techniques\nInteresting projects I’m working on\nInsights from the data science field\nTutorials and how-to guides\n\nStay tuned for more content! ```"
+  },
+  {
+    "objectID": "resume.html",
+    "href": "resume.html",
+    "title": "Nathaniel Clark",
+    "section": "",
+    "text": "nathanieleclark@gmail.com | +14482007651"
+  },
+  {
+    "objectID": "resume.html#currently",
+    "href": "resume.html#currently",
+    "title": "Nathaniel Clark",
+    "section": "Currently",
+    "text": "Currently\nStudying Data Science at Brigham Young University-Idaho\n\nSpecialized in\nPython programming, data analysis, database management, cybersecurity fundamentals\n\n\nResearch interests\nMachine learning, data visualization, database design, cybersecurity"
+  },
+  {
+    "objectID": "resume.html#education",
+    "href": "resume.html#education",
+    "title": "Nathaniel Clark",
+    "section": "Education",
+    "text": "Education\nIn Progress Brigham Young University-Idaho - Bachelor of Science in Data Science\n2018-2021 Leon County Virtual School, Tallahassee, FL - High School Diploma"
+  },
+  {
+    "objectID": "resume.html#awards",
+    "href": "resume.html#awards",
+    "title": "Nathaniel Clark",
+    "section": "Awards",
+    "text": "Awards\n2025 3rd Place, Cybersecurity Category, USU Hackathon, Utah State University"
+  },
+  {
+    "objectID": "resume.html#technical-skills",
+    "href": "resume.html#technical-skills",
+    "title": "Nathaniel Clark",
+    "section": "Technical Skills",
+    "text": "Technical Skills\n\nProgramming Languages\n\nPython\nR\nC#\nSQL\n\n\n\nData Science\n\nPolars\nData cleaning\nVisualization\nBasic machine learning"
+  },
+  {
+    "objectID": "resume.html#experience",
+    "href": "resume.html#experience",
+    "title": "Nathaniel Clark",
+    "section": "Experience",
+    "text": "Experience\nCurrent Teaching Assistant, Brigham Young University-Idaho - Database and Cybersecurity classes for Professor Kory Godfrey - Grade assignments and provide support to students - Facilitate discussions on database management and security\n2025 Hackathon Team Member, Utah State University - Placed 3rd in cybersecurity category - Applied data analysis to security challenges - Developed solutions under tight deadlines\n2022-2024 Full Time Missionary, The Church of Jesus Christ of Latter-day Saints, Salt Lake City, UT - Developed communication and interpersonal skills - Led teams and coordinated community service initiatives\nJun-Aug 2022 Handyman/Laborer, Gyroscope Lab, LLC, Concord, MA - Renovated building for engineering lab - Applied problem-solving skills to structural challenges\n2021-2022 Food Service, Chipotle Mexican Grill, Tallahassee, FL - Managed multiple roles including cashier, food preparation - Ensured quality control and food safety compliance\nJun-Jul 2021 Maintenance Worker, U Club on Woodward, Tallahassee, FL - Performed repairs, appliance installation, and maintenance - Troubleshot facility issues efficiently\n2012-2022 Lawn Maintenance, Private homeowners, Tallahassee, FL - Performed mowing, edging, landscaping services - Managed scheduling and client relationships"
+  },
+  {
+    "objectID": "resume.html#projects",
+    "href": "resume.html#projects",
+    "title": "Nathaniel Clark",
+    "section": "Projects",
+    "text": "Projects\n2025 Data Cleaning and Visualization Pipeline - Created automated tools for cleaning datasets - Generated insightful visualizations\n2024 Database Security Implementation - Developed relational database systems with security features\n2024 Machine Learning Classification Models - Built and evaluated basic ML models"
+  },
+  {
+    "objectID": "resume.html#certifications",
+    "href": "resume.html#certifications",
+    "title": "Nathaniel Clark",
+    "section": "Certifications",
+    "text": "Certifications\n\nDriver’s License"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Nathaniel Clark",
+    "section": "",
+    "text": "I’m a Data Science student at Brigham Young University-Idaho with expertise in Python programming, data analysis, database management, and cybersecurity fundamentals. My journey in data science combines technical skills with practical problem-solving abilities.\n\n\n\n\n\n\n\nPython, R, C#, SQL programming\nData cleaning and visualization\nDatabase design and security\nBasic machine learning\n\n\n\n\n\nMachine Learning & AI — Deep learning, LLMs, predictive modeling\nData Engineering — ETL pipelines, data systems, cloud infrastructure\nData Visualization — Interactive dashboards, storytelling with data\nStatistical Analysis — Hypothesis testing, regression modeling, Bayesian methods\nSoftware Development — Creating data-driven applications and tools\n\n\n\n\n\n\n\n\n\n\n2025-04-04\n\n\n\n\n2025-04-03\n\n\n\n\n\n\n\nThis website showcases my projects and technical abilities in various aspects of data science. Browse through the sections to explore my work in data analysis, visualization, machine learning, and more.\nView My Resume Contact Me"
+  },
+  {
+    "objectID": "index.html#about-me",
+    "href": "index.html#about-me",
+    "title": "Nathaniel Clark",
+    "section": "",
+    "text": "I’m a Data Science student at Brigham Young University-Idaho with expertise in Python programming, data analysis, database management, and cybersecurity fundamentals. My journey in data science combines technical skills with practical problem-solving abilities."
+  },
+  {
+    "objectID": "index.html#my-focus-areas",
+    "href": "index.html#my-focus-areas",
+    "title": "Nathaniel Clark",
+    "section": "",
+    "text": "Python, R, C#, SQL programming\nData cleaning and visualization\nDatabase design and security\nBasic machine learning\n\n\n\n\n\nMachine Learning & AI — Deep learning, LLMs, predictive modeling\nData Engineering — ETL pipelines, data systems, cloud infrastructure\nData Visualization — Interactive dashboards, storytelling with data\nStatistical Analysis — Hypothesis testing, regression modeling, Bayesian methods\nSoftware Development — Creating data-driven applications and tools"
+  },
+  {
+    "objectID": "index.html#recent-blog-posts",
+    "href": "index.html#recent-blog-posts",
+    "title": "Nathaniel Clark",
+    "section": "",
+    "text": "2025-04-04\n\n\n\n\n2025-04-03"
+  },
+  {
+    "objectID": "index.html#portfolio-overview",
+    "href": "index.html#portfolio-overview",
+    "title": "Nathaniel Clark",
+    "section": "",
+    "text": "This website showcases my projects and technical abilities in various aspects of data science. Browse through the sections to explore my work in data analysis, visualization, machine learning, and more.\nView My Resume Contact Me"
+  },
+  {
+    "objectID": "exploration.html",
+    "href": "exploration.html",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "exploration.html#title-2-header",
+    "href": "exploration.html#title-2-header",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "cleansing.html",
+    "href": "cleansing.html",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "cleansing.html#title-2-header",
+    "href": "cleansing.html#title-2-header",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "Story_Telling/project4.html",
+    "href": "Story_Telling/project4.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Story_Telling/project2.html",
+    "href": "Story_Telling/project2.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Machine_Learning/project5.html",
+    "href": "Machine_Learning/project5.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Machine_Learning/project3.html",
+    "href": "Machine_Learning/project3.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Machine_Learning/project1.html",
+    "href": "Machine_Learning/project1.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Full_Stack/project4.html",
+    "href": "Full_Stack/project4.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Full_Stack/project2.html",
+    "href": "Full_Stack/project2.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Competition/project5.html",
+    "href": "Competition/project5.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Competition/project3.html",
+    "href": "Competition/project3.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Competition/project1.html",
+    "href": "Competition/project1.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Cleansing_Projects/project4.html",
+    "href": "Cleansing_Projects/project4.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Cleansing_Projects/project2.html",
+    "href": "Cleansing_Projects/project2.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Cleansing_Exploration/project5.html",
+    "href": "Cleansing_Exploration/project5.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Cleansing_Exploration/project3.html",
+    "href": "Cleansing_Exploration/project3.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Cleansing_Exploration/project1.html",
+    "href": "Cleansing_Exploration/project1.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Cleansing_Exploration/project2.html",
+    "href": "Cleansing_Exploration/project2.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Cleansing_Exploration/project4.html",
+    "href": "Cleansing_Exploration/project4.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Cleansing_Projects/project1.html",
+    "href": "Cleansing_Projects/project1.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Cleansing_Projects/project3.html",
+    "href": "Cleansing_Projects/project3.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Cleansing_Projects/project5.html",
+    "href": "Cleansing_Projects/project5.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Competition/project2.html",
+    "href": "Competition/project2.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Competition/project4.html",
+    "href": "Competition/project4.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Full_Stack/project1.html",
+    "href": "Full_Stack/project1.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Full_Stack/project3.html",
+    "href": "Full_Stack/project3.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Full_Stack/project5.html",
+    "href": "Full_Stack/project5.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Machine_Learning/project2.html",
+    "href": "Machine_Learning/project2.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Machine_Learning/project4.html",
+    "href": "Machine_Learning/project4.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Story_Telling/project1.html",
+    "href": "Story_Telling/project1.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Story_Telling/project3.html",
+    "href": "Story_Telling/project3.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Story_Telling/project5.html",
+    "href": "Story_Telling/project5.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "competition.html",
+    "href": "competition.html",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "competition.html#title-2-header",
+    "href": "competition.html#title-2-header",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "full_stack.html",
+    "href": "full_stack.html",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "full_stack.html#title-2-header",
+    "href": "full_stack.html#title-2-header",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "ml.html",
+    "href": "ml.html",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "ml.html#title-2-header",
+    "href": "ml.html#title-2-header",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "story_telling.html",
+    "href": "story_telling.html",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "story_telling.html#title-2-header",
+    "href": "story_telling.html#title-2-header",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "blog/posts/intro_polars_1/index.html",
+    "href": "blog/posts/intro_polars_1/index.html",
+    "title": "Introduction to Polars Pt. 1",
+    "section": "",
+    "text": "Recently I took a data science course that heavily utilized pandas for data manipulation in Python. Being curious about emerging technologies, I asked my instructor if I could use Polars instead. He agreed but cautioned that he wouldn’t have supporting materials for my alternative choice.\nThroughout the course, I discovered a lack of beginner-friendly Polars resources for those new to data science. I primarily relied on official documentation, which presented some challenges along the way. Despite these obstacles, I persevered, learned a great deal, and successfully completed the class.\nI’m writing this post to share what I’ve learned about Polars and provide an accessible introduction for newcomers to data manipulation libraries, especially those with limited prior experience in the field."
+  },
+  {
+    "objectID": "blog/posts/intro_polars_1/index.html#what-is-polars",
+    "href": "blog/posts/intro_polars_1/index.html#what-is-polars",
+    "title": "Introduction to Polars Pt. 1",
+    "section": "What is Polars?",
+    "text": "What is Polars?\n\nPolars is a modern data manipulation library for Python and Rust designed as a high-performance alternative to pandas, especially for large datasets. It features syntax that’s both human-readable and similar to R’s data manipulation paradigms. Polars stands out for three main reasons:\n\nPerformance: Built in Rust, Polars delivers exceptional speed through parallel processing by default and a sophisticated query optimizer that analyzes and improves execution plans.\nMemory efficiency: Using a columnar memory format rather than row-based storage, Polars efficiently handles larger-than-memory datasets and performs operations with minimal memory overhead.\nLazy evaluation: Polars supports both eager and lazy execution modes. The lazy API builds optimized query plans before execution, similar to database query planners, resulting in more efficient data processing pipelines."
+  },
+  {
+    "objectID": "blog/posts/intro_polars_1/index.html#dataframes-and-series",
+    "href": "blog/posts/intro_polars_1/index.html#dataframes-and-series",
+    "title": "Introduction to Polars Pt. 1",
+    "section": "DataFrames and Series",
+    "text": "DataFrames and Series\n\nSeries\nThe two most common data structures in Polars are DataFrames and Series. Series are one-dimensional data structures where all elements share the same datatype. Think of a Series as a single column in a table - it’s essentially a named array of data.\nPolars supports a variety of data types that fall into these major categories:\n\nNumeric: Signed integers, unsigned integers, floating point numbers, and decimals\nNested: Lists, structs, and arrays for handling complex data\nTemporal: Dates, datetimes,and times for working with time-based data\nMiscellaneous: Strings, binary data, Booleans, categoricals, enums, and objects\n\nCreating a Series is straightforward with the following syntax:\npl.Series(name, values_list)\nWhere “name” is the label for your Series and “values_list” contains the data. Here’s a simple example:\n\nimport polars as pl\ns = pl.Series(\"example\", [1, 2, 3, 4, 5])\ns\n\n\nshape: (5,)\n\n\n\nexample\n\n\ni64\n\n\n\n\n1\n\n\n2\n\n\n3\n\n\n4\n\n\n5\n\n\n\n\n\n\n\n\nDataframes\nDataFrames are tabular data structures (rows and columns) composed of multiple Series, with each column representing a single Series. These are the workhorses of data analysis and what you’ll use most frequently.\nWith DataFrames, you can write powerful queries to filter, transform, aggregate, and reshape your data efficiently.\nDataFrames can be created in several ways:\n\nFrom a dictionary of sequences (lists, arrays)\nWith explicit schema specification\nFrom a sequence of (name, dtype) pairs\nFrom NumPy arrays\nFrom a list of lists (row-oriented data)\nBy converting pandas DataFrames\nBy importing existing tabular data from CSVs, JSON, SQL, Parquet files, etc.\n\nIn real-world environments, you’ll typically work with preexisting data, though understanding various creation methods is valuable. We’ll cover data import techniques later, but for now, here’s an example of a DataFrame created from a dictionary of lists:\n\n# Create a DataFrame from a dictionary of lists\ndf = pl.DataFrame({\n    \"name\": [\"Alice\", \"Bob\", \"Charlie\", \"David\"],\n    \"age\": [25, 30, 35, 40],\n    \"city\": [\"New York\", \"Boston\", \"Chicago\", \"Seattle\"],\n    \"salary\": [75000, 85000, 90000, 95000]\n})\n\ndf\n\n\nshape: (4, 4)\n\n\n\nname\nage\ncity\nsalary\n\n\nstr\ni64\nstr\ni64\n\n\n\n\n\"Alice\"\n25\n\"New York\"\n75000\n\n\n\"Bob\"\n30\n\"Boston\"\n85000\n\n\n\"Charlie\"\n35\n\"Chicago\"\n90000\n\n\n\"David\"\n40\n\"Seattle\"\n95000"
   },
   {
     "objectID": "website_env/lib/python3.13/site-packages/soupsieve-2.6.dist-info/licenses/LICENSE.html",

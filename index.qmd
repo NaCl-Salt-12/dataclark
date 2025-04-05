@@ -96,10 +96,12 @@ for i, post in enumerate(posts[:3]):
     description = post.get('description', '')
     path = post.get('path', '')
     
-    # Create a relative path from the post path
-    rel_path = os.path.relpath(path, start=os.path.dirname(os.path.abspath('index.qmd')))
+    # Create a proper URL path for Quarto
+    # Extract the post directory name from the path
+    post_dir_name = Path(path).parent.name
+    post_url = f"blog/posts/{post_dir_name}/"
     
-    print(f"### [{title}]({rel_path})\n")
+    print(f"### [{title}]({post_url})\n")
     if date:
         print(f"**{date}**\n")
     if description:
