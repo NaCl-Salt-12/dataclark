@@ -89,20 +89,4 @@ Machine learning, data visualization, database design, cybersecurity
 
 ## Projects
 
-`2025`
-**Data Cleaning and Visualization Pipeline**
-- Created automated tools for cleaning datasets
-- Generated insightful visualizations
-
-`2024`
-**Database Security Implementation**
-- Developed relational database systems with security features
-
-`2024`
-**Machine Learning Classification Models**
-- Built and evaluated basic ML models
-
-## Certifications
-- Driver's License
-
 <!-- Last updated: April 2025 -->
