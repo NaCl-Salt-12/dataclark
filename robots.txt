@@ -1,1 +1,1 @@
-Sitemap: https://NaCl-Salt-12.github.io/datascience_portfolio/sitemap.xml
+Sitemap: https://NaCl-Salt-12.github.io/dataclark/sitemap.xml
