@@ -3,25 +3,39 @@ title: "Nathaniel Clark"
 ---
 
 :::{.column-page}
-![](Images/banner.jpg)
-
-## About Me
+::: {.grid .gx-5 .gy-3 .align-items-center}
+::: {.g-col-12 .g-col-md-7}
+## About Me {.mb-3}
 
 I'm a Data Science student at Brigham Young University-Idaho with expertise in Python programming, data analysis, database management, and cybersecurity fundamentals. My journey in data science combines technical skills with practical problem-solving abilities.
 
-## My Focus Areas
-
-::: {.grid}
-::: {.g-col-6}
-### Technical Skills
-- Python, R, C#, SQL programming
-- Data cleaning and visualization
-- Database design and security
-- Basic machine learning
+::: {.mt-4}
+[<i class="bi bi-github"></i> GitHub](https://github.com/NaCl-Salt-12){.btn .btn-sm .btn-outline-dark .me-2}
+[<i class="bi bi-linkedin"></i> LinkedIn](https://www.linkedin.com/in/nathaniel-e-clark/){.btn .btn-sm .btn-outline-dark}
+:::
 :::
 
-::: {.g-col-6}
-### Professional Interests
+::: {.g-col-12 .g-col-md-5 .text-center}
+![](Images/profile3.jpg){.img-fluid width="300px"}
+:::
+:::
+:::
+
+## My Focus Areas {.mt-5 .mb-4}
+
+::: {.grid .gx-5 .gy-4}
+::: {.g-col-12 .g-col-md-6}
+### <i class="bi bi-code-slash"></i> Technical Skills {.mb-3}
+
+- **Programming Languages:** Python, R, C#, SQL
+- **Data Analysis:** Cleaning, transformation, visualization
+- **Database Systems:** Design, management, security protocols
+- **Machine Learning:** Classification, regression, clustering
+:::
+
+::: {.g-col-12 .g-col-md-6}
+### <i class="bi bi-lightbulb"></i> Professional Interests {.mb-3}
+
 - **Machine Learning & AI** — Deep learning, LLMs, predictive modeling
 - **Data Engineering** — ETL pipelines, data systems, cloud infrastructure
 - **Data Visualization** — Interactive dashboards, storytelling with data
@@ -30,10 +44,10 @@ I'm a Data Science student at Brigham Young University-Idaho with expertise in P
 :::
 :::
 
-## Recent Blog Posts
+## <i class="bi bi-journal-text"></i> Recent Blog Posts {.mt-5 .mb-4}
 
-::: {.grid}
-::: {.g-col-12}
+::: {.grid .gx-5 .gy-4}
+::: {.g-col-12 .shadow-sm .p-3 .border .rounded}
 ```{python}
 #| echo: false
 #| output: asis
