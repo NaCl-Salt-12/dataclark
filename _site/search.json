@@ -108,7 +108,7 @@
     "href": "index.html",
     "title": "Nathaniel Clark",
     "section": "",
-    "text": "I’m a Data Science student at Brigham Young University-Idaho with expertise in Python programming, data analysis, database management, and cybersecurity fundamentals. My journey in data science combines technical skills with practical problem-solving abilities.\n\n\n\n\n\n\n\nPython, R, C#, SQL programming\nData cleaning and visualization\nDatabase design and security\nBasic machine learning\n\n\n\n\n\nMachine Learning & AI — Deep learning, LLMs, predictive modeling\nData Engineering — ETL pipelines, data systems, cloud infrastructure\nData Visualization — Interactive dashboards, storytelling with data\nStatistical Analysis — Hypothesis testing, regression modeling, Bayesian methods\nSoftware Development — Creating data-driven applications and tools\n\n\n\n\n\n\nThis website showcases my projects and technical abilities in various aspects of data science. Browse through the sections to explore my work in data analysis, visualization, machine learning, and more.\nView My Resume Contact Me"
+    "text": "I’m a Data Science student at Brigham Young University-Idaho with expertise in Python programming, data analysis, database management, and cybersecurity fundamentals. My journey in data science combines technical skills with practical problem-solving abilities.\n\n\n\n\n\n\n\nPython, R, C#, SQL programming\nData cleaning and visualization\nDatabase design and security\nBasic machine learning\n\n\n\n\n\nMachine Learning & AI — Deep learning, LLMs, predictive modeling\nData Engineering — ETL pipelines, data systems, cloud infrastructure\nData Visualization — Interactive dashboards, storytelling with data\nStatistical Analysis — Hypothesis testing, regression modeling, Bayesian methods\nSoftware Development — Creating data-driven applications and tools\n\n\n\n\n\n\n\n\n\n2025-04-03\n\n\n\n\n\n\nThis website showcases my projects and technical abilities in various aspects of data science. Browse through the sections to explore my work in data analysis, visualization, machine learning, and more.\nView My Resume Contact Me"
   },
   {
     "objectID": "index.html#title-2-header",
@@ -414,13 +414,139 @@
   {
     "objectID": "blog/index.html",
     "href": "blog/index.html",
+    "title": "Data Science Blog",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to Polars Pt. 1\nDataframes and Series\n\n \n\n\npolars\n\npython\n\nIntroduction to Polars\n\n\n \n\n\n\n\n\nApr 4, 2025\nNathaniel Clark\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome to My Data Science Blog\n\n\n \n\n\nnews\n\nintroduction\n\n\n \n\n\n\n\n\nApr 3, 2025\nNathaniel Clark\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+  },
+  {
+    "objectID": "blog/posts/welcome/index.html",
+    "href": "blog/posts/welcome/index.html",
+    "title": "Welcome to My Data Science Blog",
+    "section": "",
+    "text": "This is my first blog post on my data science journey. I’ll be sharing insights, projects, and learnings here."
+  },
+  {
+    "objectID": "blog/posts/welcome/polars-blog.html",
+    "href": "blog/posts/welcome/polars-blog.html",
+    "title": "Introduction to Polars Pt. 1",
+    "section": "",
+    "text": "Recently I took a data science course that heavily utilized pandas for data manipulation in Python. Being curious about emerging technologies, I asked my instructor if I could use Polars instead. He agreed but cautioned that he wouldn’t have supporting materials for my alternative choice.\nThroughout the course, I discovered a lack of beginner-friendly Polars resources for those new to data science. I primarily relied on official documentation, which presented some challenges along the way. Despite these obstacles, I persevered, learned a great deal, and successfully completed the class.\nI’m writing this post to share what I’ve learned about Polars and provide an accessible introduction for newcomers to data manipulation libraries, especially those with limited prior experience in the field."
+  },
+  {
+    "objectID": "blog/posts/welcome/polars-blog.html#what-is-polars",
+    "href": "blog/posts/welcome/polars-blog.html#what-is-polars",
+    "title": "Introduction to Polars Pt. 1",
+    "section": "What is Polars?",
+    "text": "What is Polars?\n\nPolars is a modern data manipulation library for Python and Rust designed as a high-performance alternative to pandas, especially for large datasets. It features syntax that’s both human-readable and similar to R’s data manipulation paradigms. Polars stands out for three main reasons:\n\nPerformance: Built in Rust, Polars delivers exceptional speed through parallel processing by default and a sophisticated query optimizer that analyzes and improves execution plans.\nMemory efficiency: Using a columnar memory format rather than row-based storage, Polars efficiently handles larger-than-memory datasets and performs operations with minimal memory overhead.\nLazy evaluation: Polars supports both eager and lazy execution modes. The lazy API builds optimized query plans before execution, similar to database query planners, resulting in more efficient data processing pipelines."
+  },
+  {
+    "objectID": "blog/posts/welcome/polars-blog.html#dataframes-and-series",
+    "href": "blog/posts/welcome/polars-blog.html#dataframes-and-series",
+    "title": "Introduction to Polars Pt. 1",
+    "section": "DataFrames and Series",
+    "text": "DataFrames and Series\n\nSeries\nThe two most common data structures in Polars are DataFrames and Series. Series are one-dimensional data structures where all elements share the same datatype. Think of a Series as a single column in a table - it’s essentially a named array of data.\nPolars supports a variety of data types that fall into these major categories:\n\nNumeric: Signed integers, unsigned integers, floating point numbers, and decimals\nNested: Lists, structs, and arrays for handling complex data\nTemporal: Dates, datetimes,and times for working with time-based data\nMiscellaneous: Strings, binary data, Booleans, categoricals, enums, and objects\n\nCreating a Series is straightforward with the following syntax:\npl.Series(name, values_list)\nWhere “name” is the label for your Series and “values_list” contains the data. Here’s a simple example:\n\nimport polars as pl\ns = pl.Series(\"example\", [1, 2, 3, 4, 5])\ns\n\n\nshape: (5,)\n\n\n\nexample\n\n\ni64\n\n\n\n\n1\n\n\n2\n\n\n3\n\n\n4\n\n\n5\n\n\n\n\n\n\n\n\nDataframes\nDataFrames are tabular data structures (rows and columns) composed of multiple Series, with each column representing a single Series. These are the workhorses of data analysis and what you’ll use most frequently.\nWith DataFrames, you can write powerful queries to filter, transform, aggregate, and reshape your data efficiently.\nDataFrames can be created in several ways:\n\nFrom a dictionary of sequences (lists, arrays)\nWith explicit schema specification\nFrom a sequence of (name, dtype) pairs\nFrom NumPy arrays\nFrom a list of lists (row-oriented data)\nBy converting pandas DataFrames\nBy importing existing tabular data from CSVs, JSON, SQL, Parquet files, etc.\n\nIn real-world environments, you’ll typically work with preexisting data, though understanding various creation methods is valuable. We’ll cover data import techniques later, but for now, here’s an example of a DataFrame created from a dictionary of lists:\n\n# Create a DataFrame from a dictionary of lists\ndf = pl.DataFrame({\n    \"name\": [\"Alice\", \"Bob\", \"Charlie\", \"David\"],\n    \"age\": [25, 30, 35, 40],\n    \"city\": [\"New York\", \"Boston\", \"Chicago\", \"Seattle\"],\n    \"salary\": [75000, 85000, 90000, 95000]\n})\n\ndf\n\n\nshape: (4, 4)\n\n\n\nname\nage\ncity\nsalary\n\n\nstr\ni64\nstr\ni64\n\n\n\n\n\"Alice\"\n25\n\"New York\"\n75000\n\n\n\"Bob\"\n30\n\"Boston\"\n85000\n\n\n\"Charlie\"\n35\n\"Chicago\"\n90000\n\n\n\"David\"\n40\n\"Seattle\"\n95000"
+  },
+  {
+    "objectID": "website_env/lib/python3.13/site-packages/seaborn-0.13.2.dist-info/LICENSE.html",
+    "href": "website_env/lib/python3.13/site-packages/seaborn-0.13.2.dist-info/LICENSE.html",
+    "title": "DataClark",
+    "section": "",
+    "text": "Copyright (c) 2012-2023, Michael L. Waskom All rights reserved.\nRedistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:\n\nRedistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.\nRedistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.\nNeither the name of the project nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "website_env/lib/python3.13/site-packages/pandas/tests/indexes/period/test_constructors.html",
+    "href": "website_env/lib/python3.13/site-packages/pandas/tests/indexes/period/test_constructors.html",
     "title": "DataClark",
     "section": "",
     "text": "Back to top"
   },
   {
-    "objectID": "blog/posts/welcome/index.html",
-    "href": "blog/posts/welcome/index.html",
+    "objectID": "website_env/lib/python3.13/site-packages/narwhals-1.33.0.dist-info/licenses/LICENSE.html",
+    "href": "website_env/lib/python3.13/site-packages/narwhals-1.33.0.dist-info/licenses/LICENSE.html",
+    "title": "DataClark",
+    "section": "",
+    "text": "MIT License\nCopyright (c) 2024, Marco Gorelli\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "website_env/lib/python3.13/site-packages/httpx-0.28.1.dist-info/licenses/LICENSE.html",
+    "href": "website_env/lib/python3.13/site-packages/httpx-0.28.1.dist-info/licenses/LICENSE.html",
+    "title": "DataClark",
+    "section": "",
+    "text": "Copyright © 2019, Encode OSS Ltd. All rights reserved.\nRedistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:\n\nRedistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.\nRedistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.\nNeither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "website_env/lib/python3.13/site-packages/httpcore-1.0.7.dist-info/licenses/LICENSE.html",
+    "href": "website_env/lib/python3.13/site-packages/httpcore-1.0.7.dist-info/licenses/LICENSE.html",
+    "title": "DataClark",
+    "section": "",
+    "text": "Copyright © 2020, Encode OSS Ltd. All rights reserved.\nRedistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:\n\nRedistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.\nRedistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.\nNeither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "website_env/lib/python3.13/site-packages/pyzmq-26.4.0.dist-info/licenses/LICENSE.html",
+    "href": "website_env/lib/python3.13/site-packages/pyzmq-26.4.0.dist-info/licenses/LICENSE.html",
+    "title": "DataClark",
+    "section": "",
+    "text": "BSD 3-Clause License\nCopyright (c) 2009-2012, Brian Granger, Min Ragan-Kelley\nAll rights reserved.\nRedistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:\n\nRedistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.\nRedistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.\nNeither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "index.html#recent-blog-posts",
+    "href": "index.html#recent-blog-posts",
+    "title": "Nathaniel Clark",
+    "section": "",
+    "text": "2025-04-03"
+  },
+  {
+    "objectID": "blog/posts/welcome/index.html#welcome",
+    "href": "blog/posts/welcome/index.html#welcome",
+    "title": "Welcome to My Data Science Blog",
+    "section": "",
+    "text": "This is my first blog post on my data science journey. I’ll be sharing insights, projects, and learnings here."
+  },
+  {
+    "objectID": "blog/posts/welcome/index.html#what-to-expect",
+    "href": "blog/posts/welcome/index.html#what-to-expect",
+    "title": "Welcome to My Data Science Blog",
+    "section": "What to Expect",
+    "text": "What to Expect\nIn this blog, I’ll cover:\n\nData analysis techniques\nInteresting projects I’m working on\nInsights from the data science field\nTutorials and how-to guides\n\nStay tuned for more content! ```"
+  },
+  {
+    "objectID": "website_env/lib/python3.13/site-packages/soupsieve-2.6.dist-info/licenses/LICENSE.html",
+    "href": "website_env/lib/python3.13/site-packages/soupsieve-2.6.dist-info/licenses/LICENSE.html",
+    "title": "DataClark",
+    "section": "",
+    "text": "MIT License\nCopyright (c) 2018 - 2024 Isaac Muse isaacmuse@gmail.com\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "website_env/lib/python3.13/site-packages/idna-3.10.dist-info/LICENSE.html",
+    "href": "website_env/lib/python3.13/site-packages/idna-3.10.dist-info/LICENSE.html",
+    "title": "DataClark",
+    "section": "",
+    "text": "BSD 3-Clause License\nCopyright (c) 2013-2024, Kim Davies and contributors. All rights reserved.\nRedistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:\n\nRedistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.\nRedistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.\nNeither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "website_env/lib/python3.13/site-packages/cffi/recompiler.html",
+    "href": "website_env/lib/python3.13/site-packages/cffi/recompiler.html",
+    "title": "DataClark",
+    "section": "",
+    "text": "Back to top"
+  },
+  {
+    "objectID": "website_env/lib/python3.13/site-packages/numpy/random/LICENSE.html",
+    "href": "website_env/lib/python3.13/site-packages/numpy/random/LICENSE.html",
+    "title": "NCSA Open Source License",
+    "section": "",
+    "text": "This software is dual-licensed under the The University of Illinois/NCSA Open Source License (NCSA) and The 3-Clause BSD License\n\nNCSA Open Source License\nCopyright (c) 2019 Kevin Sheppard. All rights reserved.\nDeveloped by: Kevin Sheppard (kevin.sheppard@economics.ox.ac.uk, kevin.k.sheppard@gmail.com) http://www.kevinsheppard.com\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal with the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\nRedistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimers.\nRedistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimers in the documentation and/or other materials provided with the distribution.\nNeither the names of Kevin Sheppard, nor the names of any contributors may be used to endorse or promote products derived from this Software without specific prior written permission.\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE CONTRIBUTORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS WITH THE SOFTWARE.\n\n\n3-Clause BSD License\nCopyright (c) 2019 Kevin Sheppard. All rights reserved.\nRedistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:\n\nRedistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.\nRedistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.\nNeither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n\n\nComponents\nMany parts of this module have been derived from original sources, often the algorithm’s designer. Component licenses are located with the component code.\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "website_env/lib/python3.13/site-packages/pandas/tests/indexes/period/test_indexing.html",
+    "href": "website_env/lib/python3.13/site-packages/pandas/tests/indexes/period/test_indexing.html",
+    "title": "DataClark",
+    "section": "",
+    "text": "Back to top"
+  },
+  {
+    "objectID": "website_env/lib/python3.13/site-packages/pandas/tests/indexes/datetimes/test_indexing.html",
+    "href": "website_env/lib/python3.13/site-packages/pandas/tests/indexes/datetimes/test_indexing.html",
     "title": "DataClark",
     "section": "",
     "text": "Back to top"
