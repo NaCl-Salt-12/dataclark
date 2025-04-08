@@ -2,11 +2,11 @@ project:
   type: website
 
 website:
-  title: "DataClark"
-  favicon: Images/favicon.png
+  title: "Clark Analytics"
+  favicon: Images/logo.png
   back-to-top-navigation: true
   repo-url: https://github.com/username/username.github.io
-  #repo-actions: [issue] #if you want to allow others to report issues on your site uncomment this line
+  repo-actions: [issue] #if you want to allow others to report issues on your site uncomment this line
 
   page-footer: 
     border: true
