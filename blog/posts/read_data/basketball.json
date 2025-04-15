@@ -1,0 +1,42 @@
+[
+    {
+        "player_name": "LeBron James",
+        "team": "Los Angeles Lakers",
+        "position": "Forward",
+        "points_per_game": 27.2,
+        "assists_per_game": 7.4,
+        "rebounds_per_game": 7.9
+    },
+    {
+        "player_name": "Stephen Curry",
+        "team": "Golden State Warriors",
+        "position": "Guard",
+        "points_per_game": 29.5,
+        "assists_per_game": 6.3,
+        "rebounds_per_game": 5.2
+    },
+    {
+        "player_name": "Giannis Antetokounmpo",
+        "team": "Milwaukee Bucks",
+        "position": "Forward",
+        "points_per_game": 31.1,
+        "assists_per_game": 5.7,
+        "rebounds_per_game": 11.8
+    },
+    {
+        "player_name": "Kevin Durant",
+        "team": "Phoenix Suns",
+        "position": "Forward",
+        "points_per_game": 28.7,
+        "assists_per_game": 5.3,
+        "rebounds_per_game": 7.1
+    },
+    {
+        "player_name": "Nikola Jokic",
+        "team": "Denver Nuggets",
+        "position": "Center",
+        "points_per_game": 24.5,
+        "assists_per_game": 9.8,
+        "rebounds_per_game": 11.3
+    }
+]

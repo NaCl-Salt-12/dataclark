@@ -1,0 +1,11 @@
+id,first_name,last_name,email,purchase_date,product,quantity,price,total
+1,John,Doe,john.doe@example.com,2023-01-15,Laptop,1,1299.99,1299.99
+2,Jane,Smith,jane.smith@example.com,2023-01-16,Smartphone,2,699.95,1399.90
+3,Robert,Johnson,rob.j@example.com,2023-01-18,"Headphones, Wireless",3,89.99,269.97
+4,Sarah,Williams,sarah.w@example.com,2023-01-20,Monitor,1,249.50,249.50
+5,Michael,Brown,michael.b@example.com,2023-01-22,Keyboard,2,59.99,119.98
+6,Emily,Jones,emily.jones@example.com,2023-01-25,"Mouse, Ergonomic",1,45.50,45.50
+7,David,Miller,david.m@example.com,2023-01-27,Tablet,1,399.99,399.99
+8,Jessica,Davis,jessica.d@example.com,2023-01-30,Printer,1,189.95,189.95
+9,Thomas,Wilson,thomas.w@example.com,2023-02-02,"Software, Premium",2,129.99,259.98
+10,Lisa,Taylor,lisa.t@example.com,2023-02-05,External SSD,3,79.95,239.85
