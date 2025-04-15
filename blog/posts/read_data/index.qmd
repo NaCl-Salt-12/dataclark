@@ -139,7 +139,7 @@ pl.read_filetype([
 ```
 If you're working with different file types that share the same schema (identical columns and datatypes) and want to combine them into a single DataFrame, you'll need to read each file individually and then concatenate them. Polars makes this process straightforward with its `concat` function, which can merge DataFrames regardless of their original file formats.
 
-```{python}
+```python
 # Read files of different formats
 df1 = pl.read_csv("path/to/file.csv")
 df2 = pl.read_parquet("path/to/file.parquet")
