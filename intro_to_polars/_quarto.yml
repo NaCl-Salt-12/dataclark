@@ -18,7 +18,7 @@ output:
 
 book:
   title: "Introduction to Polars"
-  subtitle: "A Beginners Guide to Data Analysis with Polars"
+  subtitle: "A Beginners Guide to Data Analysis with Polars in Python"
   author: "Nathaniel Clark"
   date: "2025-04-20"
   chapters:
