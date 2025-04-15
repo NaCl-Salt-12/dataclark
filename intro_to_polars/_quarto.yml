@@ -7,13 +7,13 @@ output:
     toc: true
     toc-location: right
     toc-depth: 2
-    theme: lux
+    theme: cosmos
     css: styles.css
   pdf:
     toc: true
     toc-location: right
     toc-depth: 2
-    theme: lux
+    theme: cosmos
     css: styles.css
 
 book:

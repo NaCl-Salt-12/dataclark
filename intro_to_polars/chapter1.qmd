@@ -1,0 +1,11 @@
+# Chapter 1: Introduction
+
+## What is Polars 
+
+Polars is a modern data manipulation library avalible for Python, R, NodeJs and Rust. It is  designed as a high-performance alternative to pandas, especially for large datasets. It features syntax that's both human-readable and similar to R's data manipulation paradigms. Polars stands out for three main reasons:
+
+- **Performance**: Built in Rust, Polars delivers exceptional speed through parallel processing by default and a sophisticated query optimizer that analyzes and improves execution plans.
+- **Memory efficiency**: Using a columnar memory format rather than row-based storage, Polars efficiently handles larger-than-memory datasets and performs operations with minimal memory overhead.
+- **Lazy evaluation**: Polars supports both eager and lazy execution modes. The lazy API builds optimized query plans before execution, similar to database query planners, resulting in more efficient data processing pipelines.
+
+## Who uses Polars
