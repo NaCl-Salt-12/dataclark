@@ -1,0 +1,30 @@
+project:
+  type: book
+  output-dir: ../_site/intro_to_polars
+
+output:
+  html:
+    toc: true
+    toc-location: right
+    toc-depth: 2
+    theme: lux
+    css: styles.css
+  pdf:
+    toc: true
+    toc-location: right
+    toc-depth: 2
+    theme: lux
+    css: styles.css
+
+book:
+  title: "Introduction to Polars"
+  subtitle: "A Beginners Guide to Data Analysis with Polars"
+  author: "Nathaniel Clark"
+  date: "2025-04-20"
+  chapters:
+    - index.qmd
+    - chapter1.qmd
+    - chapter2.qmd
+    - chapter3.qmd
+  navbar:
+    background: primary

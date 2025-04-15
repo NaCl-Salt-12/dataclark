@@ -1,4 +1,4 @@
----
+--
 title: "Client Report - [Insert Project Title]"
 subtitle: "Course DS 250"
 author: "[STUDENT NAME]"
@@ -26,3 +26,4 @@ execute:
 ---
 
 ### Paste in a template
+-
