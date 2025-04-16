@@ -1,0 +1,31 @@
+# Dataframes and Series 
+
+## Data types
+
+Polars allows you to store data in a varity of formats called data types. These data types fall generally into the following categorties:
+
+- **Numeric**: Signed integers, unsigned integers, floating point numbers, and decimals
+- **Nested**: Lists, structs, and arrays for handling complex data
+- **Temporal**: Dates, datetimes,and times for working with time-based data
+- **Miscellaneous**: Strings, binary data, Booleans, categoricals, enums, and objects
+
+The most common data types you will be working with are generally: Strings, signed and unsigned integers, floating point numbers or floats, decimals, dates or datatimes and booleans. For more information on each of these data types see @sec-appendix-a.
+
+## Series
+
+The two most common data structures in Polars are DataFrames and Series. Series are one-dimensional data structures where all elements share the same datatype. Think of a Series as a single column in a table - it’s essentially a named array of data.
+
+Creating a Series is straightforward with the following syntax:
+
+`pl.Series(name, values_list)`
+
+Where "name" is the label for your Series and "values_list" contains the data. Here's a simple example:
+```{python}
+import polars as pl
+s = pl.Series("example", [1, 2, 3, 4, 5])
+s
+```
+
+:::{ .callout-tip }
+When you create a series Polars will infer the data type for the values you provide. So in the above example I gave it [1, 2, 3, 4, 5] and it set the datatype to Int64 if instead gave it [1, 2, 3, 4.0, 5] it would asume it is Float64.
+:::

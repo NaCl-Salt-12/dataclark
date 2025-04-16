@@ -26,5 +26,7 @@ book:
     - chapter1.qmd
     - chapter2.qmd
     - chapter3.qmd
+  appendices: 
+    - appendix1.qmd
   navbar:
     background: primary
