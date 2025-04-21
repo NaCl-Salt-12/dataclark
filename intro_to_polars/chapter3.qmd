@@ -52,5 +52,93 @@ s3
 
 ## Dataframes
 
-DataFrames are tabular data structures (rows and columns) composed of multiple Series, with each column representing a single Series. These are the workhorses of data analysis and what you’ll use most frequently.
+DataFrames are tabular data structures (rows and columns) composed of multiple Series, with each column representing a single Series. The design of a dataframe is called schema. A schema is a mapping of column to the data types. 
 
+Dataframes are the workhorses of data analysis and what you’ll use most frequently.
+
+With DataFrames, you can write powerful queries to filter, transform, aggregate, and reshape your data efficiently.
+
+DataFrames can be created in several ways:
+
+1. From a dictionary of sequences (lists, arrays)
+2. With explicit schema specification 
+3. From a sequence of (name, dtype) pairs
+4. From NumPy arrays
+5. From a list of lists (row-oriented data)
+6. By converting pandas DataFrames
+7. By importing existing tabular data from CSVs, JSON, SQL, Parquet files, etc.
+
+In real-world environments, you’ll typically work with preexisting data, though understanding various creation methods is valuable. We’ll cover data import techniques later, but for now, here’s an example of a DataFrame created from a dictionary of lists:
+```{python}
+# Create a DataFrame from a dictionary of lists
+df = pl.DataFrame({
+    "name": ["Alice", "Bob", "Charlie", "David"],
+    "age": [25, 30, 35, 40],
+    "city": ["New York", "Boston", "Chicago", "Seattle"],
+    "salary": [75000, 85000, 90000, 95000]
+})
+
+df
+```
+
+every data frame has a shape. the shape is the number of rows and columns in a dataframe 
+`shape(rows,columns)`
+
+the shape for the above dataframe is:
+
+```{python}
+print(df.shape)
+```
+
+you can view the schema of any dataframe with the following command 
+
+```{python}
+print(df.schema)
+```
+
+We see here that the schema is returned as a dictionary. In the above example the column name has the string datatype. Though you can view the data type already when displaying the dataframe.
+
+## Inspecting Dataframes
+
+In polars there are a varity of ways to inspect a dataframe, all of which have different use cases. The ones that we will be covering right now are:
+
+- head 
+- tail 
+- glimpse
+- sample
+- describe
+- slice
+
+### head 
+
+the `head` functions allows you to view the first x rows of the dataframe. By default the number of rows it shows is 5, though you can specify the number of rows to view.
+
+```python
+dataframe.head(n)
+```
+Where n is the number of rows to return if you give it a negative number it will turn all rows except the last n rows.
+
+```{python}
+import numpy as np
+
+# Create NumPy arrays for sandwich data
+sandwich_names = np.array(['BLT', 'Club', 'Tuna', 'Ham & Cheese', 'Veggie'])
+prices = np.array([8.99, 10.50, 7.50, 6.99, 6.50])
+calories = np.array([550, 720, 480, 520, 320])
+vegetarian = np.array([False, False, False, False, True])
+
+# Create DataFrame from NumPy arrays
+sandwich_df = pl.DataFrame({
+    "sandwich": sandwich_names,
+    "price": prices,
+    "calories": calories,
+    "vegetarian": vegetarian
+})
+
+
+sandwich_df.head(3)
+```
+
+### tail
+
+The `tail` function is esentailly the inverse of head. It allows you to view the last n rows of the dataframe. The default for tail is also five rows.
