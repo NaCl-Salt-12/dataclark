@@ -34,12 +34,23 @@ s2 = pl.Series("payment", [132.50, 120, 116, 98.75 ,42])
 s2
 ```
 
-You can set the data type of the series as well by using the dtype parameter. A example use case is when storing a id number the id number should be stored as a string not a int due to the fact that we we do not want to perform mathmatical operations on the identification number therfore it is best stored as a string.
+```{python}
+s3 = pl.Series("mixed", [1, "text", True, 3.14], strict=False)
+# series.dytpe outputs a the data type of the series
+print(f"Mixed series type: {s3.dtype}")
+s3
+```
+
+You can set the data type of the series as well by using the `dtype` parameter. A example use case is when storing a id number the id number should be stored as a string not a int due to the fact that we we do not want to perform mathmatical operations on the identification number therefore it is best stored as a string.
 
 
 ```{python}
-# strict=False allows automatic conversion from integers to strings
-s3 = pl.Series("id number", [143823, 194203, 553420, 234325, 236532], dtype=pl.String, strict=False)
+# strict=False allows automatic conversion from different data types
+s3 = pl.Series("id number", [143823, 194203, 553420, 234325, 236532], dtype=pl.Utf8, strict=False)
 s3
 ```
+
+## Dataframes
+
+DataFrames are tabular data structures (rows and columns) composed of multiple Series, with each column representing a single Series. These are the workhorses of data analysis and what you’ll use most frequently.
 

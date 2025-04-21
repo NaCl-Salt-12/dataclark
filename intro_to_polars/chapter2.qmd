@@ -10,7 +10,7 @@ pip install polars
 ```
 ## Optional Dependencies
 
-Polars offers various optional dependencies for specific use cases, which is done to reduce the footprint of the library. Throught this guide I will mention when specific dependancts are required/used.
+Polars offers various optional dependencies for specific use cases, which are omitted to reduce the footprint of the library. Throught this guide I will mention when specific dependancts are required/used.
 
 To install all optional dependencies:
 ```bash
