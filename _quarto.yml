@@ -23,7 +23,7 @@ website:
       - text: "My Resume"
         file: resume.qmd
       - text: "Intro to Polars"  
-        file: intro_to_polars/index.html
+        file: introduction_to_polars/index.html
       - text: "Blog"
         file: blog/index.qmd
       # - text: "Data Cleansing"
