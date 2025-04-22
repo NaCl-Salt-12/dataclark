@@ -1,7 +1,0 @@
-# Preface {.unnumbered}
-
-Welcome to "Introduction to Polars." This book emerged from my journey as a data science student who chose to explore Polars rather than pandas—the standard library taught in my course. When I approached my instructor about using this alternative technology, he supported my decision while honestly acknowledging that course materials wouldn't cover my chosen path.
-
-As I navigated through the course, I discovered a significant gap in beginner-friendly Polars resources for data science newcomers. While the official documentation proved valuable, it often assumed a level of familiarity that beginners might not possess. Nevertheless, through persistence and experimentation, I gained proficiency and successfully completed my coursework.
-
-This book aims to bridge that gap by offering an accessible introduction to Polars for those new to data manipulation libraries. I've designed it especially for readers with limited prior experience in data science, incorporating the insights and solutions I discovered along my learning journey.
