@@ -1,0 +1,20 @@
+# Preface {.unnumbered}
+
+Welcome to "Introduction to Polars," a comprehensive guide to using the Polars library for data manipulation in Python.
+
+This book covers the fundamentals of working with Polars, from basic operations to advanced techniques.
+
+## Structure of the Book
+
+The book is organized into several chapters, each focusing on different aspects of working with Polars:
+
+- Chapter 1: Introduction to Polars
+- Chapter 2: Getting Started
+- Chapter 3: DataFrames and Series
+- ...
+
+```{python}
+#| echo: false
+import polars as pl
+print(f"Using Polars version: {pl.__version__}")
+```
