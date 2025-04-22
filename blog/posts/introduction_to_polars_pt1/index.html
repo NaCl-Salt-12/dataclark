@@ -137,7 +137,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">My Resume</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../intro_to_polars/index.html"> 
+    <a class="nav-link" href="../../../introduction_to_polars/index.html"> 
 <span class="menu-text">Intro to Polars</span></a>
   </li>  
   <li class="nav-item">
@@ -237,7 +237,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Creating a Series is straightforward with the following syntax:</p>
 <p><code>pl.Series(name, values_list)</code></p>
 <p>Where “name” is the label for your Series and “values_list” contains the data. Here’s a simple example:</p>
-<div id="677f51aa" class="cell" data-execution_count="1">
+<div id="0033c2a3" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> polars <span class="im">as</span> pl</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> pl.Series(<span class="st">"example"</span>, [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>])</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>s</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -296,7 +296,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>By importing existing tabular data from CSVs, JSON, SQL, Parquet files, etc.</li>
 </ol>
 <p>In real-world environments, you’ll typically work with preexisting data, though understanding various creation methods is valuable. We’ll cover data import techniques later, but for now, here’s an example of a DataFrame created from a dictionary of lists:</p>
-<div id="0a324869" class="cell" data-execution_count="2">
+<div id="d4f31526" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a DataFrame from a dictionary of lists</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pl.DataFrame({</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"name"</span>: [<span class="st">"Alice"</span>, <span class="st">"Bob"</span>, <span class="st">"Charlie"</span>, <span class="st">"David"</span>],</span>
