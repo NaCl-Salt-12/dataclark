@@ -30,3 +30,14 @@ book:
     - appendix1.qmd
   navbar:
     background: primary
+
+format:
+  html:
+    theme: cosmos
+    css: styles.css
+  pdf:
+    toc: true
+    toc-location: right
+    toc-depth: 2
+    theme: cosmos
+    css: styles.css
