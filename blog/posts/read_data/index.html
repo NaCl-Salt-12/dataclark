@@ -230,7 +230,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>pl.read_csv(<span class="st">"https://example.com/path/to/your/file.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This capability to read files directly from URLs also works with all the file import methods we’ll cover below.</p>
 <p>This function offers numerous parameters to handle different CSV formats and configurations. For more information read the <a href="https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.read_csv.html">documentation</a>.</p>
-<div id="6af6e1e0" class="cell" data-execution_count="1">
+<div id="8903a7a8" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> polars <span class="im">as</span> pl</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>df_csv <span class="op">=</span> pl.read_csv(<span class="st">"example.csv"</span>, try_parse_dates<span class="op">=</span><span class="va">True</span>)</span>
@@ -351,7 +351,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>If your Excel file contains multiple sheets, you can specify which one to read using the <code>sheet_name</code> parameter:</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pl.read_excel(<span class="st">"path/to/data.xlsx"</span>, sheet_name<span class="op">=</span><span class="st">"example"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>For additional Excel reading options and parameters, refer to the <a href="https://docs.pola.rs/api/python/stable/reference/api/polars.read_excel.html">Polars Excel documentation</a>, which covers sheet selection, range specification, and handling of complex Excel files.</p>
-<div id="e22f6923" class="cell" data-execution_count="2">
+<div id="3aef209e" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>df_xlsx <span class="op">=</span> pl.read_excel(<span class="st">"penguins.xlsx"</span>, sheet_name<span class="op">=</span><span class="st">"Dream Island"</span>)</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>df_xlsx.tail(<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -450,7 +450,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Parquet is a columnar storage format designed for efficient data analytics. It provides excellent compression and fast query performance, making it a popular choice for data science workflows. Polars includes native, high-performance support for reading Parquet files.</p>
 <p>The basic syntax for reading a Parquet file is:</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>pl.read_parquet(<span class="st">"path/to/data.parquet"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="8dc8d2bd" class="cell" data-execution_count="3">
+<div id="39a30206" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>df_par <span class="op">=</span> pl.read_parquet(<span class="st">"finance.parquet"</span>)</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>df_par.sample(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
@@ -491,52 +491,52 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody>
 <tr class="odd">
-<td>2025-01-03 00:00:00</td>
-<td>"GOOG"</td>
-<td>340.42</td>
-<td>342.92</td>
-<td>340.82</td>
-<td>341.94</td>
-<td>4450451</td>
-<td>13.47</td>
-<td>0.0117</td>
-<td>8.4743e9</td>
+<td>2025-02-28 00:00:00</td>
+<td>"META"</td>
+<td>764.43</td>
+<td>765.9</td>
+<td>758.59</td>
+<td>765.28</td>
+<td>7099708</td>
+<td>35.76</td>
+<td>0.0121</td>
+<td>5.8157e10</td>
 </tr>
 <tr class="even">
-<td>2024-11-22 00:00:00</td>
-<td>"AMZN"</td>
-<td>141.41</td>
-<td>142.8</td>
-<td>141.49</td>
-<td>141.79</td>
-<td>3100900</td>
-<td>30.18</td>
-<td>0.0211</td>
-<td>4.6146e9</td>
+<td>2025-02-18 00:00:00</td>
+<td>"AAPL"</td>
+<td>299.44</td>
+<td>299.63</td>
+<td>298.78</td>
+<td>299.45</td>
+<td>2024541</td>
+<td>13.94</td>
+<td>0.012</td>
+<td>8.9789e9</td>
 </tr>
 <tr class="odd">
-<td>2025-02-19 00:00:00</td>
-<td>"GOOG"</td>
-<td>305.81</td>
-<td>308.1</td>
-<td>306.1</td>
-<td>306.25</td>
-<td>5703123</td>
-<td>12.84</td>
-<td>0.001</td>
-<td>1.4116e10</td>
+<td>2024-07-29 00:00:00</td>
+<td>"AMZN"</td>
+<td>147.04</td>
+<td>148.02</td>
+<td>145.69</td>
+<td>147.09</td>
+<td>4030399</td>
+<td>26.23</td>
+<td>0.0215</td>
+<td>4.7784e9</td>
 </tr>
 <tr class="even">
-<td>2025-02-27 00:00:00</td>
-<td>"MSFT"</td>
-<td>223.96</td>
-<td>225.85</td>
-<td>223.19</td>
-<td>224.5</td>
-<td>1047137</td>
-<td>22.04</td>
-<td>0.0101</td>
-<td>2.1296e9</td>
+<td>2024-09-23 00:00:00</td>
+<td>"META"</td>
+<td>673.42</td>
+<td>677.51</td>
+<td>671.87</td>
+<td>674.46</td>
+<td>5167893</td>
+<td>22.97</td>
+<td>0.0294</td>
+<td>2.5092e10</td>
 </tr>
 </tbody>
 </table>
