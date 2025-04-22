@@ -1,0 +1,64 @@
+# Installation
+
+## Basic Installation
+
+Polars can be installed using pip:
+
+
+```bash
+pip install polars
+```
+## Optional Dependencies
+
+Polars offers various optional dependencies for specific use cases, which are omitted to reduce the footprint of the library. Throught this guide I will mention when specific dependancts are required/used.
+
+To install all optional dependencies:
+```bash
+pip install 'polars[all]'
+```
+::: {.callout-note}
+I recommend installing all optional dependencies due to convenience. And the fact that the relative footprint is still not excessive.
+:::
+
+
+### Interoperability  
+
+Polars offers the following dependencys for increased interoperability between different librarys.
+
+- __pandas__: allows conversion to and from pandas dataframes/series 
+- __numpy__: allows conversion between numpy arrays
+- __pyarrow__:allows for data conversion between PyArrow tables and arrays
+- __pydantic__: allows for conversion from Pydantic models to polars
+
+```bash
+pip install 'polars[pandas, numpy, pyarrow, pydantic]' # remove the unused dependencies
+```
+
+### Excel
+
+Polars has a few options for different engines used to convert xlsx files to a format more readable by polars.
+
+The different engines avalible are:
+
+- __calamine__
+- __openpyxl__
+- __xlsx2csv__
+
+:::{.callout-tip}
+ There are some differences in the engines performance and behaviour to learn more see the [official documentation](https://docs.pola.rs/user-guide/io/excel/).
+:::
+
+Additionally Polars support one other optional dependency related to Excel:
+- __xlsxwriter__: which allows you to write to xlsx files
+
+```bash
+pip install 'polars[excel]' # if you want to install all Excel dependencies
+pip install 'polars[calamine, openpyxl, xlsx2csv, xlsxwriter]' # if you want to pick and chose 
+```
+### Database 
+
+### Cloud 
+
+### Other I/O
+
+### Other
