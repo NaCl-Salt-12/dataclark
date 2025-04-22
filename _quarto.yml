@@ -22,23 +22,11 @@ website:
         file: index.qmd
       - text: "My Resume"
         file: resume.qmd
-      - text: "Intro to Polars"  
-        file: introduction_to_polars/index.html
+        text: "Intro to Polars"
+        href: https://nacl-salt-12.github.io/introduction_to_polars/
       - text: "Blog"
         file: blog/index.qmd
-      # - text: "Data Cleansing"
-      #   file: cleansing.qmd
-      # - text: "Data Exploration"
-      #   file: exploration.qmd
-      # - text: "Story Telling"
-      #   file: story_telling.qmd
-      # - text: "Machine Learning"
-      #   file: ml.qmd
-      # - text: "Full Stack"
-      #   file: full_stack.qmd
-      # - text: "Competition"
-      #   file: competition.qmd
-  
+        
   # learn more about navication here https://quarto.org/docs/websites/website-navigation.html
   # comment out any of the sections below to turn off the sidebar
 
