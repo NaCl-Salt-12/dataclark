@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Nathaniel Clark">
-<meta name="dcterms.date" content="2025-04-04">
 
-<title>Introduction to Polars Pt. 1 – Clark</title>
+<title>chapter2 – Clark</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -59,23 +57,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../">
-<link href="../../../Images/logo.png" rel="icon" type="image/png">
-<script src="../../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-d4d76bf8491c20bad77d141916dc28e1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-8b523f5b471d4d501e278751e5d4c14f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../Images/logo.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-d4d76bf8491c20bad77d141916dc28e1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-8b523f5b471d4d501e278751e5d4c14f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -103,12 +101,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
-
-<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
-<link rel="stylesheet" href="../../../styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -118,7 +113,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../../index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Clark</span>
     </a>
   </div>
@@ -129,19 +124,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../resume.html"> 
+    <a class="nav-link" href="../resume.html"> 
 <span class="menu-text">My Resume</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../intro_to_polars/index.html"> 
+    <a class="nav-link" href="../intro_to_polars/index.html"> 
 <span class="menu-text">Intro to Polars</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../blog/index.html"> 
+    <a class="nav-link" href="../blog/index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
 </ul>
@@ -160,208 +155,104 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#what-is-polars" id="toc-what-is-polars" class="nav-link active" data-scroll-target="#what-is-polars">What is Polars?</a></li>
-  <li><a href="#dataframes-and-series" id="toc-dataframes-and-series" class="nav-link" data-scroll-target="#dataframes-and-series">DataFrames and Series</a>
+  <li><a href="#installation" id="toc-installation" class="nav-link active" data-scroll-target="#installation">Installation</a>
   <ul class="collapse">
-  <li><a href="#series" id="toc-series" class="nav-link" data-scroll-target="#series">Series</a></li>
-  <li><a href="#dataframes" id="toc-dataframes" class="nav-link" data-scroll-target="#dataframes">Dataframes</a></li>
+  <li><a href="#basic-installation" id="toc-basic-installation" class="nav-link" data-scroll-target="#basic-installation">Basic Installation</a></li>
+  <li><a href="#optional-dependencies" id="toc-optional-dependencies" class="nav-link" data-scroll-target="#optional-dependencies">Optional Dependencies</a>
+  <ul class="collapse">
+  <li><a href="#interoperability" id="toc-interoperability" class="nav-link" data-scroll-target="#interoperability">Interoperability</a></li>
+  <li><a href="#excel" id="toc-excel" class="nav-link" data-scroll-target="#excel">Excel</a></li>
+  <li><a href="#database" id="toc-database" class="nav-link" data-scroll-target="#database">Database</a></li>
+  <li><a href="#cloud" id="toc-cloud" class="nav-link" data-scroll-target="#cloud">Cloud</a></li>
+  <li><a href="#other-io" id="toc-other-io" class="nav-link" data-scroll-target="#other-io">Other I/O</a></li>
+  <li><a href="#other" id="toc-other" class="nav-link" data-scroll-target="#other">Other</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/username/username.github.io/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Introduction to Polars Pt. 1</h1>
-<p class="subtitle lead">Dataframes and Series</p>
-  <div class="quarto-categories">
-    <div class="quarto-category">polars</div>
-    <div class="quarto-category">python</div>
-    <div class="quarto-category">Introduction to Polars</div>
-  </div>
-  </div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Nathaniel Clark </p>
-          </div>
-  </div>
-    
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">April 4, 2025</p>
-    </div>
-  </div>
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<p>Recently I took a data science course that heavily utilized pandas for data manipulation in Python. Being curious about emerging technologies, I asked my instructor if I could use Polars instead. He agreed but cautioned that he wouldn’t have supporting materials for my alternative choice.</p>
-<p>Throughout the course, I discovered a lack of beginner-friendly Polars resources for those new to data science. I primarily relied on official documentation, which presented some challenges along the way. Despite these obstacles, I persevered, learned a great deal, and successfully completed the class.</p>
-<p>I’m writing this post to share what I’ve learned about Polars and provide an accessible introduction for newcomers to data manipulation libraries, especially those with limited prior experience in the field.</p>
-<section id="what-is-polars" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-polars">What is Polars?</h2>
-<p><img src="polars.jpg" class="img-fluid"></p>
-<p>Polars is a modern data manipulation library for Python and Rust designed as a high-performance alternative to pandas, especially for large datasets. It features syntax that’s both human-readable and similar to R’s data manipulation paradigms. Polars stands out for three main reasons:</p>
-<ul>
-<li><strong>Performance</strong>: Built in Rust, Polars delivers exceptional speed through parallel processing by default and a sophisticated query optimizer that analyzes and improves execution plans.</li>
-<li><strong>Memory efficiency</strong>: Using a columnar memory format rather than row-based storage, Polars efficiently handles larger-than-memory datasets and performs operations with minimal memory overhead.</li>
-<li><strong>Lazy evaluation</strong>: Polars supports both eager and lazy execution modes. The lazy API builds optimized query plans before execution, similar to database query planners, resulting in more efficient data processing pipelines.</li>
-</ul>
+<section id="installation" class="level1">
+<h1>Installation</h1>
+<section id="basic-installation" class="level2">
+<h2 class="anchored" data-anchor-id="basic-installation">Basic Installation</h2>
+<p>Polars can be installed using pip:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install polars</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="dataframes-and-series" class="level2">
-<h2 class="anchored" data-anchor-id="dataframes-and-series">DataFrames and Series</h2>
-<section id="series" class="level3">
-<h3 class="anchored" data-anchor-id="series">Series</h3>
-<p>The two most common data structures in Polars are DataFrames and Series. Series are one-dimensional data structures where all elements share the same datatype. Think of a Series as a single column in a table - it’s essentially a named array of data.</p>
-<p>Polars supports a variety of data types that fall into these major categories:</p>
+<section id="optional-dependencies" class="level2">
+<h2 class="anchored" data-anchor-id="optional-dependencies">Optional Dependencies</h2>
+<p>Polars offers various optional dependencies for specific use cases, which are omitted to reduce the footprint of the library. Throught this guide I will mention when specific dependancts are required/used.</p>
+<p>To install all optional dependencies:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="st">'polars[all]'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>I recommend installing all optional dependencies due to convenience. And the fact that the relative footprint is still not excessive.</p>
+</div>
+</div>
+<section id="interoperability" class="level3">
+<h3 class="anchored" data-anchor-id="interoperability">Interoperability</h3>
+<p>Polars offers the following dependencys for increased interoperability between different librarys.</p>
 <ul>
-<li><strong>Numeric</strong>: Signed integers, unsigned integers, floating point numbers, and decimals</li>
-<li><strong>Nested</strong>: Lists, structs, and arrays for handling complex data</li>
-<li><strong>Temporal</strong>: Dates, datetimes,and times for working with time-based data</li>
-<li><strong>Miscellaneous</strong>: Strings, binary data, Booleans, categoricals, enums, and objects</li>
+<li><strong>pandas</strong>: allows conversion to and from pandas dataframes/series</li>
+<li><strong>numpy</strong>: allows conversion between numpy arrays</li>
+<li><strong>pyarrow</strong>:allows for data conversion between PyArrow tables and arrays</li>
+<li><strong>pydantic</strong>: allows for conversion from Pydantic models to polars</li>
 </ul>
-<p>Creating a Series is straightforward with the following syntax:</p>
-<p><code>pl.Series(name, values_list)</code></p>
-<p>Where “name” is the label for your Series and “values_list” contains the data. Here’s a simple example:</p>
-<div id="2dddac29" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> polars <span class="im">as</span> pl</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> pl.Series(<span class="st">"example"</span>, [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>])</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>s</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="1">
-<div><style>
-.dataframe > thead > tr,
-.dataframe > tbody > tr {
-  text-align: right;
-  white-space: pre-wrap;
-}
-</style>
-<small>shape: (5,)</small>
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th">example</th>
-</tr>
-<tr class="even">
-<th>i64</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1</td>
-</tr>
-<tr class="even">
-<td>2</td>
-</tr>
-<tr class="odd">
-<td>3</td>
-</tr>
-<tr class="even">
-<td>4</td>
-</tr>
-<tr class="odd">
-<td>5</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="st">'polars[pandas, numpy, pyarrow, pydantic]'</span> <span class="co"># remove the unused dependencies</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="dataframes" class="level3">
-<h3 class="anchored" data-anchor-id="dataframes">Dataframes</h3>
-<p>DataFrames are tabular data structures (rows and columns) composed of multiple Series, with each column representing a single Series. These are the workhorses of data analysis and what you’ll use most frequently.</p>
-<p>With DataFrames, you can write powerful queries to filter, transform, aggregate, and reshape your data efficiently.</p>
-<p>DataFrames can be created in several ways:</p>
-<ol type="1">
-<li>From a dictionary of sequences (lists, arrays)</li>
-<li>With explicit schema specification</li>
-<li>From a sequence of (name, dtype) pairs</li>
-<li>From NumPy arrays</li>
-<li>From a list of lists (row-oriented data)</li>
-<li>By converting pandas DataFrames</li>
-<li>By importing existing tabular data from CSVs, JSON, SQL, Parquet files, etc.</li>
-</ol>
-<p>In real-world environments, you’ll typically work with preexisting data, though understanding various creation methods is valuable. We’ll cover data import techniques later, but for now, here’s an example of a DataFrame created from a dictionary of lists:</p>
-<div id="fe81116b" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a DataFrame from a dictionary of lists</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pl.DataFrame({</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"name"</span>: [<span class="st">"Alice"</span>, <span class="st">"Bob"</span>, <span class="st">"Charlie"</span>, <span class="st">"David"</span>],</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"age"</span>: [<span class="dv">25</span>, <span class="dv">30</span>, <span class="dv">35</span>, <span class="dv">40</span>],</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"city"</span>: [<span class="st">"New York"</span>, <span class="st">"Boston"</span>, <span class="st">"Chicago"</span>, <span class="st">"Seattle"</span>],</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"salary"</span>: [<span class="dv">75000</span>, <span class="dv">85000</span>, <span class="dv">90000</span>, <span class="dv">95000</span>]</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="2">
-<div><style>
-.dataframe > thead > tr,
-.dataframe > tbody > tr {
-  text-align: right;
-  white-space: pre-wrap;
-}
-</style>
-<small>shape: (4, 4)</small>
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th">name</th>
-<th data-quarto-table-cell-role="th">age</th>
-<th data-quarto-table-cell-role="th">city</th>
-<th data-quarto-table-cell-role="th">salary</th>
-</tr>
-<tr class="even">
-<th>str</th>
-<th>i64</th>
-<th>str</th>
-<th>i64</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>"Alice"</td>
-<td>25</td>
-<td>"New York"</td>
-<td>75000</td>
-</tr>
-<tr class="even">
-<td>"Bob"</td>
-<td>30</td>
-<td>"Boston"</td>
-<td>85000</td>
-</tr>
-<tr class="odd">
-<td>"Charlie"</td>
-<td>35</td>
-<td>"Chicago"</td>
-<td>90000</td>
-</tr>
-<tr class="even">
-<td>"David"</td>
-<td>40</td>
-<td>"Seattle"</td>
-<td>95000</td>
-</tr>
-</tbody>
-</table>
+<section id="excel" class="level3">
+<h3 class="anchored" data-anchor-id="excel">Excel</h3>
+<p>Polars has a few options for different engines used to convert xlsx files to a format more readable by polars.</p>
+<p>The different engines avalible are:</p>
+<ul>
+<li><strong>calamine</strong></li>
+<li><strong>openpyxl</strong></li>
+<li><strong>xlsx2csv</strong></li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
 </div>
 </div>
+<div class="callout-body-container callout-body">
+<p>There are some differences in the engines performance and behaviour to learn more see the <a href="https://docs.pola.rs/user-guide/io/excel/">official documentation</a>.</p>
 </div>
+</div>
+<p>Additionally Polars support one other optional dependency related to Excel: - <strong>xlsxwriter</strong>: which allows you to write to xlsx files</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="st">'polars[excel]'</span> <span class="co"># if you want to install all Excel dependencies</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="st">'polars[calamine, openpyxl, xlsx2csv, xlsxwriter]'</span> <span class="co"># if you want to pick and chose </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="database" class="level3">
+<h3 class="anchored" data-anchor-id="database">Database</h3>
+</section>
+<section id="cloud" class="level3">
+<h3 class="anchored" data-anchor-id="cloud">Cloud</h3>
+</section>
+<section id="other-io" class="level3">
+<h3 class="anchored" data-anchor-id="other-io">Other I/O</h3>
+</section>
+<section id="other" class="level3">
+<h3 class="anchored" data-anchor-id="other">Other</h3>
 
 
+</section>
 </section>
 </section>
 

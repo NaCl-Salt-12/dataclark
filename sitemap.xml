@@ -1,27 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://NaCl-Salt-12.github.io/dataclark/resume.html</loc>
-    <lastmod>2025-04-21T21:36:22.255Z</lastmod>
+    <loc>https://NaCl-Salt-12.github.io/dataclark/intro_to_polars/chapter3.html</loc>
+    <lastmod>2025-04-22T02:59:06.608Z</lastmod>
   </url>
   <url>
-    <loc>https://NaCl-Salt-12.github.io/dataclark/blog/posts/introduction_to_polars_pt1/index.html</loc>
-    <lastmod>2025-04-21T21:36:22.250Z</lastmod>
+    <loc>https://NaCl-Salt-12.github.io/dataclark/intro_to_polars/chapter2.html</loc>
+    <lastmod>2025-04-22T02:59:06.608Z</lastmod>
   </url>
   <url>
-    <loc>https://NaCl-Salt-12.github.io/dataclark/blog/index.html</loc>
-    <lastmod>2025-04-21T21:36:22.250Z</lastmod>
+    <loc>https://NaCl-Salt-12.github.io/dataclark/intro_to_polars/chapter1.html</loc>
+    <lastmod>2025-04-22T02:59:06.608Z</lastmod>
   </url>
   <url>
-    <loc>https://NaCl-Salt-12.github.io/dataclark/index.html</loc>
-    <lastmod>2025-04-21T21:36:22.253Z</lastmod>
-  </url>
-  <url>
-    <loc>https://NaCl-Salt-12.github.io/dataclark/blog/posts/welcome/index.html</loc>
-    <lastmod>2025-04-21T21:36:22.253Z</lastmod>
+    <loc>https://NaCl-Salt-12.github.io/dataclark/intro_to_polars/index.html</loc>
+    <lastmod>2025-04-22T02:59:06.609Z</lastmod>
   </url>
   <url>
     <loc>https://NaCl-Salt-12.github.io/dataclark/blog/posts/read_data/index.html</loc>
-    <lastmod>2025-04-21T21:36:22.251Z</lastmod>
+    <lastmod>2025-04-22T02:59:06.604Z</lastmod>
+  </url>
+  <url>
+    <loc>https://NaCl-Salt-12.github.io/dataclark/blog/posts/welcome/index.html</loc>
+    <lastmod>2025-04-22T02:59:06.606Z</lastmod>
+  </url>
+  <url>
+    <loc>https://NaCl-Salt-12.github.io/dataclark/index.html</loc>
+    <lastmod>2025-04-22T02:59:06.606Z</lastmod>
+  </url>
+  <url>
+    <loc>https://NaCl-Salt-12.github.io/dataclark/blog/index.html</loc>
+    <lastmod>2025-04-22T02:59:06.603Z</lastmod>
+  </url>
+  <url>
+    <loc>https://NaCl-Salt-12.github.io/dataclark/blog/posts/introduction_to_polars_pt1/index.html</loc>
+    <lastmod>2025-04-22T02:59:06.603Z</lastmod>
+  </url>
+  <url>
+    <loc>https://NaCl-Salt-12.github.io/dataclark/resume.html</loc>
+    <lastmod>2025-04-22T02:59:06.609Z</lastmod>
+  </url>
+  <url>
+    <loc>https://NaCl-Salt-12.github.io/dataclark/intro_to_polars/appendix2.html</loc>
+    <lastmod>2025-04-22T02:59:06.608Z</lastmod>
+  </url>
+  <url>
+    <loc>https://NaCl-Salt-12.github.io/dataclark/intro_to_polars/appendix1.html</loc>
+    <lastmod>2025-04-22T02:59:06.608Z</lastmod>
+  </url>
+  <url>
+    <loc>https://NaCl-Salt-12.github.io/dataclark/intro_to_polars/chapter4.html</loc>
+    <lastmod>2025-04-22T02:59:06.609Z</lastmod>
   </url>
 </urlset>

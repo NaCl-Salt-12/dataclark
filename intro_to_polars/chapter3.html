@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Nathaniel Clark">
-<meta name="dcterms.date" content="2025-04-15">
 
-<title>Introduction to Polars Pt. 2 – Clark</title>
+<title>chapter3 – Clark</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -59,23 +57,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../">
-<link href="../../../Images/logo.png" rel="icon" type="image/png">
-<script src="../../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-d4d76bf8491c20bad77d141916dc28e1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-8b523f5b471d4d501e278751e5d4c14f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../Images/logo.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-d4d76bf8491c20bad77d141916dc28e1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-8b523f5b471d4d501e278751e5d4c14f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -108,7 +106,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
-<link rel="stylesheet" href="../../../styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -118,7 +116,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../../index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Clark</span>
     </a>
   </div>
@@ -129,19 +127,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../resume.html"> 
+    <a class="nav-link" href="../resume.html"> 
 <span class="menu-text">My Resume</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../intro_to_polars/index.html"> 
+    <a class="nav-link" href="../intro_to_polars/index.html"> 
 <span class="menu-text">Intro to Polars</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../blog/index.html"> 
+    <a class="nav-link" href="../blog/index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
 </ul>
@@ -160,13 +158,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#importing-data-with-polars" id="toc-importing-data-with-polars" class="nav-link active" data-scroll-target="#importing-data-with-polars">Importing Data with Polars</a>
+  <li><a href="#data-types" id="toc-data-types" class="nav-link active" data-scroll-target="#data-types">Data types</a></li>
+  <li><a href="#series" id="toc-series" class="nav-link" data-scroll-target="#series">Series</a></li>
+  <li><a href="#dataframes" id="toc-dataframes" class="nav-link" data-scroll-target="#dataframes">Dataframes</a></li>
+  <li><a href="#inspecting-dataframes" id="toc-inspecting-dataframes" class="nav-link" data-scroll-target="#inspecting-dataframes">Inspecting Dataframes</a>
   <ul class="collapse">
-  <li><a href="#csv-files" id="toc-csv-files" class="nav-link" data-scroll-target="#csv-files">CSV Files</a></li>
-  <li><a href="#json-files" id="toc-json-files" class="nav-link" data-scroll-target="#json-files">JSON Files</a></li>
-  <li><a href="#excel" id="toc-excel" class="nav-link" data-scroll-target="#excel">Excel</a></li>
-  <li><a href="#parquet-files" id="toc-parquet-files" class="nav-link" data-scroll-target="#parquet-files">Parquet Files</a></li>
-  <li><a href="#importing-mutiple-files" id="toc-importing-mutiple-files" class="nav-link" data-scroll-target="#importing-mutiple-files">Importing Mutiple files</a></li>
+  <li><a href="#head" id="toc-head" class="nav-link" data-scroll-target="#head">head</a></li>
+  <li><a href="#tail" id="toc-tail" class="nav-link" data-scroll-target="#tail">tail</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/username/username.github.io/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
@@ -176,32 +174,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Introduction to Polars Pt. 2</h1>
-<p class="subtitle lead">Reading in Data</p>
-  <div class="quarto-categories">
-    <div class="quarto-category">polars</div>
-    <div class="quarto-category">python</div>
-    <div class="quarto-category">Introduction to Polars</div>
-  </div>
-  </div>
+<h1 class="title">Dataframes and Series</h1>
+</div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Nathaniel Clark </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">April 15, 2025</p>
-    </div>
-  </div>
   
     
   </div>
@@ -211,30 +191,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>In this segement, we’ll explore how to read data with Polars using various file formats including CSVs, JSONs, Excel spreadsheets, and Parquet files, whether stored locally or accessed via the web. Note that we won’t be covering cloud storage or database connections in this tutorial.</p>
-<section id="importing-data-with-polars" class="level2">
-<h2 class="anchored" data-anchor-id="importing-data-with-polars">Importing Data with Polars</h2>
-<div class="columns">
-<div class="column" style="padding-right: 30px;">
-<p>Polars provides robust capabilities for importing data from various sources including CSVs, JSONs, Excel spreadsheets, Parquet files, cloud storage solutions (AWS, Azure, and Google Cloud), and databases.</p>
-<p>The importing methods follow a consistent pattern across file types, making it easy to work with different data formats.</p>
-</div><div class="column" style="width:35%;">
-<p><img src="read.jpg" class="img-fluid"></p>
-</div>
-</div>
-<section id="csv-files" class="level3">
-<h3 class="anchored" data-anchor-id="csv-files">CSV Files</h3>
-<p>The basic syntax for reading a CSV file is:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pl.read_csv(<span class="st">"path/to/data.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Alternatively, you can also read CSV files directly from the internet:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>pl.read_csv(<span class="st">"https://example.com/path/to/your/file.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>This capability to read files directly from URLs also works with all the file import methods we’ll cover below.</p>
-<p>This function offers numerous parameters to handle different CSV formats and configurations. For more information read the <a href="https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.read_csv.html">documentation</a>.</p>
-<div id="62bb280d" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> polars <span class="im">as</span> pl</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>df_csv <span class="op">=</span> pl.read_csv(<span class="st">"example.csv"</span>, try_parse_dates<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>df_csv.head(<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="data-types" class="level2">
+<h2 class="anchored" data-anchor-id="data-types">Data types</h2>
+<p>Polars allows you to store data in a varity of formats called data types. These data types fall generally into the following categorties:</p>
+<ul>
+<li><strong>Numeric</strong>: Signed integers, unsigned integers, floating point numbers, and decimals</li>
+<li><strong>Nested</strong>: Lists, structs, and arrays for handling complex data</li>
+<li><strong>Temporal</strong>: Dates, datetimes,and times for working with time-based data</li>
+<li><strong>Miscellaneous</strong>: Strings, binary data, Booleans, categoricals, enums, and objects</li>
+</ul>
+<p>The most common data types you will be working with are generally: Strings, signed and unsigned integers, floating point numbers or floats, decimals, dates or datatimes and booleans. For more information on each of these data types see <strong>?@sec-appendix-a</strong>.</p>
+</section>
+<section id="series" class="level2">
+<h2 class="anchored" data-anchor-id="series">Series</h2>
+<p>The two most common data structures in Polars are DataFrames and Series. Series are one-dimensional data structures where all elements share the same datatype. Think of a Series as a single column in a table - it’s essentially a named array of data.</p>
+<p>Creating a Series is straightforward with the following syntax:</p>
+<p><code>pl.Series(name, values_list)</code></p>
+<p>Where “name” is the label for your Series and “values_list” contains the data. Here’s a simple example:</p>
+<div id="a1f7805f" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> polars <span class="im">as</span> pl</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> pl.Series(<span class="st">"example"</span>, [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>])</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>s</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="1">
 <div><style>
 .dataframe > thead > tr,
@@ -243,118 +220,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   white-space: pre-wrap;
 }
 </style>
-<small>shape: (5, 9)</small>
+<small>shape: (5,)</small>
 <table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
-<th data-quarto-table-cell-role="th">id</th>
-<th data-quarto-table-cell-role="th">first_name</th>
-<th data-quarto-table-cell-role="th">last_name</th>
-<th data-quarto-table-cell-role="th">email</th>
-<th data-quarto-table-cell-role="th">purchase_date</th>
-<th data-quarto-table-cell-role="th">product</th>
-<th data-quarto-table-cell-role="th">quantity</th>
-<th data-quarto-table-cell-role="th">price</th>
-<th data-quarto-table-cell-role="th">total</th>
+<th data-quarto-table-cell-role="th">example</th>
 </tr>
 <tr class="even">
 <th>i64</th>
-<th>str</th>
-<th>str</th>
-<th>str</th>
-<th>date</th>
-<th>str</th>
-<th>i64</th>
-<th>f64</th>
-<th>f64</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>1</td>
-<td>"John"</td>
-<td>"Doe"</td>
-<td>"john.doe@example.com"</td>
-<td>2023-01-15</td>
-<td>"Laptop"</td>
-<td>1</td>
-<td>1299.99</td>
-<td>1299.99</td>
 </tr>
 <tr class="even">
 <td>2</td>
-<td>"Jane"</td>
-<td>"Smith"</td>
-<td>"jane.smith@example.com"</td>
-<td>2023-01-16</td>
-<td>"Smartphone"</td>
-<td>2</td>
-<td>699.95</td>
-<td>1399.9</td>
 </tr>
 <tr class="odd">
 <td>3</td>
-<td>"Robert"</td>
-<td>"Johnson"</td>
-<td>"rob.j@example.com"</td>
-<td>2023-01-18</td>
-<td>"Headphones, Wireless"</td>
-<td>3</td>
-<td>89.99</td>
-<td>269.97</td>
 </tr>
 <tr class="even">
 <td>4</td>
-<td>"Sarah"</td>
-<td>"Williams"</td>
-<td>"sarah.w@example.com"</td>
-<td>2023-01-20</td>
-<td>"Monitor"</td>
-<td>1</td>
-<td>249.5</td>
-<td>249.5</td>
 </tr>
 <tr class="odd">
 <td>5</td>
-<td>"Michael"</td>
-<td>"Brown"</td>
-<td>"michael.b@example.com"</td>
-<td>2023-01-22</td>
-<td>"Keyboard"</td>
-<td>2</td>
-<td>59.99</td>
-<td>119.98</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 </div>
-</section>
-<section id="json-files" class="level3">
-<h3 class="anchored" data-anchor-id="json-files">JSON Files</h3>
-<p>Reading JSON files follows a similar pattern. The basic syntax is:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>pl.read_json(<span class="st">"docs/data/path.json"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>JSON files have a more standardized structure than CSVs, so the reading process requires fewer configuration parameters. Polars handles JSON parsing efficiently with minimal setup. For advanced options and configurations, consult the official <a href="https://docs.pola.rs/api/python/stable/reference/api/polars.read_json.html">documentation</a>.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>df_json <span class="op">=</span> pl.read_json(<span class="st">"basketball.json"</span>)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>df_json</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="excel" class="level3">
-<h3 class="anchored" data-anchor-id="excel">Excel</h3>
-<p>Polars doesn’t include a native Excel reader. Instead, it leverages external libraries like fastexcel, xlsx2csv, or openpyxl to parse Excel files into Polars-compatible formats. Among these options, Polars recommends fastexcel for optimal performance.</p>
-<p>While it’s generally better to avoid using Excel files where possible (you can usually export as CSV directly from Excel), reading Excel files is straightforward with the right dependencies installed.</p>
-<p>Before attempting to read Excel files, make sure you have at least one of these libraries installed:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a> <span class="ex">$</span> pip install fastexcel xlsx2csv openpyxl</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>The basic syntax for reading an Excel file with Polars is:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>pl.read_excel(<span class="st">"path/to/data.xlsx"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>If your Excel file contains multiple sheets, you can specify which one to read using the <code>sheet_name</code> parameter:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pl.read_excel(<span class="st">"path/to/data.xlsx"</span>, sheet_name<span class="op">=</span><span class="st">"example"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>For additional Excel reading options and parameters, refer to the <a href="https://docs.pola.rs/api/python/stable/reference/api/polars.read_excel.html">Polars Excel documentation</a>, which covers sheet selection, range specification, and handling of complex Excel files.</p>
-<div id="ecb81162" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>df_xlsx <span class="op">=</span> pl.read_excel(<span class="st">"penguins.xlsx"</span>, sheet_name<span class="op">=</span><span class="st">"Dream Island"</span>)</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>df_xlsx.tail(<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>When you create a series Polars will infer the data type for the values you provide. So in the above example I gave it [1, 2, 3, 4, 5] and it set the datatype to Int64 if instead gave it [1, 2, 3, 4.0, 5] it would asume it is Float64.</p>
+<div id="8fd54566" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>s2 <span class="op">=</span> pl.Series(<span class="st">"payment"</span>, [<span class="fl">132.50</span>, <span class="dv">120</span>, <span class="dv">116</span>, <span class="fl">98.75</span> ,<span class="dv">42</span>])</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>s2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <div><style>
 .dataframe > thead > tr,
@@ -363,96 +263,45 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   white-space: pre-wrap;
 }
 </style>
-<small>shape: (5, 8)</small>
+<small>shape: (5,)</small>
 <table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
-<th data-quarto-table-cell-role="th">species</th>
-<th data-quarto-table-cell-role="th">island</th>
-<th data-quarto-table-cell-role="th">bill_length_mm</th>
-<th data-quarto-table-cell-role="th">bill_depth_mm</th>
-<th data-quarto-table-cell-role="th">flipper_length_mm</th>
-<th data-quarto-table-cell-role="th">body_mass_g</th>
-<th data-quarto-table-cell-role="th">sex</th>
-<th data-quarto-table-cell-role="th">year</th>
+<th data-quarto-table-cell-role="th">payment</th>
 </tr>
 <tr class="even">
-<th>str</th>
-<th>str</th>
 <th>f64</th>
-<th>f64</th>
-<th>i64</th>
-<th>i64</th>
-<th>str</th>
-<th>i64</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>"Chinstrap"</td>
-<td>"Dream"</td>
-<td>55.8</td>
-<td>19.8</td>
-<td>207</td>
-<td>4000</td>
-<td>"male"</td>
-<td>2009</td>
+<td>132.5</td>
 </tr>
 <tr class="even">
-<td>"Chinstrap"</td>
-<td>"Dream"</td>
-<td>43.5</td>
-<td>18.1</td>
-<td>202</td>
-<td>3400</td>
-<td>"female"</td>
-<td>2009</td>
+<td>120.0</td>
 </tr>
 <tr class="odd">
-<td>"Chinstrap"</td>
-<td>"Dream"</td>
-<td>49.6</td>
-<td>18.2</td>
-<td>193</td>
-<td>3775</td>
-<td>"male"</td>
-<td>2009</td>
+<td>116.0</td>
 </tr>
 <tr class="even">
-<td>"Chinstrap"</td>
-<td>"Dream"</td>
-<td>50.8</td>
-<td>19.0</td>
-<td>210</td>
-<td>4100</td>
-<td>"male"</td>
-<td>2009</td>
+<td>98.75</td>
 </tr>
 <tr class="odd">
-<td>"Chinstrap"</td>
-<td>"Dream"</td>
-<td>50.2</td>
-<td>18.7</td>
-<td>198</td>
-<td>3775</td>
-<td>"female"</td>
-<td>2009</td>
+<td>42.0</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 </div>
-<p>This example spreadsheet can be accessed via <a href="https://docs.google.com/spreadsheets/d/1aFu8lnD_g0yjF5O-K6SFgSEWiHPpgvFCF0NY9D6LXnY/edit?gid=0#gid=0">this Google Sheets link</a>.</p>
-</section>
-<section id="parquet-files" class="level3">
-<h3 class="anchored" data-anchor-id="parquet-files">Parquet Files</h3>
-<p>Parquet is a columnar storage format designed for efficient data analytics. It provides excellent compression and fast query performance, making it a popular choice for data science workflows. Polars includes native, high-performance support for reading Parquet files.</p>
-<p>The basic syntax for reading a Parquet file is:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>pl.read_parquet(<span class="st">"path/to/data.parquet"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="b25e2a30" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>df_par <span class="op">=</span> pl.read_parquet(<span class="st">"finance.parquet"</span>)</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>df_par.sample(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="dfbea7bc" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>s3 <span class="op">=</span> pl.Series(<span class="st">"mixed"</span>, [<span class="dv">1</span>, <span class="st">"text"</span>, <span class="va">True</span>, <span class="fl">3.14</span>], strict<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># series.dytpe outputs a the data type of the series</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Mixed series type: </span><span class="sc">{</span>s3<span class="sc">.</span>dtype<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>s3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Mixed series type: String</code></pre>
+</div>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <div><style>
 .dataframe > thead > tr,
@@ -461,82 +310,72 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   white-space: pre-wrap;
 }
 </style>
-<small>shape: (4, 10)</small>
+<small>shape: (4,)</small>
 <table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
-<th data-quarto-table-cell-role="th">date</th>
-<th data-quarto-table-cell-role="th">ticker</th>
-<th data-quarto-table-cell-role="th">open</th>
-<th data-quarto-table-cell-role="th">high</th>
-<th data-quarto-table-cell-role="th">low</th>
-<th data-quarto-table-cell-role="th">close</th>
-<th data-quarto-table-cell-role="th">volume</th>
-<th data-quarto-table-cell-role="th">pe_ratio</th>
-<th data-quarto-table-cell-role="th">dividend_yield</th>
-<th data-quarto-table-cell-role="th">market_cap</th>
+<th data-quarto-table-cell-role="th">mixed</th>
 </tr>
 <tr class="even">
-<th>datetime[ns]</th>
 <th>str</th>
-<th>f64</th>
-<th>f64</th>
-<th>f64</th>
-<th>f64</th>
-<th>i64</th>
-<th>f64</th>
-<th>f64</th>
-<th>f64</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>2024-06-10 00:00:00</td>
-<td>"AAPL"</td>
-<td>206.9</td>
-<td>209.03</td>
-<td>205.68</td>
-<td>207.57</td>
-<td>2786694</td>
-<td>28.74</td>
-<td>0.0101</td>
-<td>5.7972e9</td>
+<td>"1"</td>
 </tr>
 <tr class="even">
-<td>2025-01-09 00:00:00</td>
-<td>"GOOG"</td>
-<td>336.92</td>
-<td>341.17</td>
-<td>336.44</td>
-<td>338.54</td>
-<td>5546726</td>
-<td>28.2</td>
-<td>0.0255</td>
-<td>1.6261e10</td>
+<td>"text"</td>
 </tr>
 <tr class="odd">
-<td>2024-06-07 00:00:00</td>
-<td>"AAPL"</td>
-<td>205.0</td>
-<td>206.38</td>
-<td>203.58</td>
-<td>205.09</td>
-<td>1317522</td>
-<td>35.44</td>
-<td>0.0037</td>
-<td>5.9497e9</td>
+<td>"true"</td>
 </tr>
 <tr class="even">
-<td>2025-03-17 00:00:00</td>
-<td>"META"</td>
-<td>776.59</td>
-<td>785.55</td>
-<td>772.67</td>
-<td>778.14</td>
-<td>7325035</td>
-<td>11.26</td>
-<td>0.0272</td>
-<td>4.8416e10</td>
+<td>"3.14"</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>You can set the data type of the series as well by using the <code>dtype</code> parameter. A example use case is when storing a id number the id number should be stored as a string not a int due to the fact that we we do not want to perform mathmatical operations on the identification number therefore it is best stored as a string.</p>
+<div id="2c6e91d6" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># strict=False allows automatic conversion from different data types</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>s3 <span class="op">=</span> pl.Series(<span class="st">"id number"</span>, [<span class="dv">143823</span>, <span class="dv">194203</span>, <span class="dv">553420</span>, <span class="dv">234325</span>, <span class="dv">236532</span>], dtype<span class="op">=</span>pl.Utf8, strict<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>s3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+<div><style>
+.dataframe > thead > tr,
+.dataframe > tbody > tr {
+  text-align: right;
+  white-space: pre-wrap;
+}
+</style>
+<small>shape: (5,)</small>
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">id number</th>
+</tr>
+<tr class="even">
+<th>str</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>"143823"</td>
+</tr>
+<tr class="even">
+<td>"194203"</td>
+</tr>
+<tr class="odd">
+<td>"553420"</td>
+</tr>
+<tr class="even">
+<td>"234325"</td>
+</tr>
+<tr class="odd">
+<td>"236532"</td>
 </tr>
 </tbody>
 </table>
@@ -544,27 +383,190 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="importing-mutiple-files" class="level3">
-<h3 class="anchored" data-anchor-id="importing-mutiple-files">Importing Mutiple files</h3>
-<p>For situations where you need to combine data from multiple files into a single DataFrame, Polars offers straightforward approaches. While the syntax is relatively simple, the implementation may vary depending on your specific file organization.</p>
-<p>When working with multiple files of the same type and similar naming patterns in a single directory, Polars supports glob pattern matching:</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>pl.read_filetype(<span class="st">"path/to/data/my_many_files_*.filetype"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>For files with different names but the same format, placing them in a single directory allows you to use wildcard patterns to import them all at once:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>pl.read_filetype(<span class="st">"path/to/data/import/*.filetype"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Alternatively, for files located in different directories or even on different servers, you can provide a list of filepaths or URLs:</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>pl.read_filetype([</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"path/to/first/file.filetype"</span>,</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"path/to/second/file.filetype"</span>,</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"another/location/file.filetype"</span></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>If you’re working with different file types that share the same schema (identical columns and datatypes) and want to combine them into a single DataFrame, you’ll need to read each file individually and then concatenate them. Polars makes this process straightforward with its <code>concat</code> function, which can merge DataFrames regardless of their original file formats.</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Read files of different formats</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>df1 <span class="op">=</span> pl.read_csv(<span class="st">"path/to/file.csv"</span>)</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>df2 <span class="op">=</span> pl.read_parquet(<span class="st">"path/to/file.parquet"</span>)</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>df3 <span class="op">=</span> pl.read_json(<span class="st">"path/to/file.json"</span>)</span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Concatenate into a single DataFrame</span></span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>combined_df <span class="op">=</span> pl.concat([df1, df2, df3], how<span class="op">=</span><span class="st">"vertical"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="dataframes" class="level2">
+<h2 class="anchored" data-anchor-id="dataframes">Dataframes</h2>
+<p>DataFrames are tabular data structures (rows and columns) composed of multiple Series, with each column representing a single Series. The design of a dataframe is called schema. A schema is a mapping of column to the data types.</p>
+<p>Dataframes are the workhorses of data analysis and what you’ll use most frequently.</p>
+<p>With DataFrames, you can write powerful queries to filter, transform, aggregate, and reshape your data efficiently.</p>
+<p>DataFrames can be created in several ways:</p>
+<ol type="1">
+<li>From a dictionary of sequences (lists, arrays)</li>
+<li>With explicit schema specification</li>
+<li>From a sequence of (name, dtype) pairs</li>
+<li>From NumPy arrays</li>
+<li>From a list of lists (row-oriented data)</li>
+<li>By converting pandas DataFrames</li>
+<li>By importing existing tabular data from CSVs, JSON, SQL, Parquet files, etc.</li>
+</ol>
+<p>In real-world environments, you’ll typically work with preexisting data, though understanding various creation methods is valuable. We’ll cover data import techniques later, but for now, here’s an example of a DataFrame created from a dictionary of lists:</p>
+<div id="e32a23c5" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a DataFrame from a dictionary of lists</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pl.DataFrame({</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"name"</span>: [<span class="st">"Alice"</span>, <span class="st">"Bob"</span>, <span class="st">"Charlie"</span>, <span class="st">"David"</span>],</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"age"</span>: [<span class="dv">25</span>, <span class="dv">30</span>, <span class="dv">35</span>, <span class="dv">40</span>],</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"city"</span>: [<span class="st">"New York"</span>, <span class="st">"Boston"</span>, <span class="st">"Chicago"</span>, <span class="st">"Seattle"</span>],</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"salary"</span>: [<span class="dv">75000</span>, <span class="dv">85000</span>, <span class="dv">90000</span>, <span class="dv">95000</span>]</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+<div><style>
+.dataframe > thead > tr,
+.dataframe > tbody > tr {
+  text-align: right;
+  white-space: pre-wrap;
+}
+</style>
+<small>shape: (4, 4)</small>
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">name</th>
+<th data-quarto-table-cell-role="th">age</th>
+<th data-quarto-table-cell-role="th">city</th>
+<th data-quarto-table-cell-role="th">salary</th>
+</tr>
+<tr class="even">
+<th>str</th>
+<th>i64</th>
+<th>str</th>
+<th>i64</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>"Alice"</td>
+<td>25</td>
+<td>"New York"</td>
+<td>75000</td>
+</tr>
+<tr class="even">
+<td>"Bob"</td>
+<td>30</td>
+<td>"Boston"</td>
+<td>85000</td>
+</tr>
+<tr class="odd">
+<td>"Charlie"</td>
+<td>35</td>
+<td>"Chicago"</td>
+<td>90000</td>
+</tr>
+<tr class="even">
+<td>"David"</td>
+<td>40</td>
+<td>"Seattle"</td>
+<td>95000</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>every data frame has a shape. the shape is the number of rows and columns in a dataframe <code>shape(rows,columns)</code></p>
+<p>the shape for the above dataframe is:</p>
+<div id="1b25a765" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.shape)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>(4, 4)</code></pre>
+</div>
+</div>
+<p>you can view the schema of any dataframe with the following command</p>
+<div id="c20d0da8" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.schema)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Schema({'name': String, 'age': Int64, 'city': String, 'salary': Int64})</code></pre>
+</div>
+</div>
+<p>We see here that the schema is returned as a dictionary. In the above example the column name has the string datatype. Though you can view the data type already when displaying the dataframe.</p>
+</section>
+<section id="inspecting-dataframes" class="level2">
+<h2 class="anchored" data-anchor-id="inspecting-dataframes">Inspecting Dataframes</h2>
+<p>In polars there are a varity of ways to inspect a dataframe, all of which have different use cases. The ones that we will be covering right now are:</p>
+<ul>
+<li>head</li>
+<li>tail</li>
+<li>glimpse</li>
+<li>sample</li>
+<li>describe</li>
+<li>slice</li>
+</ul>
+<section id="head" class="level3">
+<h3 class="anchored" data-anchor-id="head">head</h3>
+<p>the <code>head</code> functions allows you to view the first x rows of the dataframe. By default the number of rows it shows is 5, though you can specify the number of rows to view.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>dataframe.head(n)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Where n is the number of rows to return if you give it a negative number it will turn all rows except the last n rows.</p>
+<div id="9d0ac857" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Create NumPy arrays for sandwich data</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>sandwich_names <span class="op">=</span> np.array([<span class="st">'BLT'</span>, <span class="st">'Club'</span>, <span class="st">'Tuna'</span>, <span class="st">'Ham &amp; Cheese'</span>, <span class="st">'Veggie'</span>])</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>prices <span class="op">=</span> np.array([<span class="fl">8.99</span>, <span class="fl">10.50</span>, <span class="fl">7.50</span>, <span class="fl">6.99</span>, <span class="fl">6.50</span>])</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>calories <span class="op">=</span> np.array([<span class="dv">550</span>, <span class="dv">720</span>, <span class="dv">480</span>, <span class="dv">520</span>, <span class="dv">320</span>])</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>vegetarian <span class="op">=</span> np.array([<span class="va">False</span>, <span class="va">False</span>, <span class="va">False</span>, <span class="va">False</span>, <span class="va">True</span>])</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Create DataFrame from NumPy arrays</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>sandwich_df <span class="op">=</span> pl.DataFrame({</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">"sandwich"</span>: sandwich_names,</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">"price"</span>: prices,</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">"calories"</span>: calories,</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">"vegetarian"</span>: vegetarian</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>sandwich_df.head(<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="8">
+<div><style>
+.dataframe > thead > tr,
+.dataframe > tbody > tr {
+  text-align: right;
+  white-space: pre-wrap;
+}
+</style>
+<small>shape: (3, 4)</small>
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">sandwich</th>
+<th data-quarto-table-cell-role="th">price</th>
+<th data-quarto-table-cell-role="th">calories</th>
+<th data-quarto-table-cell-role="th">vegetarian</th>
+</tr>
+<tr class="even">
+<th>str</th>
+<th>f64</th>
+<th>i64</th>
+<th>bool</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>"BLT"</td>
+<td>8.99</td>
+<td>550</td>
+<td>false</td>
+</tr>
+<tr class="even">
+<td>"Club"</td>
+<td>10.5</td>
+<td>720</td>
+<td>false</td>
+</tr>
+<tr class="odd">
+<td>"Tuna"</td>
+<td>7.5</td>
+<td>480</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="tail" class="level3">
+<h3 class="anchored" data-anchor-id="tail">tail</h3>
+<p>The <code>tail</code> function is esentailly the inverse of head. It allows you to view the last n rows of the dataframe. The default for tail is also five rows.</p>
 
 
 </section>

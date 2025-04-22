@@ -1,5 +1,180 @@
 [
   {
+    "objectID": "intro_to_polars/chapter3.html",
+    "href": "intro_to_polars/chapter3.html",
+    "title": "Dataframes and Series",
+    "section": "",
+    "text": "Polars allows you to store data in a varity of formats called data types. These data types fall generally into the following categorties:\n\nNumeric: Signed integers, unsigned integers, floating point numbers, and decimals\nNested: Lists, structs, and arrays for handling complex data\nTemporal: Dates, datetimes,and times for working with time-based data\nMiscellaneous: Strings, binary data, Booleans, categoricals, enums, and objects\n\nThe most common data types you will be working with are generally: Strings, signed and unsigned integers, floating point numbers or floats, decimals, dates or datatimes and booleans. For more information on each of these data types see ?@sec-appendix-a."
+  },
+  {
+    "objectID": "intro_to_polars/chapter3.html#data-types",
+    "href": "intro_to_polars/chapter3.html#data-types",
+    "title": "Dataframes and Series",
+    "section": "",
+    "text": "Polars allows you to store data in a varity of formats called data types. These data types fall generally into the following categorties:\n\nNumeric: Signed integers, unsigned integers, floating point numbers, and decimals\nNested: Lists, structs, and arrays for handling complex data\nTemporal: Dates, datetimes,and times for working with time-based data\nMiscellaneous: Strings, binary data, Booleans, categoricals, enums, and objects\n\nThe most common data types you will be working with are generally: Strings, signed and unsigned integers, floating point numbers or floats, decimals, dates or datatimes and booleans. For more information on each of these data types see ?@sec-appendix-a."
+  },
+  {
+    "objectID": "intro_to_polars/chapter3.html#series",
+    "href": "intro_to_polars/chapter3.html#series",
+    "title": "Dataframes and Series",
+    "section": "Series",
+    "text": "Series\nThe two most common data structures in Polars are DataFrames and Series. Series are one-dimensional data structures where all elements share the same datatype. Think of a Series as a single column in a table - it’s essentially a named array of data.\nCreating a Series is straightforward with the following syntax:\npl.Series(name, values_list)\nWhere “name” is the label for your Series and “values_list” contains the data. Here’s a simple example:\n\nimport polars as pl\ns = pl.Series(\"example\", [1, 2, 3, 4, 5])\ns\n\n\nshape: (5,)\n\n\n\nexample\n\n\ni64\n\n\n\n\n1\n\n\n2\n\n\n3\n\n\n4\n\n\n5\n\n\n\n\n\n\nWhen you create a series Polars will infer the data type for the values you provide. So in the above example I gave it [1, 2, 3, 4, 5] and it set the datatype to Int64 if instead gave it [1, 2, 3, 4.0, 5] it would asume it is Float64.\n\ns2 = pl.Series(\"payment\", [132.50, 120, 116, 98.75 ,42])\ns2\n\n\nshape: (5,)\n\n\n\npayment\n\n\nf64\n\n\n\n\n132.5\n\n\n120.0\n\n\n116.0\n\n\n98.75\n\n\n42.0\n\n\n\n\n\n\n\ns3 = pl.Series(\"mixed\", [1, \"text\", True, 3.14], strict=False)\n# series.dytpe outputs a the data type of the series\nprint(f\"Mixed series type: {s3.dtype}\")\ns3\n\nMixed series type: String\n\n\n\nshape: (4,)\n\n\n\nmixed\n\n\nstr\n\n\n\n\n\"1\"\n\n\n\"text\"\n\n\n\"true\"\n\n\n\"3.14\"\n\n\n\n\n\n\nYou can set the data type of the series as well by using the dtype parameter. A example use case is when storing a id number the id number should be stored as a string not a int due to the fact that we we do not want to perform mathmatical operations on the identification number therefore it is best stored as a string.\n\n# strict=False allows automatic conversion from different data types\ns3 = pl.Series(\"id number\", [143823, 194203, 553420, 234325, 236532], dtype=pl.Utf8, strict=False)\ns3\n\n\nshape: (5,)\n\n\n\nid number\n\n\nstr\n\n\n\n\n\"143823\"\n\n\n\"194203\"\n\n\n\"553420\"\n\n\n\"234325\"\n\n\n\"236532\""
+  },
+  {
+    "objectID": "intro_to_polars/chapter3.html#dataframes",
+    "href": "intro_to_polars/chapter3.html#dataframes",
+    "title": "Dataframes and Series",
+    "section": "Dataframes",
+    "text": "Dataframes\nDataFrames are tabular data structures (rows and columns) composed of multiple Series, with each column representing a single Series. The design of a dataframe is called schema. A schema is a mapping of column to the data types.\nDataframes are the workhorses of data analysis and what you’ll use most frequently.\nWith DataFrames, you can write powerful queries to filter, transform, aggregate, and reshape your data efficiently.\nDataFrames can be created in several ways:\n\nFrom a dictionary of sequences (lists, arrays)\nWith explicit schema specification\nFrom a sequence of (name, dtype) pairs\nFrom NumPy arrays\nFrom a list of lists (row-oriented data)\nBy converting pandas DataFrames\nBy importing existing tabular data from CSVs, JSON, SQL, Parquet files, etc.\n\nIn real-world environments, you’ll typically work with preexisting data, though understanding various creation methods is valuable. We’ll cover data import techniques later, but for now, here’s an example of a DataFrame created from a dictionary of lists:\n\n# Create a DataFrame from a dictionary of lists\ndf = pl.DataFrame({\n    \"name\": [\"Alice\", \"Bob\", \"Charlie\", \"David\"],\n    \"age\": [25, 30, 35, 40],\n    \"city\": [\"New York\", \"Boston\", \"Chicago\", \"Seattle\"],\n    \"salary\": [75000, 85000, 90000, 95000]\n})\n\ndf\n\n\nshape: (4, 4)\n\n\n\nname\nage\ncity\nsalary\n\n\nstr\ni64\nstr\ni64\n\n\n\n\n\"Alice\"\n25\n\"New York\"\n75000\n\n\n\"Bob\"\n30\n\"Boston\"\n85000\n\n\n\"Charlie\"\n35\n\"Chicago\"\n90000\n\n\n\"David\"\n40\n\"Seattle\"\n95000\n\n\n\n\n\n\nevery data frame has a shape. the shape is the number of rows and columns in a dataframe shape(rows,columns)\nthe shape for the above dataframe is:\n\nprint(df.shape)\n\n(4, 4)\n\n\nyou can view the schema of any dataframe with the following command\n\nprint(df.schema)\n\nSchema({'name': String, 'age': Int64, 'city': String, 'salary': Int64})\n\n\nWe see here that the schema is returned as a dictionary. In the above example the column name has the string datatype. Though you can view the data type already when displaying the dataframe."
+  },
+  {
+    "objectID": "intro_to_polars/chapter3.html#inspecting-dataframes",
+    "href": "intro_to_polars/chapter3.html#inspecting-dataframes",
+    "title": "Dataframes and Series",
+    "section": "Inspecting Dataframes",
+    "text": "Inspecting Dataframes\nIn polars there are a varity of ways to inspect a dataframe, all of which have different use cases. The ones that we will be covering right now are:\n\nhead\ntail\nglimpse\nsample\ndescribe\nslice\n\n\nhead\nthe head functions allows you to view the first x rows of the dataframe. By default the number of rows it shows is 5, though you can specify the number of rows to view.\ndataframe.head(n)\nWhere n is the number of rows to return if you give it a negative number it will turn all rows except the last n rows.\n\nimport numpy as np\n\n# Create NumPy arrays for sandwich data\nsandwich_names = np.array(['BLT', 'Club', 'Tuna', 'Ham & Cheese', 'Veggie'])\nprices = np.array([8.99, 10.50, 7.50, 6.99, 6.50])\ncalories = np.array([550, 720, 480, 520, 320])\nvegetarian = np.array([False, False, False, False, True])\n\n# Create DataFrame from NumPy arrays\nsandwich_df = pl.DataFrame({\n    \"sandwich\": sandwich_names,\n    \"price\": prices,\n    \"calories\": calories,\n    \"vegetarian\": vegetarian\n})\n\n\nsandwich_df.head(3)\n\n\nshape: (3, 4)\n\n\n\nsandwich\nprice\ncalories\nvegetarian\n\n\nstr\nf64\ni64\nbool\n\n\n\n\n\"BLT\"\n8.99\n550\nfalse\n\n\n\"Club\"\n10.5\n720\nfalse\n\n\n\"Tuna\"\n7.5\n480\nfalse\n\n\n\n\n\n\n\n\ntail\nThe tail function is esentailly the inverse of head. It allows you to view the last n rows of the dataframe. The default for tail is also five rows."
+  },
+  {
+    "objectID": "intro_to_polars/chapter2.html",
+    "href": "intro_to_polars/chapter2.html",
+    "title": "Installation",
+    "section": "",
+    "text": "Polars can be installed using pip:\npip install polars\n\n\n\nPolars offers various optional dependencies for specific use cases, which are omitted to reduce the footprint of the library. Throught this guide I will mention when specific dependancts are required/used.\nTo install all optional dependencies:\npip install 'polars[all]'\n\n\n\n\n\n\nNote\n\n\n\nI recommend installing all optional dependencies due to convenience. And the fact that the relative footprint is still not excessive.\n\n\n\n\nPolars offers the following dependencys for increased interoperability between different librarys.\n\npandas: allows conversion to and from pandas dataframes/series\nnumpy: allows conversion between numpy arrays\npyarrow:allows for data conversion between PyArrow tables and arrays\npydantic: allows for conversion from Pydantic models to polars\n\npip install 'polars[pandas, numpy, pyarrow, pydantic]' # remove the unused dependencies\n\n\n\nPolars has a few options for different engines used to convert xlsx files to a format more readable by polars.\nThe different engines avalible are:\n\ncalamine\nopenpyxl\nxlsx2csv\n\n\n\n\n\n\n\nTip\n\n\n\nThere are some differences in the engines performance and behaviour to learn more see the official documentation.\n\n\nAdditionally Polars support one other optional dependency related to Excel: - xlsxwriter: which allows you to write to xlsx files\npip install 'polars[excel]' # if you want to install all Excel dependencies\npip install 'polars[calamine, openpyxl, xlsx2csv, xlsxwriter]' # if you want to pick and chose"
+  },
+  {
+    "objectID": "intro_to_polars/chapter2.html#basic-installation",
+    "href": "intro_to_polars/chapter2.html#basic-installation",
+    "title": "Installation",
+    "section": "",
+    "text": "Polars can be installed using pip:\npip install polars"
+  },
+  {
+    "objectID": "intro_to_polars/chapter2.html#optional-dependencies",
+    "href": "intro_to_polars/chapter2.html#optional-dependencies",
+    "title": "Installation",
+    "section": "",
+    "text": "Polars offers various optional dependencies for specific use cases, which are omitted to reduce the footprint of the library. Throught this guide I will mention when specific dependancts are required/used.\nTo install all optional dependencies:\npip install 'polars[all]'\n\n\n\n\n\n\nNote\n\n\n\nI recommend installing all optional dependencies due to convenience. And the fact that the relative footprint is still not excessive.\n\n\n\n\nPolars offers the following dependencys for increased interoperability between different librarys.\n\npandas: allows conversion to and from pandas dataframes/series\nnumpy: allows conversion between numpy arrays\npyarrow:allows for data conversion between PyArrow tables and arrays\npydantic: allows for conversion from Pydantic models to polars\n\npip install 'polars[pandas, numpy, pyarrow, pydantic]' # remove the unused dependencies\n\n\n\nPolars has a few options for different engines used to convert xlsx files to a format more readable by polars.\nThe different engines avalible are:\n\ncalamine\nopenpyxl\nxlsx2csv\n\n\n\n\n\n\n\nTip\n\n\n\nThere are some differences in the engines performance and behaviour to learn more see the official documentation.\n\n\nAdditionally Polars support one other optional dependency related to Excel: - xlsxwriter: which allows you to write to xlsx files\npip install 'polars[excel]' # if you want to install all Excel dependencies\npip install 'polars[calamine, openpyxl, xlsx2csv, xlsxwriter]' # if you want to pick and chose"
+  },
+  {
+    "objectID": "intro_to_polars/chapter1.html",
+    "href": "intro_to_polars/chapter1.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "Polars is a modern data manipulation library avalible for Python, R, NodeJs and Rust. It is designed as a high-performance alternative to pandas, especially for large datasets. It features syntax that’s both human-readable and similar to R’s data manipulation paradigms. Polars stands out for three main reasons:\n\nPerformance: Built in Rust, Polars delivers exceptional speed through parallel processing by default and a sophisticated query optimizer that analyzes and improves execution plans.\nMemory efficiency: Using a columnar memory format rather than row-based storage, Polars efficiently handles larger-than-memory datasets and performs operations with minimal memory overhead.\nLazy evaluation: Polars supports both eager and lazy execution modes. The lazy API builds optimized query plans before execution, similar to database query planners, resulting in more efficient data processing pipelines."
+  },
+  {
+    "objectID": "intro_to_polars/chapter1.html#what-is-polars",
+    "href": "intro_to_polars/chapter1.html#what-is-polars",
+    "title": "Introduction",
+    "section": "",
+    "text": "Polars is a modern data manipulation library avalible for Python, R, NodeJs and Rust. It is designed as a high-performance alternative to pandas, especially for large datasets. It features syntax that’s both human-readable and similar to R’s data manipulation paradigms. Polars stands out for three main reasons:\n\nPerformance: Built in Rust, Polars delivers exceptional speed through parallel processing by default and a sophisticated query optimizer that analyzes and improves execution plans.\nMemory efficiency: Using a columnar memory format rather than row-based storage, Polars efficiently handles larger-than-memory datasets and performs operations with minimal memory overhead.\nLazy evaluation: Polars supports both eager and lazy execution modes. The lazy API builds optimized query plans before execution, similar to database query planners, resulting in more efficient data processing pipelines."
+  },
+  {
+    "objectID": "intro_to_polars/index.html",
+    "href": "intro_to_polars/index.html",
+    "title": "Preface",
+    "section": "",
+    "text": "Preface\nWelcome to “Introduction to Polars.” This book emerged from my journey as a data science student who chose to explore Polars rather than pandas—the standard library taught in my course. When I approached my instructor about using this alternative technology, he supported my decision while honestly acknowledging that course materials wouldn’t cover my chosen path.\nAs I navigated through the course, I discovered a significant gap in beginner-friendly Polars resources for data science newcomers. While the official documentation proved valuable, it often assumed a level of familiarity that beginners might not possess. Nevertheless, through persistence and experimentation, I gained proficiency and successfully completed my coursework.\nThis book aims to bridge that gap by offering an accessible introduction to Polars for those new to data manipulation libraries. I’ve designed it especially for readers with limited prior experience in data science, incorporating the insights and solutions I discovered along my learning journey.\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "blog/posts/read_data/index.html",
+    "href": "blog/posts/read_data/index.html",
+    "title": "Introduction to Polars Pt. 2",
+    "section": "",
+    "text": "In this segement, we’ll explore how to read data with Polars using various file formats including CSVs, JSONs, Excel spreadsheets, and Parquet files, whether stored locally or accessed via the web. Note that we won’t be covering cloud storage or database connections in this tutorial."
+  },
+  {
+    "objectID": "blog/posts/read_data/index.html#importing-data-with-polars",
+    "href": "blog/posts/read_data/index.html#importing-data-with-polars",
+    "title": "Introduction to Polars Pt. 2",
+    "section": "Importing Data with Polars",
+    "text": "Importing Data with Polars\n\n\nPolars provides robust capabilities for importing data from various sources including CSVs, JSONs, Excel spreadsheets, Parquet files, cloud storage solutions (AWS, Azure, and Google Cloud), and databases.\nThe importing methods follow a consistent pattern across file types, making it easy to work with different data formats.\n\n\n\n\n\nCSV Files\nThe basic syntax for reading a CSV file is:\npl.read_csv(\"path/to/data.csv\")\nAlternatively, you can also read CSV files directly from the internet:\npl.read_csv(\"https://example.com/path/to/your/file.csv\")\nThis capability to read files directly from URLs also works with all the file import methods we’ll cover below.\nThis function offers numerous parameters to handle different CSV formats and configurations. For more information read the documentation.\n\nimport polars as pl\n\ndf_csv = pl.read_csv(\"example.csv\", try_parse_dates=True)\ndf_csv.head(5)\n\n\nshape: (5, 9)\n\n\n\nid\nfirst_name\nlast_name\nemail\npurchase_date\nproduct\nquantity\nprice\ntotal\n\n\ni64\nstr\nstr\nstr\ndate\nstr\ni64\nf64\nf64\n\n\n\n\n1\n\"John\"\n\"Doe\"\n\"john.doe@example.com\"\n2023-01-15\n\"Laptop\"\n1\n1299.99\n1299.99\n\n\n2\n\"Jane\"\n\"Smith\"\n\"jane.smith@example.com\"\n2023-01-16\n\"Smartphone\"\n2\n699.95\n1399.9\n\n\n3\n\"Robert\"\n\"Johnson\"\n\"rob.j@example.com\"\n2023-01-18\n\"Headphones, Wireless\"\n3\n89.99\n269.97\n\n\n4\n\"Sarah\"\n\"Williams\"\n\"sarah.w@example.com\"\n2023-01-20\n\"Monitor\"\n1\n249.5\n249.5\n\n\n5\n\"Michael\"\n\"Brown\"\n\"michael.b@example.com\"\n2023-01-22\n\"Keyboard\"\n2\n59.99\n119.98\n\n\n\n\n\n\n\n\nJSON Files\nReading JSON files follows a similar pattern. The basic syntax is:\npl.read_json(\"docs/data/path.json\")\nJSON files have a more standardized structure than CSVs, so the reading process requires fewer configuration parameters. Polars handles JSON parsing efficiently with minimal setup. For advanced options and configurations, consult the official documentation.\ndf_json = pl.read_json(\"basketball.json\")\n\ndf_json\n\n\nExcel\nPolars doesn’t include a native Excel reader. Instead, it leverages external libraries like fastexcel, xlsx2csv, or openpyxl to parse Excel files into Polars-compatible formats. Among these options, Polars recommends fastexcel for optimal performance.\nWhile it’s generally better to avoid using Excel files where possible (you can usually export as CSV directly from Excel), reading Excel files is straightforward with the right dependencies installed.\nBefore attempting to read Excel files, make sure you have at least one of these libraries installed:\n $ pip install fastexcel xlsx2csv openpyxl\nThe basic syntax for reading an Excel file with Polars is:\npl.read_excel(\"path/to/data.xlsx\")\nIf your Excel file contains multiple sheets, you can specify which one to read using the sheet_name parameter:\ndf = pl.read_excel(\"path/to/data.xlsx\", sheet_name=\"example\")\nFor additional Excel reading options and parameters, refer to the Polars Excel documentation, which covers sheet selection, range specification, and handling of complex Excel files.\n\ndf_xlsx = pl.read_excel(\"penguins.xlsx\", sheet_name=\"Dream Island\")\n\ndf_xlsx.tail(5)\n\n\nshape: (5, 8)\n\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\nstr\nstr\nf64\nf64\ni64\ni64\nstr\ni64\n\n\n\n\n\"Chinstrap\"\n\"Dream\"\n55.8\n19.8\n207\n4000\n\"male\"\n2009\n\n\n\"Chinstrap\"\n\"Dream\"\n43.5\n18.1\n202\n3400\n\"female\"\n2009\n\n\n\"Chinstrap\"\n\"Dream\"\n49.6\n18.2\n193\n3775\n\"male\"\n2009\n\n\n\"Chinstrap\"\n\"Dream\"\n50.8\n19.0\n210\n4100\n\"male\"\n2009\n\n\n\"Chinstrap\"\n\"Dream\"\n50.2\n18.7\n198\n3775\n\"female\"\n2009\n\n\n\n\n\n\nThis example spreadsheet can be accessed via this Google Sheets link.\n\n\nParquet Files\nParquet is a columnar storage format designed for efficient data analytics. It provides excellent compression and fast query performance, making it a popular choice for data science workflows. Polars includes native, high-performance support for reading Parquet files.\nThe basic syntax for reading a Parquet file is:\npl.read_parquet(\"path/to/data.parquet\")\n\ndf_par = pl.read_parquet(\"finance.parquet\")\ndf_par.sample(4)\n\n\nshape: (4, 10)\n\n\n\ndate\nticker\nopen\nhigh\nlow\nclose\nvolume\npe_ratio\ndividend_yield\nmarket_cap\n\n\ndatetime[ns]\nstr\nf64\nf64\nf64\nf64\ni64\nf64\nf64\nf64\n\n\n\n\n2024-06-10 00:00:00\n\"AAPL\"\n206.9\n209.03\n205.68\n207.57\n2786694\n28.74\n0.0101\n5.7972e9\n\n\n2025-01-09 00:00:00\n\"GOOG\"\n336.92\n341.17\n336.44\n338.54\n5546726\n28.2\n0.0255\n1.6261e10\n\n\n2024-06-07 00:00:00\n\"AAPL\"\n205.0\n206.38\n203.58\n205.09\n1317522\n35.44\n0.0037\n5.9497e9\n\n\n2025-03-17 00:00:00\n\"META\"\n776.59\n785.55\n772.67\n778.14\n7325035\n11.26\n0.0272\n4.8416e10\n\n\n\n\n\n\n\n\nImporting Mutiple files\nFor situations where you need to combine data from multiple files into a single DataFrame, Polars offers straightforward approaches. While the syntax is relatively simple, the implementation may vary depending on your specific file organization.\nWhen working with multiple files of the same type and similar naming patterns in a single directory, Polars supports glob pattern matching:\npl.read_filetype(\"path/to/data/my_many_files_*.filetype\")\nFor files with different names but the same format, placing them in a single directory allows you to use wildcard patterns to import them all at once:\npl.read_filetype(\"path/to/data/import/*.filetype\")\nAlternatively, for files located in different directories or even on different servers, you can provide a list of filepaths or URLs:\npl.read_filetype([\n    \"path/to/first/file.filetype\",\n    \"path/to/second/file.filetype\",\n    \"another/location/file.filetype\"\n])\nIf you’re working with different file types that share the same schema (identical columns and datatypes) and want to combine them into a single DataFrame, you’ll need to read each file individually and then concatenate them. Polars makes this process straightforward with its concat function, which can merge DataFrames regardless of their original file formats.\n# Read files of different formats\ndf1 = pl.read_csv(\"path/to/file.csv\")\ndf2 = pl.read_parquet(\"path/to/file.parquet\")\ndf3 = pl.read_json(\"path/to/file.json\")\n\n# Concatenate into a single DataFrame\ncombined_df = pl.concat([df1, df2, df3], how=\"vertical\")"
+  },
+  {
+    "objectID": "blog/posts/welcome/index.html",
+    "href": "blog/posts/welcome/index.html",
+    "title": "Welcome to My Data Science Blog",
+    "section": "",
+    "text": "This is my first blog post on my data science journey. I’ll be sharing insights, projects, and learnings here."
+  },
+  {
+    "objectID": "blog/posts/welcome/index.html#welcome",
+    "href": "blog/posts/welcome/index.html#welcome",
+    "title": "Welcome to My Data Science Blog",
+    "section": "",
+    "text": "This is my first blog post on my data science journey. I’ll be sharing insights, projects, and learnings here."
+  },
+  {
+    "objectID": "blog/posts/welcome/index.html#what-to-expect",
+    "href": "blog/posts/welcome/index.html#what-to-expect",
+    "title": "Welcome to My Data Science Blog",
+    "section": "What to Expect",
+    "text": "What to Expect\nIn this blog, I’ll cover:\n\nData analysis techniques\nInteresting projects I’m working on\nInsights from the data science field\nTutorials and how-to guides\n\nStay tuned for more content! ```"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Nathaniel Clark",
+    "section": "",
+    "text": "I’m a Data Science student at Brigham Young University-Idaho with expertise in Python programming, data analysis, database management, and cybersecurity fundamentals. My journey in data science combines technical skills with practical problem-solving abilities.\n\n GitHub  LinkedIn"
+  },
+  {
+    "objectID": "index.html#about-me",
+    "href": "index.html#about-me",
+    "title": "Nathaniel Clark",
+    "section": "",
+    "text": "I’m a Data Science student at Brigham Young University-Idaho with expertise in Python programming, data analysis, database management, and cybersecurity fundamentals. My journey in data science combines technical skills with practical problem-solving abilities.\n\n GitHub  LinkedIn"
+  },
+  {
+    "objectID": "index.html#my-focus-areas",
+    "href": "index.html#my-focus-areas",
+    "title": "Nathaniel Clark",
+    "section": "My Focus Areas",
+    "text": "My Focus Areas\n\n\n Technical Skills\n\nProgramming Languages: Python, R, C#, SQL\nData Analysis: Cleaning, transformation, visualization\nDatabase Systems: Design, management, security protocols\nMachine Learning: Classification, regression, clustering\n\n\n\n Professional Interests\n\nMachine Learning & AI — Deep learning, LLMs, predictive modeling\nData Engineering — ETL pipelines, data systems, cloud infrastructure\nData Visualization — Interactive dashboards, storytelling with data\nStatistical Analysis — Hypothesis testing, regression modeling, Bayesian methods\nSoftware Development — Creating data-driven applications and tools"
+  },
+  {
+    "objectID": "index.html#recent-blog-posts",
+    "href": "index.html#recent-blog-posts",
+    "title": "Nathaniel Clark",
+    "section": " Recent Blog Posts",
+    "text": "Recent Blog Posts\n\n\n\nIntroduction to Polars Pt. 2\n2025-04-15\n\n\n\nIntroduction to Polars Pt. 1\n2025-04-04\n\n\n\nWelcome to My Data Science Blog\n2025-04-03"
+  },
+  {
+    "objectID": "index.html#portfolio-overview",
+    "href": "index.html#portfolio-overview",
+    "title": "Nathaniel Clark",
+    "section": "Portfolio Overview",
+    "text": "Portfolio Overview\nThis website showcases my projects and technical abilities in various aspects of data science. Browse through the sections to explore my work in data analysis, visualization, machine learning, and more.\nView My Resume Contact Me :::"
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Data Science Blog",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nIntroduction to Polars Pt. 2\n\n\nReading in Data\n\n\n\npolars\n\n\npython\n\n\nIntroduction to Polars\n\n\n\n\n\n\n\n\n\nApr 15, 2025\n\n\nNathaniel Clark\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to Polars Pt. 1\n\n\nDataframes and Series\n\n\n\npolars\n\n\npython\n\n\nIntroduction to Polars\n\n\n\n\n\n\n\n\n\nApr 4, 2025\n\n\nNathaniel Clark\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome to My Data Science Blog\n\n\n\n\n\n\nnews\n\n\nintroduction\n\n\n\n\n\n\n\n\n\nApr 3, 2025\n\n\nNathaniel Clark\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+  },
+  {
+    "objectID": "blog/posts/introduction_to_polars_pt1/index.html",
+    "href": "blog/posts/introduction_to_polars_pt1/index.html",
+    "title": "Introduction to Polars Pt. 1",
+    "section": "",
+    "text": "Recently I took a data science course that heavily utilized pandas for data manipulation in Python. Being curious about emerging technologies, I asked my instructor if I could use Polars instead. He agreed but cautioned that he wouldn’t have supporting materials for my alternative choice.\nThroughout the course, I discovered a lack of beginner-friendly Polars resources for those new to data science. I primarily relied on official documentation, which presented some challenges along the way. Despite these obstacles, I persevered, learned a great deal, and successfully completed the class.\nI’m writing this post to share what I’ve learned about Polars and provide an accessible introduction for newcomers to data manipulation libraries, especially those with limited prior experience in the field."
+  },
+  {
+    "objectID": "blog/posts/introduction_to_polars_pt1/index.html#what-is-polars",
+    "href": "blog/posts/introduction_to_polars_pt1/index.html#what-is-polars",
+    "title": "Introduction to Polars Pt. 1",
+    "section": "What is Polars?",
+    "text": "What is Polars?\n\nPolars is a modern data manipulation library for Python and Rust designed as a high-performance alternative to pandas, especially for large datasets. It features syntax that’s both human-readable and similar to R’s data manipulation paradigms. Polars stands out for three main reasons:\n\nPerformance: Built in Rust, Polars delivers exceptional speed through parallel processing by default and a sophisticated query optimizer that analyzes and improves execution plans.\nMemory efficiency: Using a columnar memory format rather than row-based storage, Polars efficiently handles larger-than-memory datasets and performs operations with minimal memory overhead.\nLazy evaluation: Polars supports both eager and lazy execution modes. The lazy API builds optimized query plans before execution, similar to database query planners, resulting in more efficient data processing pipelines."
+  },
+  {
+    "objectID": "blog/posts/introduction_to_polars_pt1/index.html#dataframes-and-series",
+    "href": "blog/posts/introduction_to_polars_pt1/index.html#dataframes-and-series",
+    "title": "Introduction to Polars Pt. 1",
+    "section": "DataFrames and Series",
+    "text": "DataFrames and Series\n\nSeries\nThe two most common data structures in Polars are DataFrames and Series. Series are one-dimensional data structures where all elements share the same datatype. Think of a Series as a single column in a table - it’s essentially a named array of data.\nPolars supports a variety of data types that fall into these major categories:\n\nNumeric: Signed integers, unsigned integers, floating point numbers, and decimals\nNested: Lists, structs, and arrays for handling complex data\nTemporal: Dates, datetimes,and times for working with time-based data\nMiscellaneous: Strings, binary data, Booleans, categoricals, enums, and objects\n\nCreating a Series is straightforward with the following syntax:\npl.Series(name, values_list)\nWhere “name” is the label for your Series and “values_list” contains the data. Here’s a simple example:\n\nimport polars as pl\ns = pl.Series(\"example\", [1, 2, 3, 4, 5])\ns\n\n\nshape: (5,)\n\n\n\nexample\n\n\ni64\n\n\n\n\n1\n\n\n2\n\n\n3\n\n\n4\n\n\n5\n\n\n\n\n\n\n\n\nDataframes\nDataFrames are tabular data structures (rows and columns) composed of multiple Series, with each column representing a single Series. These are the workhorses of data analysis and what you’ll use most frequently.\nWith DataFrames, you can write powerful queries to filter, transform, aggregate, and reshape your data efficiently.\nDataFrames can be created in several ways:\n\nFrom a dictionary of sequences (lists, arrays)\nWith explicit schema specification\nFrom a sequence of (name, dtype) pairs\nFrom NumPy arrays\nFrom a list of lists (row-oriented data)\nBy converting pandas DataFrames\nBy importing existing tabular data from CSVs, JSON, SQL, Parquet files, etc.\n\nIn real-world environments, you’ll typically work with preexisting data, though understanding various creation methods is valuable. We’ll cover data import techniques later, but for now, here’s an example of a DataFrame created from a dictionary of lists:\n\n# Create a DataFrame from a dictionary of lists\ndf = pl.DataFrame({\n    \"name\": [\"Alice\", \"Bob\", \"Charlie\", \"David\"],\n    \"age\": [25, 30, 35, 40],\n    \"city\": [\"New York\", \"Boston\", \"Chicago\", \"Seattle\"],\n    \"salary\": [75000, 85000, 90000, 95000]\n})\n\ndf\n\n\nshape: (4, 4)\n\n\n\nname\nage\ncity\nsalary\n\n\nstr\ni64\nstr\ni64\n\n\n\n\n\"Alice\"\n25\n\"New York\"\n75000\n\n\n\"Bob\"\n30\n\"Boston\"\n85000\n\n\n\"Charlie\"\n35\n\"Chicago\"\n90000\n\n\n\"David\"\n40\n\"Seattle\"\n95000"
+  },
+  {
     "objectID": "resume.html",
     "href": "resume.html",
     "title": "Nathaniel Clark",
@@ -49,101 +224,24 @@
     "text": "Projects"
   },
   {
-    "objectID": "blog/posts/introduction_to_polars_pt1/index.html",
-    "href": "blog/posts/introduction_to_polars_pt1/index.html",
-    "title": "Introduction to Polars Pt. 1",
+    "objectID": "intro_to_polars/appendix2.html",
+    "href": "intro_to_polars/appendix2.html",
+    "title": "Reading and Writing Data",
     "section": "",
-    "text": "Recently I took a data science course that heavily utilized pandas for data manipulation in Python. Being curious about emerging technologies, I asked my instructor if I could use Polars instead. He agreed but cautioned that he wouldn’t have supporting materials for my alternative choice.\nThroughout the course, I discovered a lack of beginner-friendly Polars resources for those new to data science. I primarily relied on official documentation, which presented some challenges along the way. Despite these obstacles, I persevered, learned a great deal, and successfully completed the class.\nI’m writing this post to share what I’ve learned about Polars and provide an accessible introduction for newcomers to data manipulation libraries, especially those with limited prior experience in the field."
+    "text": "Reading and Writing Data\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "blog/posts/introduction_to_polars_pt1/index.html#what-is-polars",
-    "href": "blog/posts/introduction_to_polars_pt1/index.html#what-is-polars",
-    "title": "Introduction to Polars Pt. 1",
-    "section": "What is Polars?",
-    "text": "What is Polars?\n\nPolars is a modern data manipulation library for Python and Rust designed as a high-performance alternative to pandas, especially for large datasets. It features syntax that’s both human-readable and similar to R’s data manipulation paradigms. Polars stands out for three main reasons:\n\nPerformance: Built in Rust, Polars delivers exceptional speed through parallel processing by default and a sophisticated query optimizer that analyzes and improves execution plans.\nMemory efficiency: Using a columnar memory format rather than row-based storage, Polars efficiently handles larger-than-memory datasets and performs operations with minimal memory overhead.\nLazy evaluation: Polars supports both eager and lazy execution modes. The lazy API builds optimized query plans before execution, similar to database query planners, resulting in more efficient data processing pipelines."
-  },
-  {
-    "objectID": "blog/posts/introduction_to_polars_pt1/index.html#dataframes-and-series",
-    "href": "blog/posts/introduction_to_polars_pt1/index.html#dataframes-and-series",
-    "title": "Introduction to Polars Pt. 1",
-    "section": "DataFrames and Series",
-    "text": "DataFrames and Series\n\nSeries\nThe two most common data structures in Polars are DataFrames and Series. Series are one-dimensional data structures where all elements share the same datatype. Think of a Series as a single column in a table - it’s essentially a named array of data.\nPolars supports a variety of data types that fall into these major categories:\n\nNumeric: Signed integers, unsigned integers, floating point numbers, and decimals\nNested: Lists, structs, and arrays for handling complex data\nTemporal: Dates, datetimes,and times for working with time-based data\nMiscellaneous: Strings, binary data, Booleans, categoricals, enums, and objects\n\nCreating a Series is straightforward with the following syntax:\npl.Series(name, values_list)\nWhere “name” is the label for your Series and “values_list” contains the data. Here’s a simple example:\n\nimport polars as pl\ns = pl.Series(\"example\", [1, 2, 3, 4, 5])\ns\n\n\nshape: (5,)\n\n\n\nexample\n\n\ni64\n\n\n\n\n1\n\n\n2\n\n\n3\n\n\n4\n\n\n5\n\n\n\n\n\n\n\n\nDataframes\nDataFrames are tabular data structures (rows and columns) composed of multiple Series, with each column representing a single Series. These are the workhorses of data analysis and what you’ll use most frequently.\nWith DataFrames, you can write powerful queries to filter, transform, aggregate, and reshape your data efficiently.\nDataFrames can be created in several ways:\n\nFrom a dictionary of sequences (lists, arrays)\nWith explicit schema specification\nFrom a sequence of (name, dtype) pairs\nFrom NumPy arrays\nFrom a list of lists (row-oriented data)\nBy converting pandas DataFrames\nBy importing existing tabular data from CSVs, JSON, SQL, Parquet files, etc.\n\nIn real-world environments, you’ll typically work with preexisting data, though understanding various creation methods is valuable. We’ll cover data import techniques later, but for now, here’s an example of a DataFrame created from a dictionary of lists:\n\n# Create a DataFrame from a dictionary of lists\ndf = pl.DataFrame({\n    \"name\": [\"Alice\", \"Bob\", \"Charlie\", \"David\"],\n    \"age\": [25, 30, 35, 40],\n    \"city\": [\"New York\", \"Boston\", \"Chicago\", \"Seattle\"],\n    \"salary\": [75000, 85000, 90000, 95000]\n})\n\ndf\n\n\nshape: (4, 4)\n\n\n\nname\nage\ncity\nsalary\n\n\nstr\ni64\nstr\ni64\n\n\n\n\n\"Alice\"\n25\n\"New York\"\n75000\n\n\n\"Bob\"\n30\n\"Boston\"\n85000\n\n\n\"Charlie\"\n35\n\"Chicago\"\n90000\n\n\n\"David\"\n40\n\"Seattle\"\n95000"
-  },
-  {
-    "objectID": "blog/index.html",
-    "href": "blog/index.html",
-    "title": "Data Science Blog",
+    "objectID": "intro_to_polars/appendix1.html",
+    "href": "intro_to_polars/appendix1.html",
+    "title": "Common Data Types",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nIntroduction to Polars Pt. 2\n\n\nReading in Data\n\n\n\npolars\n\n\npython\n\n\nIntroduction to Polars\n\n\n\n\n\n\n\n\n\nApr 15, 2025\n\n\nNathaniel Clark\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to Polars Pt. 1\n\n\nDataframes and Series\n\n\n\npolars\n\n\npython\n\n\nIntroduction to Polars\n\n\n\n\n\n\n\n\n\nApr 4, 2025\n\n\nNathaniel Clark\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome to My Data Science Blog\n\n\n\n\n\n\nnews\n\n\nintroduction\n\n\n\n\n\n\n\n\n\nApr 3, 2025\n\n\nNathaniel Clark\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+    "text": "Common Data Types\n\n\n\n\n\n\n\n\n\nData Type\nPolars Type\nDescription\nExample\n\n\n\n\nStrings\npl.Utf8\nText data\n\"hello\"\n\n\nSigned Integers\npl.Int8, pl.Int16, pl.Int32, pl.Int64\nWhole numbers that can be positive or negative\n-42\n\n\nUnsigned Integers\npl.UInt8, pl.UInt16, pl.UInt32, pl.UInt64\nWhole numbers that can only be positive\n42\n\n\nFloating Point\npl.Float32, pl.Float64\nReal numbers with decimal points\n3.14159\n\n\nDecimals\npl.Decimal\nFixed-precision numbers, useful for financial calculations\nDecimal(\"10.99\")\n\n\nDates/DateTimes\npl.Date, pl.Datetime\nCalendar dates and time values\n2023-01-01, 2023-01-01T12:30:00\n\n\nBooleans\npl.Boolean\nLogical values: true or false\nTrue, False\n\n\nTime\npl.Time\nTime of day without date\n12:30:45\n\n\nDuration\npl.Duration\nTime spans or intervals\n3d 12h 30m 45s\n\n\nCategorical\npl.Categorical\nEfficient storage for repeated string values\npl.Series([\"a\", \"b\", \"a\"]).cast(pl.Categorical)\n\n\nList\npl.List\nLists of values of any type\n[1, 2, 3]\n\n\nStruct\npl.Struct\nComposite type with named fields\n{\"field1\": 1, \"field2\": \"a\"}\n\n\nNull\npl.Null\nMissing or undefined values\nNone or null\n\n\n\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Nathaniel Clark",
+    "objectID": "intro_to_polars/chapter4.html",
+    "href": "intro_to_polars/chapter4.html",
+    "title": "Clark",
     "section": "",
-    "text": "I’m a Data Science student at Brigham Young University-Idaho with expertise in Python programming, data analysis, database management, and cybersecurity fundamentals. My journey in data science combines technical skills with practical problem-solving abilities.\n\n GitHub  LinkedIn"
-  },
-  {
-    "objectID": "index.html#about-me",
-    "href": "index.html#about-me",
-    "title": "Nathaniel Clark",
-    "section": "",
-    "text": "I’m a Data Science student at Brigham Young University-Idaho with expertise in Python programming, data analysis, database management, and cybersecurity fundamentals. My journey in data science combines technical skills with practical problem-solving abilities.\n\n GitHub  LinkedIn"
-  },
-  {
-    "objectID": "index.html#my-focus-areas",
-    "href": "index.html#my-focus-areas",
-    "title": "Nathaniel Clark",
-    "section": "My Focus Areas",
-    "text": "My Focus Areas\n\n\n Technical Skills\n\nProgramming Languages: Python, R, C#, SQL\nData Analysis: Cleaning, transformation, visualization\nDatabase Systems: Design, management, security protocols\nMachine Learning: Classification, regression, clustering\n\n\n\n Professional Interests\n\nMachine Learning & AI — Deep learning, LLMs, predictive modeling\nData Engineering — ETL pipelines, data systems, cloud infrastructure\nData Visualization — Interactive dashboards, storytelling with data\nStatistical Analysis — Hypothesis testing, regression modeling, Bayesian methods\nSoftware Development — Creating data-driven applications and tools"
-  },
-  {
-    "objectID": "index.html#recent-blog-posts",
-    "href": "index.html#recent-blog-posts",
-    "title": "Nathaniel Clark",
-    "section": " Recent Blog Posts",
-    "text": "Recent Blog Posts\n\n\n\nIntroduction to Polars Pt. 2\n2025-04-15\n\n\n\nIntroduction to Polars Pt. 1\n2025-04-04\n\n\n\nWelcome to My Data Science Blog\n2025-04-03"
-  },
-  {
-    "objectID": "index.html#portfolio-overview",
-    "href": "index.html#portfolio-overview",
-    "title": "Nathaniel Clark",
-    "section": "Portfolio Overview",
-    "text": "Portfolio Overview\nThis website showcases my projects and technical abilities in various aspects of data science. Browse through the sections to explore my work in data analysis, visualization, machine learning, and more.\nView My Resume Contact Me :::"
-  },
-  {
-    "objectID": "blog/posts/welcome/index.html",
-    "href": "blog/posts/welcome/index.html",
-    "title": "Welcome to My Data Science Blog",
-    "section": "",
-    "text": "This is my first blog post on my data science journey. I’ll be sharing insights, projects, and learnings here."
-  },
-  {
-    "objectID": "blog/posts/welcome/index.html#welcome",
-    "href": "blog/posts/welcome/index.html#welcome",
-    "title": "Welcome to My Data Science Blog",
-    "section": "",
-    "text": "This is my first blog post on my data science journey. I’ll be sharing insights, projects, and learnings here."
-  },
-  {
-    "objectID": "blog/posts/welcome/index.html#what-to-expect",
-    "href": "blog/posts/welcome/index.html#what-to-expect",
-    "title": "Welcome to My Data Science Blog",
-    "section": "What to Expect",
-    "text": "What to Expect\nIn this blog, I’ll cover:\n\nData analysis techniques\nInteresting projects I’m working on\nInsights from the data science field\nTutorials and how-to guides\n\nStay tuned for more content! ```"
-  },
-  {
-    "objectID": "blog/posts/read_data/index.html",
-    "href": "blog/posts/read_data/index.html",
-    "title": "Introduction to Polars Pt. 2",
-    "section": "",
-    "text": "In this segement, we’ll explore how to read data with Polars using various file formats including CSVs, JSONs, Excel spreadsheets, and Parquet files, whether stored locally or accessed via the web. Note that we won’t be covering cloud storage or database connections in this tutorial."
-  },
-  {
-    "objectID": "blog/posts/read_data/index.html#importing-data-with-polars",
-    "href": "blog/posts/read_data/index.html#importing-data-with-polars",
-    "title": "Introduction to Polars Pt. 2",
-    "section": "Importing Data with Polars",
-    "text": "Importing Data with Polars\n\n\nPolars provides robust capabilities for importing data from various sources including CSVs, JSONs, Excel spreadsheets, Parquet files, cloud storage solutions (AWS, Azure, and Google Cloud), and databases.\nThe importing methods follow a consistent pattern across file types, making it easy to work with different data formats.\n\n\n\n\n\nCSV Files\nThe basic syntax for reading a CSV file is:\npl.read_csv(\"path/to/data.csv\")\nAlternatively, you can also read CSV files directly from the internet:\npl.read_csv(\"https://example.com/path/to/your/file.csv\")\nThis capability to read files directly from URLs also works with all the file import methods we’ll cover below.\nThis function offers numerous parameters to handle different CSV formats and configurations. For more information read the documentation.\n\nimport polars as pl\n\ndf_csv = pl.read_csv(\"example.csv\", try_parse_dates=True)\ndf_csv.head(5)\n\n\nshape: (5, 9)\n\n\n\nid\nfirst_name\nlast_name\nemail\npurchase_date\nproduct\nquantity\nprice\ntotal\n\n\ni64\nstr\nstr\nstr\ndate\nstr\ni64\nf64\nf64\n\n\n\n\n1\n\"John\"\n\"Doe\"\n\"john.doe@example.com\"\n2023-01-15\n\"Laptop\"\n1\n1299.99\n1299.99\n\n\n2\n\"Jane\"\n\"Smith\"\n\"jane.smith@example.com\"\n2023-01-16\n\"Smartphone\"\n2\n699.95\n1399.9\n\n\n3\n\"Robert\"\n\"Johnson\"\n\"rob.j@example.com\"\n2023-01-18\n\"Headphones, Wireless\"\n3\n89.99\n269.97\n\n\n4\n\"Sarah\"\n\"Williams\"\n\"sarah.w@example.com\"\n2023-01-20\n\"Monitor\"\n1\n249.5\n249.5\n\n\n5\n\"Michael\"\n\"Brown\"\n\"michael.b@example.com\"\n2023-01-22\n\"Keyboard\"\n2\n59.99\n119.98\n\n\n\n\n\n\n\n\nJSON Files\nReading JSON files follows a similar pattern. The basic syntax is:\npl.read_json(\"docs/data/path.json\")\nJSON files have a more standardized structure than CSVs, so the reading process requires fewer configuration parameters. Polars handles JSON parsing efficiently with minimal setup. For advanced options and configurations, consult the official documentation.\ndf_json = pl.read_json(\"basketball.json\")\n\ndf_json\n\n\nExcel\nPolars doesn’t include a native Excel reader. Instead, it leverages external libraries like fastexcel, xlsx2csv, or openpyxl to parse Excel files into Polars-compatible formats. Among these options, Polars recommends fastexcel for optimal performance.\nWhile it’s generally better to avoid using Excel files where possible (you can usually export as CSV directly from Excel), reading Excel files is straightforward with the right dependencies installed.\nBefore attempting to read Excel files, make sure you have at least one of these libraries installed:\n $ pip install fastexcel xlsx2csv openpyxl\nThe basic syntax for reading an Excel file with Polars is:\npl.read_excel(\"path/to/data.xlsx\")\nIf your Excel file contains multiple sheets, you can specify which one to read using the sheet_name parameter:\ndf = pl.read_excel(\"path/to/data.xlsx\", sheet_name=\"example\")\nFor additional Excel reading options and parameters, refer to the Polars Excel documentation, which covers sheet selection, range specification, and handling of complex Excel files.\n\ndf_xlsx = pl.read_excel(\"penguins.xlsx\", sheet_name=\"Dream Island\")\n\ndf_xlsx.tail(5)\n\n\nshape: (5, 8)\n\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\nstr\nstr\nf64\nf64\ni64\ni64\nstr\ni64\n\n\n\n\n\"Chinstrap\"\n\"Dream\"\n55.8\n19.8\n207\n4000\n\"male\"\n2009\n\n\n\"Chinstrap\"\n\"Dream\"\n43.5\n18.1\n202\n3400\n\"female\"\n2009\n\n\n\"Chinstrap\"\n\"Dream\"\n49.6\n18.2\n193\n3775\n\"male\"\n2009\n\n\n\"Chinstrap\"\n\"Dream\"\n50.8\n19.0\n210\n4100\n\"male\"\n2009\n\n\n\"Chinstrap\"\n\"Dream\"\n50.2\n18.7\n198\n3775\n\"female\"\n2009\n\n\n\n\n\n\nThis example spreadsheet can be accessed via this Google Sheets link.\n\n\nParquet Files\nParquet is a columnar storage format designed for efficient data analytics. It provides excellent compression and fast query performance, making it a popular choice for data science workflows. Polars includes native, high-performance support for reading Parquet files.\nThe basic syntax for reading a Parquet file is:\npl.read_parquet(\"path/to/data.parquet\")\n\ndf_par = pl.read_parquet(\"finance.parquet\")\ndf_par.sample(4)\n\n\nshape: (4, 10)\n\n\n\ndate\nticker\nopen\nhigh\nlow\nclose\nvolume\npe_ratio\ndividend_yield\nmarket_cap\n\n\ndatetime[ns]\nstr\nf64\nf64\nf64\nf64\ni64\nf64\nf64\nf64\n\n\n\n\n2025-03-03 00:00:00\n\"MSFT\"\n223.6\n226.22\n222.97\n224.26\n1679544\n20.36\n0.0241\n3.5305e9\n\n\n2024-05-02 00:00:00\n\"AAPL\"\n201.31\n202.74\n200.69\n201.86\n1993456\n20.66\n0.0117\n4.3900e9\n\n\n2024-06-03 00:00:00\n\"GOOG\"\n238.13\n240.4\n237.81\n238.66\n5890068\n11.92\n0.0022\n6.7751e9\n\n\n2024-04-30 00:00:00\n\"AAPL\"\n204.4\n205.63\n204.76\n205.24\n2870216\n29.01\n0.0272\n3.5307e9\n\n\n\n\n\n\n\n\nImporting Mutiple files\nFor situations where you need to combine data from multiple files into a single DataFrame, Polars offers straightforward approaches. While the syntax is relatively simple, the implementation may vary depending on your specific file organization.\nWhen working with multiple files of the same type and similar naming patterns in a single directory, Polars supports glob pattern matching:\npl.read_filetype(\"path/to/data/my_many_files_*.filetype\")\nFor files with different names but the same format, placing them in a single directory allows you to use wildcard patterns to import them all at once:\npl.read_filetype(\"path/to/data/import/*.filetype\")\nAlternatively, for files located in different directories or even on different servers, you can provide a list of filepaths or URLs:\npl.read_filetype([\n    \"path/to/first/file.filetype\",\n    \"path/to/second/file.filetype\",\n    \"another/location/file.filetype\"\n])\nIf you’re working with different file types that share the same schema (identical columns and datatypes) and want to combine them into a single DataFrame, you’ll need to read each file individually and then concatenate them. Polars makes this process straightforward with its concat function, which can merge DataFrames regardless of their original file formats.\n# Read files of different formats\ndf1 = pl.read_csv(\"path/to/file.csv\")\ndf2 = pl.read_parquet(\"path/to/file.parquet\")\ndf3 = pl.read_json(\"path/to/file.json\")\n\n# Concatenate into a single DataFrame\ncombined_df = pl.concat([df1, df2, df3], how=\"vertical\")"
+    "text": "Back to top"
   }
 ]
