@@ -15,6 +15,7 @@ output:
     toc-depth: 2
     theme: cosmos
     css: styles.css
+output-dir: _book
 
 book:
   title: "Introduction to Polars"

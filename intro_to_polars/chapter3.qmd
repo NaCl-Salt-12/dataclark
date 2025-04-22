@@ -2,18 +2,18 @@
 
 ## Data types
 
-Polars allows you to store data in a varity of formats called data types. These data types fall generally into the following categorties:
+Polars allows you to store data in a variety of formats called data types. These data types fall generally into the following categories:
 
 - **Numeric**: Signed integers, unsigned integers, floating point numbers, and decimals
 - **Nested**: Lists, structs, and arrays for handling complex data
-- **Temporal**: Dates, datetimes,and times for working with time-based data
+- **Temporal**: Dates, datetimes, and times for working with time-based data
 - **Miscellaneous**: Strings, binary data, Booleans, categoricals, enums, and objects
 
-The most common data types you will be working with are generally: Strings, signed and unsigned integers, floating point numbers or floats, decimals, dates or datatimes and booleans. For more information on each of these data types see @sec-appendix-a.
+The most common data types you will be working with are generally: Strings, signed and unsigned integers, floating point numbers or floats, decimals, dates or datetimes and booleans. For more information on each of these data types see @sec-appendix-a.
 
 ## Series
 
-The two most common data structures in Polars are DataFrames and Series. Series are one-dimensional data structures where all elements share the same datatype. Think of a Series as a single column in a table - it’s essentially a named array of data.
+The two most common data structures in Polars are DataFrames and Series. Series are one-dimensional data structures where
 
 Creating a Series is straightforward with the following syntax:
 
@@ -141,4 +141,10 @@ sandwich_df.head(3)
 
 ### tail
 
-The `tail` function is esentailly the inverse of head. It allows you to view the last n rows of the dataframe. The default for tail is also five rows.
+The `tail` function is essentially the inverse of head. It allows you to view the last n rows of the dataframe. The default for tail is also five rows.
+
+```python
+dataframe.tail(n)
+```
+Where n is the number of rows to return if you give it a negative number it will turn all rows except the first n rows.
+
