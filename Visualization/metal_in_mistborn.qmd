@@ -1,0 +1,264 @@
+---
+title: "Metals in Mistborn"
+format: html
+---
+
+## Introduction
+
+
+I've loved reading since I was little, and that passion has only grown stronger over the years. There's little I enjoy more than curling up on the couch or in bed with a good book, completely absorbed in another world.
+
+Recently, I decided to merge two of my greatest loves: data science and reading. I wanted to create visualizations of some of my favorite books, though I wasn't sure initially how to approach it or which tools to use. Through my research, I discovered tidytext, a powerful textual analysis package in R that opened up exciting possibilities for literary exploration.
+
+What you'll see below represents the first fruits of this labor of love, a journey that combines the analytical precision of data science with the narrative richness of literature.
+
+# Analyzing Metals in *Mistborn* 
+
+Among my favorite books is Brandon Sanderson's fantasy novel Mistborn: The Final Empire, wherein metals transcend their physical properties to become the very foundation of magic itself. In Sanderson's world, each metal grants extraordinary powers to those gifted enough to "burn" it through the mystical art of Allomancy. 
+This exploration dives into how these metals appear throughout the narrative, using data to uncover patterns and relationships not apparent to the human eye. Through R and its remarkable ecosystem of text analysis tools, I've extracted every mention, processed thousands of words, and transformed raw text into visualizations that illuminate the story in entirely new ways.
+What follows is both a technical walkthrough and a love letter to literature.
+
+## Tools and Libraries
+
+```{R}
+#| code-fold: true
+#| warning: False
+library(tidyverse) 
+library(tidytext) 
+library(pdftools) 
+library(ggstream) 
+library(ggtext) 
+library(widyr)
+library(ggraph)
+library(igraph) 
+library(sysfonts) 
+library(gt)
+```
+
+The project leverages several R libraries:
+- **tidyverse**: For data manipulation and visualization.
+- **tidytext**: For text processing and tokenization.
+- **pdftools**: To extract text from the PDF.
+- **ggstream**, **ggraph**, **igraph**: For creating stream graphs and network visualizations.
+- **gt**: For styling tables.
+- **widyr**: For calculating word correlations.
+
+These tools make it possible to transform raw text into structured data and compelling visuals.
+
+## Data Extraction and Cleaning
+
+The first challenge is getting the text out of the PDF file and preparing it for analysis.
+
+### Reading the PDF
+We begin by loading the PDF using `pdftools`:
+
+```{R}
+mistborn_text <- pdf_text("./Mistborn/final_empire.pdf")
+```
+
+This creates a character vector where each element is a page of the book.
+
+### Cleaning the Text
+The raw text includes unwanted elements like page headers (e.g., "mistborn 123") and footers (e.g., "123 brandon sanderson"). We split the text into lines and clean it with regular expressions:
+
+```R
+text_lines <- unlist(strsplit(mistborn_text, "\n")) %>%
+  str_replace_all("mistborn\\s+\\d+", "") %>%
+  str_replace_all("\\d+\\s+brandon sanderson", "") %>%
+  str_replace_all("\n", " ") %>%
+  str_replace_all("[^[:alnum:][:space:]\\.]", " ")
+```
+
+This removes headers, footers, and special characters, leaving only alphanumeric text, spaces, and periods.
+
+### Extracting the Story
+The actual story starts at "PROLOGUE" and ends before "ARS ARCANUM." We locate these markers and extract the relevant lines:
+
+```R
+prologue_line <- which(str_detect(text_lines, "PROLOGUE$"))
+ars_arcanum_line <- which(str_detect(text_lines, "ARS ARCANUM$"))
+story_lines <- text_lines[prologue_line:(ars_arcanum_line - 1)]
+```
+
+### Identifying Chapters
+Chapters are marked by lines containing "PROLOGUE," "EPILOGUE," or a single number (e.g., "1"). We find these markers and assign each line to a chapter:
+
+```R
+chapter_markers <- which(str_detect(story_lines, "\\b\\d{1,2}\\b") |
+                         str_detect(story_lines, "PROLOGUE$") |
+                         str_detect(story_lines, "EPILOGUE$"))
+chapter_names <- story_lines[chapter_markers]
+line_chapters <- findInterval(seq_along(story_lines), chapter_markers)
+chapter_labels <- chapter_names[line_chapters]
+```
+
+We also create a tibble mapping chapter names to unique IDs:
+
+```R
+chapter_id <- tibble(
+  chapter_name = str_trim(chapter_names),
+  chapter_id = seq(1, 40)
+)
+```
+
+### Structuring the Data
+The cleaned text is organized into a tibble with columns for chapter name, text, line number, and chapter ID:
+
+```R
+df <- tibble(
+  chapter = str_trim(chapter_labels),
+  text = story_lines
+) %>%
+  group_by(chapter) %>%
+  mutate(line_number = row_number()) %>%
+  ungroup() %>%
+  inner_join(chapter_id, join_by(chapter == chapter_name))
+```
+
+We also extract the book's parts (e.g., "PART ONE") for use in visualizations:
+
+```R
+part_lines <- df %>%
+  filter(str_detect(text, "^\\s+PART")) %>%
+  mutate(text = str_trim(text)) %>%
+  rename(part = text) %>%
+  select(chapter_id, part)
+```
+
+## Text Analysis
+
+With the text structured, we analyze mentions of the ten key Allomantic metals: iron, steel, tin, pewter, brass, zinc, copper, bronze, atium, and gold.
+
+### Tokenizing the Text
+Using `tidytext`, we break the text into individual words:
+
+```R
+text_df <- df %>%
+  unnest_tokens(word, text)
+```
+
+### Counting Metal Mentions
+We filter for the metals and count their mentions per chapter:
+
+```R
+metals_list <- c("iron", "steel", "tin", "pewter", "brass", "zinc", "copper", "bronze", "atium", "gold")
+metals_text <- text_df %>%
+  filter(word %in% metals_list) %>%
+  mutate(word = str_to_title(word)) %>%
+  count(chapter_id, word, name = "mentions") %>%
+  left_join(part_lines, join_by(chapter_id == chapter_id)) %>%
+  fill(part)
+```
+
+This produces a dataset with each metal's mention count per chapter, linked to the book's parts.
+
+### Exploring Word Correlations
+To see how metals are used in context, we calculate correlations between words appearing together. We flatten the text, split it into sentences, group sentences into sections of ten, and compute pairwise correlations for words appearing at least 20 times:
+
+```R
+mist_section <- str_flatten(story_lines, collapse = " ") %>%
+  as_tibble() %>%
+  unnest_sentences(sentence, value) %>%
+  mutate(section = row_number() %/% 10) %>%
+  unnest_tokens(word, sentence) %>%
+  filter(!word %in% stop_words$word)
+
+word_cors <- mist_section %>%
+  group_by(word) %>%
+  filter(n() >= 20) %>%
+  pairwise_cor(word, section, sort = TRUE) %>%
+  filter(item1 %in% metals_list)
+```
+
+This reveals which words are frequently associated with each metal.
+
+## Visualizations
+
+The project creates four visualizations to showcase the findings.
+
+### Stream Graph
+The stream graph shows how metal mentions vary across chapters:
+
+```R
+stream_graph <- ggplot() +
+  geom_vline(data = part_lines, aes(xintercept = chapter_id), color = "grey50", linewidth = 0.2, linetype = 2) +
+  geom_stream(data = metals_text, aes(x = chapter_id, y = mentions, fill = word), type = "mirror", extra_span = 0.1, bw = 0.55) +
+  geom_text(data = metals_text %>% group_by(part) %>% summarize(x = min(chapter_id) + n_distinct(chapter_id) / 2), aes(x, y = -Inf, label = part), vjust = -1, hjust = 0.5, color = "grey60", family = "Trajan Pro", size = 5) +
+  scale_fill_manual(values = metal_colors) +
+  labs(fill = "Metal", subtitle = "Distribution of mentions share (number of words)<br>per metal in each chapter. Parts are separated with vertical lines.") +
+  theme_mistborn()
+```
+
+Each metal is a colored stream, with vertical lines marking the book's parts. This highlights shifts in focus, like a spike in "atium" mentions during key plot moments.
+
+### Bar Plot
+A bar plot displays total mentions for each metal:
+
+```R
+plot_data <- metals_text %>%
+  group_by(word) %>%
+  summarise(total_mentions = sum(mentions)) %>%
+  arrange(desc(total_mentions)) %>%
+  mutate(word = fct_reorder(word, total_mentions))
+
+bar_plot <- plot_data %>%
+  ggplot(aes(x = word, y = total_mentions, fill = word)) +
+  geom_col() +
+  scale_fill_manual(values = metal_colors) +
+  guides(fill = "none") +
+  labs(y = "Number of Mentions") +
+  coord_cartesian(clip = "off") +
+  geom_text(aes(label = total_mentions), color = "grey70", hjust = 0.5, vjust = -0.4, size = 7.5, family = "Trajan Pro") +
+  theme_mist() +
+  theme(axis.text.y = element_blank(), axis.title.x = element_blank(), axis.title.y = element_text(size = 18, angle = 90))
+```
+
+Pewter and steel lead, reflecting their frequent use by characters like Vin and Kelsier.
+
+### Network Graph
+The network graph visualizes word correlations:
+
+```R
+set.seed(2000)
+graph <- word_cors %>%
+  filter(correlation > 0.15) %>%
+  graph_from_data_frame()
+
+V(graph)$degree <- degree(graph)
+V(graph)$is_metal <- V(graph)$name %in% metals_list
+
+network_Graph <- graph %>%
+  ggraph(layout = "fr") +
+  geom_edge_link(aes(edge_alpha = correlation, edge_width = correlation), color = "grey40", show.legend = FALSE) +
+  geom_node_point(aes(size = degree, color = is_metal)) +
+  scale_color_manual(values = c("FALSE" = "#ff79c6", "TRUE" = "lightblue")) +
+  geom_node_label(aes(label = name), color = "grey95", fill = "#4D267380", repel = TRUE, force = 1, force_pull = 0.1, family = "Trajan Pro", label.size = 0, size = 3.5) +
+  scale_size_continuous(range = c(3, 10)) +
+  guides(size = "none", color = "none") +
+  theme_mistborn()
+```
+
+Metals (in light blue) connect to related terms (in pink), showing context—like "steel" linking to "push."
+
+### Reference Table
+A styled table lists each metal and its Allomantic power:
+
+```R
+all_chart <- tibble(
+  METAL = str_to_title(c("iron", "steel", "tin", "pewter", "zinc", "brass", "copper", "bronze", "atium", "gold")),
+  EFFECT = c("Pulls on Nearby Metals", "Pushes on Nearby Metals", "Enhances Senses", "Enhances Physical Abilities", "Riots Emotions", "Soothes Emotions", "Hides Allomaic Pulses", "Reveals Allomatic Pulses", "See other People's Futures", "See Your Own Past")
+)
+
+ref_table <- gt(all_chart) %>%
+  opt_table_font(font = "Times New Roman", color = "#E6E6E6") %>%
+  tab_style(style = cell_text(align = "center", size = px(20)), locations = cells_column_labels()) %>%
+  tab_options(table.background.color = "#1a0d26")
+```
+
+This serves as a handy guide for readers unfamiliar with Allomancy.
+
+## Insights and Conclusion
+
+The analysis reveals that pewter and steel dominate mentions, aligning with their frequent use by key characters. The stream graph shows narrative shifts, like atium's prominence in the climax. The network graph adds depth, linking metals to actions and concepts in the story.
+
+This project illustrates how data science can enrich literary analysis, offering a fresh lens on *Mistborn*. The code and methods are adaptable to other texts, inviting further exploration at the intersection of data and storytelling.
