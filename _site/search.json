@@ -116,7 +116,7 @@
     "href": "resume.html#projects",
     "title": "Nathaniel Clark",
     "section": "Projects",
-    "text": "Projects\n\nMetals in Mistborn: Text wrangling a visualization of Mistborn Final Empire, for more you can read this article or see the code here."
+    "text": "Projects\n\nMetals in Mistborn: Text wrangling a visualization of Mistborn Final Empire, for more you can read this article or see the code here.\nDisc Golf Speed Prediction: Predicting the speed metric from a discs physical metrics with xgboost. See the article."
   },
   {
     "objectID": "index.html",

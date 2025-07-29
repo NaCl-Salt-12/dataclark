@@ -20,7 +20,7 @@ website:
     right:
       - text: "Home"
         file: index.qmd
-      - text: "My Resume"
+      - text: "Resume"
         file: resume.qmd
       # - text: "Intro to Polars"
       #   href: https://nacl-salt-12.github.io/introduction_to_polars/index.html

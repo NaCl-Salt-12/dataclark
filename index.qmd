@@ -136,4 +136,5 @@ if not posts:
 This website showcases my projects and technical abilities in various aspects of data science. Browse through the sections to explore my work in data analysis, visualization, machine learning, and more.
 
 [View My Resume](resume.qmd){.btn .btn-primary} [Contact Me](mailto:nathanieleclark@gmail.com){.btn .btn-secondary}
+
 :::
