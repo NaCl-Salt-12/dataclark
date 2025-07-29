@@ -27,7 +27,9 @@ website:
       - text: "Blog"
         file: blog/index.qmd
       - text: Projects
-        file: Projects/metal_in_mistborn.qmd 
+        menu:
+          - text: Metals in Mistborn
+            file: Projects/metal_in_mistborn.qmd 
 
   # learn more about navication here https://quarto.org/docs/websites/website-navigation.html
   # comment out any of the sections below to turn off the sidebar
