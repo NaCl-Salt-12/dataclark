@@ -1,0 +1,194 @@
+---
+title: "Predicting Disc Golf Speed Ratings with Machine Learning"
+author: "Nathaniel Clark"
+date: "2025-07-29"
+format:
+  html:
+    page-layout: article
+    number-sections: false
+    code-fold: true
+    code-summary: "Show the code"
+    code-overflow: wrap
+    code-copy: hover
+    code-tools:
+        source: false
+        toggle: true
+        caption: See code
+execute: 
+  warning: false
+---
+
+## Introduction
+
+Disc golf, a sport that combines precision, strategy, and physics, has surged in popularity, captivating players with its blend of athleticism and technical finesse. Central to the game is the disc itself, where the speed rating—a measure of how fast a disc must be thrown to achieve its intended flight path—plays a critical role in performance. As a avid disc golfer I wondered if I could predicting a disc’s speed rating based on its physical characteristics to better inform myself on the relationship between disc and glide rating and help me select discs in the future. In this project, I utilize machine learning to predict disc golf speed ratings using a dataset of disc specifications, employing the XGBoost algorithm to uncover patterns in the data.
+
+## Objective
+
+The goal is to build a predictive model that estimates a disc’s speed rating based on its physical attributes, such as rim width, diameter, and bead presence. By engineering features like rim-to-diameter ratio and disc area, and using a robust XGBoost model, I aim to achieve accurate predictions and identify which features most influence a disc’s speed. This analysis not only showcases the power of machine learning in sports analytics but also offers practical applications for disc design and selection.
+
+## Data Preparation
+
+The dataset, found on [kaggle](https://www.kaggle.com/datasets/jakestrasler/disc-golf-disc-flight-numbers-and-dimensions), contains detailed measurements of various disc golf discs, including attributes like rim width, diameter, height, and bead presence. I used the Polars library for efficient data manipulation, dropping non-numeric flight characteristics (e.g., fade, glide, turn, stability) to focus on physical measurements and to avoid bais and lay the ground work for future models. To enrich the dataset, I engineered several features:
+
+-   **Rim ratio**: Rim width divided by diameter, capturing the proportional width of the rim.
+-   **Profile ratio**: Height divided by diameter, reflecting the disc’s vertical profile.
+-   **Rim area**: Product of rim width and rim depth, representing the rim’s surface area.
+-   **Disc area**: Calculated using the formula for the area of a circle, (\pi \times (\text{diameter}/2)\^2).
+-   **Flight plate ratio**: Inside rim diameter divided by total diameter, indicating the proportion of the disc’s flight plate.
+-   **Inside rim width-depth product**: Inside rim diameter multiplied by rim depth, capturing interaction effects.
+
+Additionally, the categorical variable “DISC TYPE” was converted to dummy variables, and the “BEAD” column was transformed into a boolean (True for “Yes,” False for “No”). These transformations ensure the dataset is suitable for machine learning.
+
+```{python}
+import polars as pl 
+from lets_plot import *
+import numpy as np 
+import polars.selectors as cs
+import sklearn
+
+LetsPlot.setup_html()
+
+df = pl.read_csv("disc-data.csv", infer_schema_length=10000)
+
+df = df.drop(["MOLD","FADE","GLIDE","TURN","STABILITY"])
+df = df.to_dummies("DISC TYPE")
+
+df = df.with_columns(
+    pl.col("BEAD").replace_strict({"No":False, "Yes":True}),
+    (pl.col("RIM WIDTH (cm)") / pl.col("DIAMETER (cm)")).alias("Rim ratio"),
+    (pl.col("HEIGHT (cm)")/pl.col("DIAMETER (cm)")).alias("profile ratio"),
+    (pl.col("RIM WIDTH (cm)")*pl.col("RIM DEPTH (cm)")).alias("rim_area"),
+    (np.pi*(pl.col("DIAMETER (cm)")/2)**2).alias("disc_area"),
+    (pl.col("INSIDE RIM DIAMETER (cm)")/ pl.col("DIAMETER (cm)")).alias("flight_plate_ratio"),
+    (pl.col("INSIDE RIM DIAMETER (cm)")*pl.col("RIM DEPTH (cm)")).alias("inside_rwd"),
+)
+```
+
+## Model Training
+
+I chose the XGBoost regressor, a powerful gradient-boosting algorithm, to predict speed ratings. The dataset was split into the standard training (70%) and testing (30%) sets to evaluate model performance. The model was configured with the following hyperparameters:
+
+-   **Booster**: DART (Dropout-meet-Additive Regression Trees) for improved generalization.
+-   **Number of estimators**: 120, balancing complexity and performance.
+-   **Learning rate (eta)**: 0.15, controlling the step size of updates.
+-   **Gamma**: 3, enforcing sparsity in splits.
+-   **Max depth**: 8, limiting tree complexity to prevent overfitting.
+-   **Rate drop**: 0.3, introducing dropout in DART to enhance robustness.
+
+The model was trained on the training set, and predictions were made on the test set.
+
+```{python}
+import xgboost as xgb
+from sklearn.model_selection import train_test_split
+
+X = df.drop("SPEED")
+y = df["SPEED"]
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+model = xgb.XGBRegressor(
+    booster='dart',
+    n_estimators=120,
+    eta=0.15,
+    gamma=3,
+    max_depth=8,
+    rate_drop=0.3
+)
+model.fit(X_train, y_train)
+```
+
+## Model Evaluation
+
+To assess the model’s performance, I calculated several commen metrics:
+
+-   **Mean Squared Error (MSE)**: indicating the average squared difference between predicted and actual speed ratings.
+-   **Root Mean Squared Error (RMSE)**: showing the average prediction error in speed rating units.
+-   **Mean Absolute Error (MAE)**: reflecting the average absolute deviation of predictions.
+-   **R-squared (R²)**: 0.96, suggesting that 96% of the variance in speed ratings is explained by the model.
+
+These metrics indicate strong predictive performance, with the model capturing most of the variability in speed ratings while maintaining relatively low errors.
+
+```{python}
+#| layout-align: center
+from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
+
+y_pred = model.predict(X_test)
+
+mse = mean_squared_error(y_test, y_pred)
+rmse = np.sqrt(mse)
+mae = mean_absolute_error(y_test, y_pred)
+r2 = r2_score(y_test, y_pred)
+
+metrics = pl.DataFrame(
+    {
+        "Metric": ["Mean Squared Error","Root Mean Squared Error","Mean Absolute Error","R-squared"],
+        "Result":[mse,rmse,mae,r2]
+    }
+)
+
+metrics.select(
+    "Metric",
+    Result = pl.col("Result").round(2)
+)
+# print(f"Mean Squared Error: {mse:.2f}")
+# print(f"Root Mean Squared Error: {rmse:.2f}")
+# print(f"Mean Absolute Error: {mae:.2f}")
+# print(f"R-squared: {r2:.2f}")
+```
+
+## Feature Importance
+
+To understand which features drive speed predictions, I extracted the gain-based feature importance from the XGBoost model. The top five features, visualized in a bar plot, reveal the key drivers of speed ratings:
+
+-   **Rim ratio**: The most influential feature, as wider rims typically correlate with higher speed ratings due to aerodynamic properties.
+-   **flight_plate_ratio**: The proportion of the flight plate relative to total diameter significantly affects speed and stability.
+-   **DISC TYPE_Putter**: Putter classification has a strong influence, as putters typically have lower speed ratings reflecting their design for control rather than distance.
+-   **DISC TYPE_Driver**: Driver classification significantly impacts speed predictions, as drivers are specifically designed for high-speed throws and distance.
+-   **RIM WIDTH (cm)**: The physical rim width measurement captures direct aerodynamic properties affecting flight dynamics.
+
+
+```{python}
+importance = model.get_booster().get_score(importance_type='gain')
+importance_df = pl.DataFrame({
+    'Feature': list(importance.keys()),
+    'Importance': list(importance.values())
+}).with_columns(
+    pl.col('Importance').round(2)
+)
+importance_df = importance_df.sort("Importance", descending=True).head(5)
+
+plot1 = (
+    ggplot(importance_df, aes(y=as_discrete('Feature', order_by='Importance', order=1), x='Importance', fill='Feature')) +
+    geom_bar(stat="identity") +
+    labs(title="Top Feature Importance (Gain)", x="Importance Score") +
+    guides(fill="none") +
+    theme(
+        axis_text=element_text(size=12),
+        axis_title_y=element_blank()
+    )
+)
+plot1
+```
+
+## Actual vs. Predicted Speed
+
+To visualize the model’s performance, I created a scatter plot comparing actual speed ratings to predicted values, with a red dashed line representing perfect predictions (y=x). The points, plotted with slight jitter to avoid overlap, cluster closely around the line, confirming the model’s accuracy. The plot, provides a clear visual of the model’s predictive ability.
+
+```{python}
+chart = pl.DataFrame({
+    "actual": y_test,
+    "predicted": y_pred
+})
+
+plot2 = (
+    ggplot(chart, aes(x="actual", y="predicted")) +
+    geom_point(position="jitter", color="#1E90FF", alpha=0.5) +
+    geom_abline(slope=1, intercept=0, color="red", linetype="dashed") +
+    labs(x="Actual Speed", y="Predicted Speed", title="Actual vs Predicted Speed")
+)
+plot2
+```
+
+## Conclusion
+
+The XGBoost model achieved an R² of 0.96, with rim ratio and related features emerging as the most influential predictors. These insights can help players select discs tailored to their throwing style. Future work could incorporate additional features, such as material properties or advanced aerodynamic metrics, to further refine predictions as well as additional models to predict the other commen metrics (i.e. Glide, Fade, Turn and Stability). This analysis underscores the intersection of data science and sports, offering a data-driven approach to understanding the physics of disc golf.

@@ -16,7 +16,7 @@ I'm a Data Science student at Brigham Young University-Idaho with expertise in P
 :::
 
 ::: {.g-col-12 .g-col-md-5 .text-center}
-![](Images/profile3.jpg){.img-fluid width="300px"}
+![](Images/profile4.png){.img-fluid width="300px"}
 :::
 :::
 :::
