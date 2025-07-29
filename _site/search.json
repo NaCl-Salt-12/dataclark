@@ -711,7 +711,7 @@
     "href": "Projects/metal_in_mistborn.html#tools-and-libraries",
     "title": "Metals in Mistborn",
     "section": "Tools and Libraries",
-    "text": "Tools and Libraries\nThe project utilizes several R libraries:\n\ntidyverse: For data manipulation and visualization.\ntidytext: For text processing and tokenization.\npdftools: To extract text from the PDF.\nggstream, ggraph, igraph: For creating stream graphs and network visualizations.\ngt: For styling tables.\nwidyr: For calculating word correlations.\n\nIn addition canva was also used for formatting the final product."
+    "text": "Tools and Libraries\n\n\nImporting fonts may take a few minutes, depending on the number of fonts and the speed of the system.\nContinue? [y/n] \n\n\nImporting fonts may take a few minutes, depending on the number of fonts and the speed of the system.\nContinue? [y/n] \n\n\nThe project utilizes several R libraries:\n\ntidyverse: For data manipulation and visualization.\ntidytext: For text processing and tokenization.\npdftools: To extract text from the PDF.\nggstream, ggraph, igraph: For creating stream graphs and network visualizations.\ngt: For styling tables.\nwidyr: For calculating word correlations.\n\nIn addition canva was also used for formatting the final product."
   },
   {
     "objectID": "Projects/metal_in_mistborn.html#data-extraction-and-cleaning",
