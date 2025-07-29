@@ -58,6 +58,7 @@ jobs:
             any::gt
             any::kableExtra
             any::showtext
+            any::extrafont
 
       - name: Render resume.qmd to PDF
         run: quarto render resume.qmd --to pdf
