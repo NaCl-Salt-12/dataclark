@@ -41,8 +41,8 @@ library(showtext)
 #| echo: false
 
 # Fonts to include in the theme
-font_add(family = "Trajan Pro", regular = "../fonts/TrajanPro-Regular.ttf") 
-
+font_add(family = "Trajan Pro", regular = "../fonts/TrajanPro-Regular.ttf
+") 
 font_add(family = "Times New Roman", regular = "../fonts/times.ttf")
 
 
