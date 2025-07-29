@@ -43,7 +43,7 @@ library(extrafont)
 font_import("Trajan",paths="fonts/TrajanPro-Regular.ttf")
 font_import("Times",paths = "../fonts/times.ttf")
 
-loadfonts()
+loadfonts(device  = "all",quiet = TRUE)
 
 
 # First custom theme
