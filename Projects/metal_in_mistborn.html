@@ -141,6 +141,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link" href="../blog/index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-projects" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Projects</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-projects">    
+        <li>
+    <a class="dropdown-item" href="../Projects/metal_in_mistborn.html">
+ <span class="dropdown-text">Metals in Mistborn</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -181,8 +192,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#analyzing-metals-in-mistborn" id="toc-analyzing-metals-in-mistborn" class="nav-link" data-scroll-target="#analyzing-metals-in-mistborn">Analyzing Metals in Mistborn</a>
-  <ul class="collapse">
+  <li><a href="#analyzing-metals-in-mistborn" id="toc-analyzing-metals-in-mistborn" class="nav-link" data-scroll-target="#analyzing-metals-in-mistborn">Analyzing Metals in Mistborn</a></li>
   <li><a href="#tools-and-libraries" id="toc-tools-and-libraries" class="nav-link" data-scroll-target="#tools-and-libraries">Tools and Libraries</a></li>
   <li><a href="#data-extraction-and-cleaning" id="toc-data-extraction-and-cleaning" class="nav-link" data-scroll-target="#data-extraction-and-cleaning">Data Extraction and Cleaning</a>
   <ul class="collapse">
@@ -203,7 +213,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   <li><a href="#poster" id="toc-poster" class="nav-link" data-scroll-target="#poster">Poster</a></li>
-  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://nacl-salt-12.github.io/dataclark/issues/new" class="toc-action"><i class="bi bi-git"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -231,15 +240,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>I’ve loved reading since I was little, and that passion has only grown stronger over the years. There’s little I enjoy more than curling up on the couch or in bed with a good book, completely absorbed in another world.</p>
-<p>Recently, I decided to merge two of my favorite things: data science and reading. I wanted to create visualizations of some of my favorite books, though I wasn’t sure initially how to approach it or which tools to use. Through research, I discovered tidytext, a textual analysis package in R that opened up exciting possibilities for exploration and discovery.</p>
-<p>What you’ll see below represents the first fruits of this labor of love, a journey that combines the analytical precision of data science with the narrative richness of literature.</p>
+<p>I’ve always loved reading. Recently, I decided to combine this passion with data science by creating visualizations of my favorite books. After some research, I found tidytext, an R package for analyzing text, which opened up new ways to explore literature through data.</p>
 </section>
-<section id="analyzing-metals-in-mistborn" class="level1">
-<h1>Analyzing Metals in Mistborn</h1>
-<p>Among my favorite books is Brandon Sanderson’s fantasy novel Mistborn: The Final Empire, wherein metals transcend their physical properties to become the very foundation of magic itself. In Sanderson’s world, each metal grants extraordinary powers to those gifted enough to “burn” it through the mystical art of Allomancy.</p>
-<p>This exploration dives into how these metals appear throughout the narrative, using data to uncover patterns and relationships not apparent to the human eye. Through R and its remarkable ecosystem of text analysis tools, I’ve extracted every mention, processed thousands of words, and transformed raw text into visualizations that illuminate the story in entirely new ways.</p>
+<section id="analyzing-metals-in-mistborn" class="level2">
+<h2 class="anchored" data-anchor-id="analyzing-metals-in-mistborn">Analyzing Metals in Mistborn</h2>
+<p>One of my favorite books is Brandon Sanderson’s Mistborn: The Final Empire. In this fantasy novel, metals are the source of magical powers through a system called Allomancy—people can “burn” different metals to gain special abilities. I used R and text analysis tools to track how these metals appear throughout the story. By processing the entire book and turning the text into data, I created visualizations that reveal patterns you might not notice while reading.</p>
 <p>What follows is both a technical walkthrough and a love letter to literature.</p>
+</section>
 <section id="tools-and-libraries" class="level2">
 <h2 class="anchored" data-anchor-id="tools-and-libraries">Tools and Libraries</h2>
 <p>The project utilizes several R libraries:</p>
@@ -779,14 +786,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>Throughout this project, I gained valuable experience and enjoyed the journey of exploration and experimentation. I explored numerous approaches and visualization options before settling on my final choices, and I’m quite pleased with how everything turned out.</p>
+<p>Throughout this project, I gained valuable experience and enjoyed the journey of exploration and experimentation. I tried numerous approaches and visualization options before settling on my final choices, and I’m quite pleased with how everything turned out.</p>
 </section>
 <section id="poster" class="level2">
 <h2 class="anchored" data-anchor-id="poster">Poster</h2>
 <p>The final image was creating using canva to format and style it. <img src="https://raw.githubusercontent.com/NaCl-Salt-12/BookDataVisualization/refs/heads/main/Mistborn/images/metals_mistborn_poster.png" class="img-fluid" alt="Mistborn Poster"></p>
 
 
-</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
