@@ -40,10 +40,10 @@ library(extrafont)
 #| echo: false
 
 # Fonts to include in the theme
-font_import("Trajan",paths="fonts/TrajanPro-Regular.ttf")
-font_import("Times",paths = "../fonts/times.ttf")
+# font_import("Trajan",paths="fonts/TrajanPro-Regular.ttf")
+# font_import("Times",paths = "../fonts/times.ttf")
 
-loadfonts(device  = "all",quiet = TRUE)
+# loadfonts(device  = "all",quiet = TRUE)
 
 
 # First custom theme
