@@ -6,18 +6,12 @@ engine: knitr
 
 ## Introduction
 
+I've always loved reading. Recently, I decided to combine this passion with data science by creating visualizations of my favorite books. After some research, I found tidytext, an R package for analyzing text, which opened up new ways to explore literature through data.
 
-I've loved reading since I was little, and that passion has only grown stronger over the years. There's little I enjoy more than curling up on the couch or in bed with a good book, completely absorbed in another world.
+## Analyzing Metals in Mistborn
 
-Recently, I decided to merge two of my favorite things: data science and reading. I wanted to create visualizations of some of my favorite books, though I wasn't sure initially how to approach it or which tools to use. Through research, I discovered tidytext, a textual analysis package in R that opened up exciting possibilities for exploration and discovery.
-
-What you'll see below represents the first fruits of this labor of love, a journey that combines the analytical precision of data science with the narrative richness of literature.
-
-# Analyzing Metals in Mistborn 
-
-Among my favorite books is Brandon Sanderson's fantasy novel Mistborn: The Final Empire, wherein metals transcend their physical properties to become the very foundation of magic itself. In Sanderson's world, each metal grants extraordinary powers to those gifted enough to "burn" it through the mystical art of Allomancy. 
-
-This exploration dives into how these metals appear throughout the narrative, using data to uncover patterns and relationships not apparent to the human eye. Through R and its remarkable ecosystem of text analysis tools, I've extracted every mention, processed thousands of words, and transformed raw text into visualizations that illuminate the story in entirely new ways.
+One of my favorite books is Brandon Sanderson's Mistborn: The Final Empire. In this fantasy novel, metals are the source of magical powers through a system called Allomancy—people can "burn" different metals to gain special abilities.
+I used R and text analysis tools to track how these metals appear throughout the story. By processing the entire book and turning the text into data, I created visualizations that reveal patterns you might not notice while reading.
 
 What follows is both a technical walkthrough and a love letter to literature.
 
@@ -433,7 +427,7 @@ Due to a desire for brevity I left some of the code out, to see the entire code 
 
 ## Conclusion
 
-Throughout this project, I gained valuable experience and enjoyed the journey of exploration and experimentation. I explored numerous approaches and visualization options before settling on my final choices, and I'm quite pleased with how everything turned out.
+Throughout this project, I gained valuable experience and enjoyed the journey of exploration and experimentation. I tried numerous approaches and visualization options before settling on my final choices, and I'm quite pleased with how everything turned out.
 
 ## Poster
 The final image was creating using canva to format and style it.
