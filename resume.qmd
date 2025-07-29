@@ -2,91 +2,67 @@
 layout: cv
 title: Nathaniel Clark
 ---
-<div id="webaddress">
-<a href="mailto:nathanieleclark@gmail.com">nathanieleclark@gmail.com</a>
-| +14482007651
-</div>
 
-## Currently
-
-Studying Data Science at Brigham Young University-Idaho
-
-### Specialized in
-
-Python programming, data analysis, database management, cybersecurity fundamentals
-
-### Research interests
-
-Machine learning, data visualization, database design, cybersecurity
+::: {#webaddress}
+<a href="mailto:nathanieleclark@gmail.com">nathanieleclark\@gmail.com</a> \| +14482007651
+:::
 
 ## Education
 
-`In Progress`
-**Brigham Young University-Idaho**
-- Bachelor of Science in Data Science
+### Brigham Young University – Idaho  
+**Bachelor of Science, Data Science**  
+*September 2024 – Present*  
+GPA: 3.46
 
-`2018-2021`
-**Leon County Virtual School, Tallahassee, FL**
-- High School Diploma
-
-## Awards
-
-`2025`
-3rd Place, Cybersecurity Category, *USU Hackathon*, Utah State University
-
-## Technical Skills
-
-### Programming Languages
-- Python
-- R
-- C#
-- SQL
-
-### Data Science
-- Polars
-- Data cleaning
-- Visualization
-- Basic machine learning
+---
 
 ## Experience
 
-`Current`
-**Teaching Assistant**, Brigham Young University-Idaho
-- Database and Cybersecurity classes for Professor Kory Godfrey
-- Grade assignments and provide support to students
-- Facilitate discussions on database management and security
+### Data Science Tutor  
+**Brigham Young University – Idaho**  
+*April 2025 – Present*  
+- Provided one-on-one support for data science concepts: analysis, programming, visualizations, and statistics  
+- Tutored students in Python, R, data analysis, and machine learning  
+- Assisted students in a walk-in lab covering a variety of statistics and data science courses
 
-`2025`
-**Hackathon Team Member**, Utah State University
-- Placed 3rd in cybersecurity category
-- Applied data analysis to security challenges
-- Developed solutions under tight deadlines
+### Project Manager – Agentic Grader  
+**Brigham Young University – Idaho**  
+*April 2025 – July 2025*  
+- Led a team to develop an automated grading system for a semester-long project  
+- Utilized tools like **n8n** and **LLM APIs**
 
-`2022-2024`
-**Full Time Missionary**, The Church of Jesus Christ of Latter-day Saints, Salt Lake City, UT
-- Developed communication and interpersonal skills
-- Led teams and coordinated community service initiatives
+### Course Designer – Data Engineering  
+**Brigham Young University – Idaho**  
+*April 2025 – July 2025*  
+- Designed curriculum and assignments for a data engineering course  
+- Used **Snowflake**, **Airflow**, and **Python** for teaching automation and data pipeline concepts
 
-`Jun-Aug 2022`
-**Handyman/Laborer**, Gyroscope Lab, LLC, Concord, MA
-- Renovated building for engineering lab
-- Applied problem-solving skills to structural challenges
+### Teaching Assistant  
+**Brigham Young University – Idaho**  
+*December 2024 – July 2025*  
+- Graded and created assignments for courses including Fundamentals of Cybersecurity, Introduction to Databases, and SQL  
+- Mentored students on technical concepts and problem-solving approaches
 
-`2021-2022`
-**Food Service**, Chipotle Mexican Grill, Tallahassee, FL
-- Managed multiple roles including cashier, food preparation
-- Ensured quality control and food safety compliance
+### Full-Time Missionary  
+**The Church of Jesus Christ of Latter-day Saints – Salt Lake City, UT**  
+*January 2022 – December 2024*  
+- Developed interpersonal and communication skills through community outreach  
+- Worked 60–80 hours per week in challenging conditions, maintaining a positive and goal-focused mindset
 
-`Jun-Jul 2021`
-**Maintenance Worker**, U Club on Woodward, Tallahassee, FL
-- Performed repairs, appliance installation, and maintenance
-- Troubleshot facility issues efficiently
+---
 
-`2012-2022`
-**Lawn Maintenance**, Private homeowners, Tallahassee, FL
-- Performed mowing, edging, landscaping services
-- Managed scheduling and client relationships
+## Technical Skills
 
-## Projects
+- **Languages:** Python, R, C#, SQL  
+- **Data Science:** Data cleaning, data visualization (*ggplot2*, *Lets-Plot*), data wrangling (*Polars*, *Tidyverse*), machine learning (*TensorFlow*, *scikit-learn*, *XGBoost*)
 
-<!-- Last updated: April 2025 -->
+---
+
+## Awards & Recognition
+
+- **3rd Place**, Cybersecurity Category — *USU Hackathon 2025*, Utah State University ([Stenography Project](https://github.com/thvl3/DeSteGo))
+
+## Projects 
+
+- **Metals in Mistborn**: Text wrangling a visualization of Mistborn Final Empire, for more you can read this [article](https://nacl-salt-12.github.io/dataclark/Projects/metal_in_mistborn.html) or see the code [here](https://github.com/NaCl-Salt-12/BookDataVisualization).
+<!-- Last updated: July 2025 -->
