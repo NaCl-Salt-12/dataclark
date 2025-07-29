@@ -65,4 +65,6 @@ GPA: 3.46
 ## Projects 
 
 - **Metals in Mistborn**: Text wrangling a visualization of Mistborn Final Empire, for more you can read this [article](https://nacl-salt-12.github.io/dataclark/Projects/metal_in_mistborn.html) or see the code [here](https://github.com/NaCl-Salt-12/BookDataVisualization).
+
+- **Disc Golf Speed Prediction**: Predicting the speed metric from a discs physical metrics with xgboost. See the [article](https://nacl-salt-12.github.io/dataclark/Projects/Disc_Golf_Speed_Prediction.html).
 <!-- Last updated: July 2025 -->
