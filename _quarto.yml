@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "Clark"
+  title: "NaCl"
   favicon: Images/logo.png
   back-to-top-navigation: true
   repo-url: https://nacl-salt-12.github.io/dataclark/
