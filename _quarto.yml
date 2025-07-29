@@ -26,14 +26,19 @@ website:
         href: https://nacl-salt-12.github.io/introduction_to_polars/index.html
       - text: "Blog"
         file: blog/index.qmd
-        text: Projects
-        menu:
-          - text: Metals in Mistborn
-            file: Projects/metal_in_mistborn.qmd 
+      - text: Projects
+        file: Projects/metal_in_mistborn.qmd 
 
   # learn more about navication here https://quarto.org/docs/websites/website-navigation.html
   # comment out any of the sections below to turn off the sidebar
 
+  sidebar: 
+    - title: "Projects"
+      style: "docked"
+      background: light
+      contents:
+        - text: "Metals in Mistborn"
+          file: Projects/metal_in_mistborn.qmd
   # sidebar: 
   #   - title: "Data Cleansing"
   #     style: "docked"
