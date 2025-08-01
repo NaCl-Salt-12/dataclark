@@ -7,7 +7,8 @@ title: "Nathaniel Clark"
 ::: {.g-col-12 .g-col-md-7}
 ## About Me {.mb-3}
 
-I'm a Data Science student at Brigham Young University-Idaho with expertise in Python programming, data analysis, database management, and cybersecurity fundamentals. My journey in data science combines technical skills with practical problem-solving abilities.
+
+I'm a Data Science student at Brigham Young University-Idaho with experience in Python programming, data analysis, visualization, machine learning, and database management. I enjoy learning and reading. In my free time, I play disc golf and pickleball, and I do miniature painting.        
 
 ::: {.mt-4}
 [<i class="bi bi-github"></i> GitHub](https://github.com/NaCl-Salt-12){.btn .btn-sm .btn-outline-dark .me-2}
@@ -20,7 +21,7 @@ I'm a Data Science student at Brigham Young University-Idaho with expertise in P
 :::
 :::
 :::
-
+<!---
 ## My Focus Areas {.mt-5 .mb-4}
 
 ::: {.grid .gx-5 .gy-4}
@@ -43,7 +44,7 @@ I'm a Data Science student at Brigham Young University-Idaho with expertise in P
 - **Software Development** — Creating data-driven applications and tools
 :::
 :::
-
+-->
 ## <i class="bi bi-journal-text"></i> Recent Blog Posts {.mt-5 .mb-4}
 
 ::: {.grid .gx-5 .gy-4}
